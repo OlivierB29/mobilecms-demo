@@ -1,1 +1,2 @@
-# mobilecms-demo
+# mobilecms-demo 
+open index.html
