@@ -62,7 +62,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../material/prebuilt-themes/pink-bluegrey.css"), "");
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n\n/* You can add global styles to this file, and also import other style files */\nbody {\n  margin: 0;\n}\n\n\n.secondary-button-bar {\n\tfont-weight: bold;\n  padding: 1.5em;\n  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);\n}\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n\n/* You can add global styles to this file, and also import other style files */\nbody {\n  margin: 0;\n}\n\n.toolbar-spacer {\n  width: 0.5em;\n}\n\n.fill-remaining-space {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 auto;\n          flex: 1 1 auto;\n}\n\n\n.secondary-button-bar {\n  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);\n}\n\n.transparent-button-bar {\n  background-color: transparent;\n  background: transparent;\n}\n", ""]);
 
 // exports
 
