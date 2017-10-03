@@ -443,9 +443,8 @@ function commonHttpFakeBackend(url, method, request) {
     }
     // save record
     if (url.match(/content\/[-a-zA-Z0-9_]*/) && method === 'POST') {
-        var bodyStr = decodeURIComponent(request.body.replace('requestbody=', ''));
-        var params = JSON.parse(bodyStr);
-        cmsApi.saveItem(getLast(url), params);
+        var params = request.body;
+        cmsApi.saveItem(getLast(url), request.body);
         var ts = Math.ceil(new Date().getTime() / 1000);
         var body_9 = JSON.parse('{"timestamp":"' + ts + '"}');
         return new __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["a" /* Observable */](function (resp) { resp.next(new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["h" /* HttpResponse */]({ status: 200, body: body_9 })); resp.complete(); });
@@ -459,9 +458,12 @@ function commonHttpFakeBackend(url, method, request) {
     }
     return null;
 }
-function auth(bodyStr) {
-    bodyStr = decodeURIComponent(bodyStr.replace('requestbody=', ''));
-    var params = JSON.parse(bodyStr);
+function auth(params) {
+    //  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!! auth 0 ' + bodyStr);
+    // const decoded = decodeURIComponent(bodyStr);
+    // console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!! auth 1');
+    // const params = JSON.parse(decoded);
+    // console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!! auth 2');
     if (params.user && params.password) {
         var user = JSON.parse('{}');
         user.username = params.user;
