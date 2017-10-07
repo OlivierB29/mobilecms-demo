@@ -17,10 +17,28 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy re
 
 /***/ }),
 
+/***/ "../../../../../src/app/_directives/alert.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.alertcontainer {\n  margin: auto;\n  width: 100%;\n}\n\n.alert {\n  float: right;\n}\n\n\n.alert-success {\n  color: green;\n}\n\n.alert-danger {\n  color: red;\n}\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
 /***/ "../../../../../src/app/_directives/alert.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"message\" [ngClass]=\"{ 'alert': message, 'alert-success': message.type === 'success', 'alert-danger': message.type === 'error' }\">{{message.text}}</div>"
+module.exports = "<div class='alertcontainer'>\n  <div *ngIf=\"message && message.type && message.text\" [ngClass]=\"{ 'alert': message, 'alert-success': message.type === 'success', 'alert-danger': message.type === 'error' }\">\n    {{message.text}}\n  </div>\n\n</div>\n﻿\n"
 
 /***/ }),
 
@@ -54,7 +72,8 @@ var AlertComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             moduleId: module.i,
             selector: 'app-alert-message',
-            template: __webpack_require__("../../../../../src/app/_directives/alert.component.html")
+            template: __webpack_require__("../../../../../src/app/_directives/alert.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/_directives/alert.component.css")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_app_shared__["a" /* AlertService */]])
     ], AlertComponent);
@@ -743,16 +762,16 @@ var AdminService = /** @class */ (function (_super) {
         }
     };
     AdminService.prototype.getAll = function () {
-        return this.http.get('/api/users', { headers: this.jwt() }).map(function (response) { return response.json(); });
+        return this.http.get('/api/users', { headers: this.jwt() });
     };
     AdminService.prototype.getById = function (id) {
-        return this.http.get('/api/users/' + id, { headers: this.jwt() }).map(function (response) { return response.json(); });
+        return this.http.get('/api/users/' + id, { headers: this.jwt() });
     };
     AdminService.prototype.create = function (user) {
-        return this.http.post('/api/users', user, { headers: this.jwt() }).map(function (response) { return response.json(); });
+        return this.http.post('/api/users', user, { headers: this.jwt() });
     };
     AdminService.prototype.update = function (user) {
-        return this.http.put('/api/users/' + user.id, user, { headers: this.jwt() }).map(function (response) { return response.json(); });
+        return this.http.put('/api/users/' + user.id, user, { headers: this.jwt() });
     };
     AdminService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
@@ -1524,7 +1543,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".error-label {\n  color: red;\n}\n.success-label {\n  color: green;\n}\n\n\n.loginform {\n  padding: 1em;\n}\n\n\n.loginform-input {\n  width: 90%;\n}\n\n\n\n@media all and (min-width: 55em) {\n\n  .loginform-input {\n    width: 20em;\n  }\n\n  .loginform {\n    padding-left: 10em;\n    padding-right: 10em;\n  }\n}\n", ""]);
+exports.push([module.i, "", ""]);
 
 // exports
 
@@ -1697,6 +1716,24 @@ var SendPasswordDialogComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/mainpage/login.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.logincontainer {\n  margin: auto;\n  width: 85%;\n}\n\n.loginform {\n  display: inline;\n  float: none;\n  padding: 1em;\n}\n\n\n.login-button {\n  font-weight: bold;\n}\n\n.loginform-input {\n  width: 100%;\n}\n\n.error-label {\n  color: red;\n}\n.success-label {\n  color: green;\n}\n\n\n@media all and (min-width: 55em) {\n\n  .logincontainer {\n    width: 29em;\n  }\n\n  .loginform-input {\n    width: 100%;\n  }\n\n\n  .loginform {\n    padding-left: 1em;\n    padding-right: 1em;\n  }\n\n}\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
 /***/ "../../../../../src/app/mainpage/mainpage.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1705,7 +1742,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".topmenucontent {\n  box-shadow: 5px 5px 10px 0 #656565;\n}\n\n\n\n.top-menu-spacer {\n padding-right: 1em;\n}\n\n\n.top-menu-title {\n  font-size: 1.25em;\n}\n\n.top-menu-icon {\n  padding: 0 0.875em;\n}\n\n.error-label {\n  color: red;\n}\n.success-label {\n  color: green;\n}\n\n.loginform {\n  padding: 1em;\n}\n\n\n.login-button {\n  font-weight: bold;\n}\n\n.loginform-input {\n  width: 100%;\n}\n\n\n.slidemenu {\nbox-shadow: 5px 5px 10px 0 #656565;\npadding-top: 1em;\n}\n\n\n.my-content {\n  margin-left: 0;\n  min-height: 800px;\n}\n\n\n\n@media all and (min-width: 55em) {\n  .my-content {\n    padding-left: 4em;\n  }\n\n  .top-menu-spacer {\n   padding-right: 5em;\n  }\n\n  .loginform-input {\n    width: 20em;\n  }\n\n\n  .loginform {\n    padding-left: 10em;\n    padding-right: 10em;\n  }\n  .slidemenu {\n  padding-top: 5em;\n  }\n}\n", ""]);
+exports.push([module.i, ".topmenucontent {\n  box-shadow: 5px 5px 10px 0 #656565;\n}\n\n\n\n.top-menu-spacer {\n padding-right: 1em;\n}\n\n\n.top-menu-title {\n  font-size: 1.25em;\n}\n\n.top-menu-icon {\n  padding: 0 0.875em;\n}\n\n\n\n\n\n.slidemenu {\nbox-shadow: 5px 5px 10px 0 #656565;\npadding-top: 1em;\n}\n\n.my-content-default {\n  margin-left: 0;\n  min-height: 50em;\n}\n\n.my-content {\n  margin-left: 0;\n  min-height: 50em;\n}\n\n\n\n@media all and (min-width: 55em) {\n  .my-content-default {\n    margin-left: 0;\n    min-height: 50em;\n  }\n\n  .my-content {\n    padding-left: 4em;\n  }\n\n  .top-menu-spacer {\n   padding-right: 5em;\n  }\n\n  .slidemenu {\n  padding-top: 5em;\n  }\n}\n", ""]);
 
 // exports
 
@@ -1718,7 +1755,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/mainpage/mainpage.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-toolbar color='primary' class='topmenucontent'>\n\n  <button *ngIf='isAuthenticated() && !menuOpened' md-button (click)='sidenav.open()'><md-icon>menu</md-icon></button>\n\n  <button [routerLink]='[\"/home\"]' md-button class='top-menu-title'>Admin</button>\n  <span class='fill-remaining-space'></span>\n  <button *ngIf='isAuthenticated() || isUserExists()' md-button (click)='disconnect()' class='top-menu-icon'><md-icon alt='disconnect'>cancel</md-icon></button>\n\n\n\n</md-toolbar>\n\n<md-sidenav-container>\n\n  <!-- slide menu -->\n\n  <md-sidenav #sidenav [mode]='menuMode' [opened]='menuOpened' class='slidemenu'>\n    <nav *ngIf='isConnected()'>\n      <div *ngIf='!menuItems'>\n\n      </div>\n      <div *ngIf='menuItems'>\n        <div *ngFor='let menu of menuItems'>\n          <app-menubutton *ngIf='menuMode !== \"over\"' [item]='menu'></app-menubutton>\n          <app-menubutton *ngIf='menuMode === \"over\"' [item]='menu' (click)='sidenav.close()'></app-menubutton>\n\n        </div>\n\n        <div *ngIf='hasAdminRole && adminMenuItems'>\n          <div *ngFor='let menu of adminMenuItems'>\n            <app-menubutton *ngIf='menuMode !== \"over\"' [item]='menu'></app-menubutton>\n            <app-menubutton *ngIf='menuMode === \"over\"' [item]='menu' (click)='sidenav.close()'></app-menubutton>\n          </div>\n        </div>\n\n\n      </div>\n\n    </nav>\n  </md-sidenav>\n\n\n  <!-- container -->\n\n\n  <div class='my-content'>\n    <app-alert-message></app-alert-message>\n\n    <!-- content -->\n    <router-outlet *ngIf='isConnected()'></router-outlet>\n    <!-- login -->\n\n    <div *ngIf='!isConnected()'>\n    <div *ngIf='!isAuthenticated() && isUserExists()' class='loginform'>\n\n      <form name='form' (ngSubmit)='f.form.valid && login()' #f='ngForm' novalidate>\n\n        <md-input-container class='loginform-input'>\n          <input type='password' mdInput placeholder='{{\"login.password\" | translate}}' name='password' [(ngModel)]='model.password' #password='ngModel' required />\n        </md-input-container>\n\n          <md-toolbar  class='loginform-input'>\n\n            <span class='fill-remaining-space'></span>\n          <button md-raised-button color='primary' [disabled]='loading' class='login-button'>{{ 'validate.label' | translate | uppercase }}</button>\n          </md-toolbar>\n          <md-toolbar  class='loginform-input'>\n            <form name='form3' (ngSubmit)='f3.form.valid && openSendPassword()' #f3='ngForm' novalidate>\n                <button md-button [disabled]='loading'>{{'sendpassworddialog.warning' | translate}}<md-icon>settings_backup_restore</md-icon></button>\n            </form>\n          </md-toolbar>\n\n      </form>\n    </div>\n\n    <!-- username / email -->\n    <div *ngIf='!isAuthenticated() && !isUserExists()' class='loginform'>\n      <form name='form2' (ngSubmit)='f2.form.valid && validateuser()' #f2='ngForm' novalidate>\n        <div [ngClass]='{ \"has-error\": f2.submitted && !username.valid }'>\n          <md-input-container class='loginform-input'>\n            <input type='text' mdInput placeholder='{{\"login.user\" | translate}}' name='username' [(ngModel)]='model.username' #username='ngModel' required />\n          </md-input-container>\n\n        </div>\n\n\n          <md-toolbar class='loginform-input'>\n            <span class='fill-remaining-space'></span>\n          <button md-raised-button  color='primary' [disabled]='loading' class='login-button'>{{ 'next.label' | translate | uppercase }}</button>\n          </md-toolbar>\n\n\n      </form>\n\n    </div>\n\n    <!-- new password -->\n    <div *ngIf='isAuthenticated() && isNewPasswordRequired()' class='loginform'>\n      <form *ngIf='!success' name='form' (ngSubmit)=\"f.form.valid && modifypassword() \" #f='ngForm' novalidate class='loginform'>\n\n\n        <div [ngClass]=\"{ 'has-error': f.submitted  && !newpassword.valid && isSecurePassword() }\">\n          <md-input-container class='loginform-input'>\n            <input type='password' mdInput placeholder='newpassword' name='newpassword' [(ngModel)]=\"model.newpassword\" #newpassword='ngModel' required />\n          </md-input-container>\n          <md-icon *ngIf='isSecurePassword()' class='success-label'>security</md-icon>\n          <md-icon *ngIf='!isSecurePassword()' class='error-label'>security</md-icon>\n        </div>\n\n        <div [ngClass]=\"{ 'has-error': f.submitted }\">\n          <md-input-container class='loginform-input'>\n            <input type='password' mdInput placeholder='newpassword2' name='newpassword2' [(ngModel)]=\"model.newpassword2\" #newpassword='ngModel' required />\n          </md-input-container>\n          <md-icon *ngIf='model.newpassword2 && model.newpassword !== model.newpassword2' class='error-label-message'>block</md-icon>\n        </div>\n\n        <div>\n          <button *ngIf='canSubmit()' md-button [disabled]=\"loading\"><md-icon>check_circle</md-icon></button>\n\n        </div>\n      </form>\n    </div>\n\n    <div class='loginform'>\n      <md-spinner *ngIf='loading' mode='indeterminate'></md-spinner>\n    </div>\n    </div>\n\n  </div>\n</md-sidenav-container>\n"
+module.exports = "<md-toolbar color='primary' class='topmenucontent'>\n\n  <button *ngIf='isAuthenticated() && !menuOpened' md-button (click)='sidenav.open()'><md-icon>menu</md-icon></button>\n\n  <button [routerLink]='[\"/home\"]' md-button class='top-menu-title'>Admin</button>\n  <span class='fill-remaining-space'></span>\n  <button *ngIf='isAuthenticated() || isUserExists()' md-button (click)='disconnect()' class='top-menu-icon'><md-icon alt='disconnect'>cancel</md-icon></button>\n\n\n\n</md-toolbar>\n\n<md-sidenav-container>\n\n  <!-- slide menu -->\n\n  <md-sidenav  *ngIf='isConnected()' #sidenav [mode]='menuMode' [opened]='menuOpened' class='slidemenu'>\n    <nav>\n      <div *ngIf='!menuItems'>\n\n      </div>\n      <div *ngIf='menuItems'>\n        <div *ngFor='let menu of menuItems'>\n          <app-menubutton *ngIf='menuMode !== \"over\"' [item]='menu'></app-menubutton>\n          <app-menubutton *ngIf='menuMode === \"over\"' [item]='menu' (click)='sidenav.close()'></app-menubutton>\n\n        </div>\n\n        <div *ngIf='hasAdminRole && adminMenuItems'>\n          <div *ngFor='let menu of adminMenuItems'>\n            <app-menubutton *ngIf='menuMode !== \"over\"' [item]='menu'></app-menubutton>\n            <app-menubutton *ngIf='menuMode === \"over\"' [item]='menu' (click)='sidenav.close()'></app-menubutton>\n          </div>\n        </div>\n\n\n      </div>\n\n    </nav>\n  </md-sidenav>\n\n\n  <!-- container -->\n\n\n  <div [ngClass]=\"{ 'my-content': isConnected(), 'my-content-default': !isConnected() }\">\n    <app-alert-message></app-alert-message>\n\n    <!-- content -->\n    <router-outlet *ngIf='isConnected()'></router-outlet>\n    <!-- login -->\n\n    <div *ngIf='!isConnected()'>\n    <md-card class='logincontainer'>\n\n\n    <div *ngIf='!isAuthenticated() && isUserExists()' class='loginform'>\n\n      <form name='form' (ngSubmit)='f.form.valid && login()' #f='ngForm' novalidate>\n\n        <md-input-container class='loginform-input'>\n          <input type='password' mdInput placeholder='{{\"login.password\" | translate}}' name='password' [(ngModel)]='model.password' #password='ngModel' required />\n        </md-input-container>\n\n          <md-toolbar  class='loginform-input'>\n            <span class='fill-remaining-space'></span>\n          <button md-raised-button color='primary' [disabled]='loading' class='login-button'><md-icon>check_circle</md-icon></button>\n          </md-toolbar>\n          <md-toolbar  class='loginform-input'>\n            <form name='form3' (ngSubmit)='f3.form.valid && openSendPassword()' #f3='ngForm' novalidate>\n                <button md-button [disabled]='loading'>{{'sendpassworddialog.warning' | translate}}<md-icon>settings_backup_restore</md-icon></button>\n            </form>\n          </md-toolbar>\n\n      </form>\n    </div>\n\n    <!-- username / email -->\n    <div *ngIf='!isAuthenticated() && !isUserExists()' class='loginform'>\n      <form name='form2' (ngSubmit)='f2.form.valid && validateuser()' #f2='ngForm' novalidate>\n        <div [ngClass]='{ \"has-error\": f2.submitted && !username.valid }'>\n          <md-input-container class='loginform-input'>\n            <input type='text' mdInput placeholder='{{\"login.user\" | translate}}' name='username' [(ngModel)]='model.username' #username='ngModel' required />\n          </md-input-container>\n\n        </div>\n\n\n          <md-toolbar class='loginform-input'>\n            <span class='fill-remaining-space'></span>\n          <button md-raised-button  color='primary' [disabled]='loading' class='login-button'>{{ 'next.label' | translate | uppercase }}</button>\n          </md-toolbar>\n\n\n      </form>\n\n    </div>\n\n    <!-- new password -->\n    <div *ngIf='isAuthenticated() && isNewPasswordRequired()' class='loginform'>\n      <form *ngIf='!success' name='form' (ngSubmit)=\"f.form.valid && modifypassword() \" #f='ngForm' novalidate class='loginform'>\n\n\n        <div [ngClass]=\"{ 'has-error': f.submitted  && !newpassword.valid && isSecurePassword() }\">\n          <md-input-container class='loginform-input'>\n            <input type='password' mdInput placeholder='newpassword' name='newpassword' [(ngModel)]=\"model.newpassword\" #newpassword='ngModel' required />\n          </md-input-container>\n          <md-icon *ngIf='isSecurePassword()' class='success-label'>security</md-icon>\n          <md-icon *ngIf='!isSecurePassword()' class='error-label'>security</md-icon>\n        </div>\n\n        <div [ngClass]=\"{ 'has-error': f.submitted }\">\n          <md-input-container class='loginform-input'>\n            <input type='password' mdInput placeholder='newpassword2' name='newpassword2' [(ngModel)]=\"model.newpassword2\" #newpassword='ngModel' required />\n          </md-input-container>\n          <md-icon *ngIf='model.newpassword2 && model.newpassword !== model.newpassword2' class='error-label-message'>block</md-icon>\n        </div>\n\n\n        <md-toolbar  class='loginform-input'>\n          <span class='fill-remaining-space'></span>\n        <button *ngIf='canSubmit()' md-raised-button color='primary' [disabled]='loading' class='login-button'><md-icon>check_circle</md-icon></button>\n        </md-toolbar>\n\n      </form>\n    </div>\n\n    <div class='loginform'>\n      <md-spinner *ngIf='loading' mode='indeterminate'></md-spinner>\n    </div>\n  </md-card> <!-- login container -->\n    </div>\n  </div>\n</md-sidenav-container>\n"
 
 /***/ }),
 
@@ -1787,7 +1824,9 @@ var MainPageComponent = /** @class */ (function () {
             this.initUi();
         }
         else {
-            console.log('logout');
+            if (this.debug) {
+                console.log('logout');
+            }
             this.authenticationService.logout();
         }
     };
@@ -1820,9 +1859,11 @@ var MainPageComponent = /** @class */ (function () {
             }
             this.currentUser = JSON.parse(currentUserLocalStorage);
             this.currentUser.token = '';
-            this.userinfo = this.getPublicInfoFromLocalStorage(this.currentUser);
+            this.updatePublicInfoFromLocalStorage(this.currentUser, this.userinfo);
             this.hasAdminRole = this.currentUser.role === 'admin';
-            console.log('currentUser ...' + this.currentUser.role + ' ' + this.currentUser.role);
+            if (this.debug) {
+                console.log('currentUser ...' + this.currentUser.role + ' ' + this.currentUser.role);
+            }
             this.hasRole = this.currentUser.role === 'editor' || this.currentUser.role === 'admin';
             if (this.debug) {
                 console.log('isConnected' + this.isConnected());
@@ -1873,9 +1914,11 @@ var MainPageComponent = /** @class */ (function () {
                     userlist.title = 'Users';
                     _this.adminMenuItems.push(userlist);
                 }
-                console.log('menu complete :' + _this.menuItems.length);
+                if (_this.debug) {
+                    console.log('menu complete :' + _this.menuItems.length);
+                }
             }, function (error) {
-                console.log('init menu failure');
+                console.error('init menu failure');
                 _this.currentUser = _this.authenticationService.resetToken();
                 if (_this.debug) {
                     console.log('isConnected' + _this.isConnected());
@@ -1885,7 +1928,9 @@ var MainPageComponent = /** @class */ (function () {
             }, function () { return console.log('init menu success'); });
         }
         else {
-            console.log('guest ');
+            if (this.debug) {
+                console.log('guest ');
+            }
         }
     };
     MainPageComponent.prototype.getLayout = function () {
@@ -1910,10 +1955,10 @@ var MainPageComponent = /** @class */ (function () {
     MainPageComponent.prototype.isNewPasswordRequired = function () {
         return this.userinfo && this.userinfo.newpasswordrequired === 'true';
     };
-    MainPageComponent.prototype.getPublicInfoFromLocalStorage = function (user) {
-        return { username: user.username,
-            email: user.email,
-            clientalgorithm: user.clientalgorithm };
+    MainPageComponent.prototype.updatePublicInfoFromLocalStorage = function (from, to) {
+        to.username = from.username,
+            to.email = from.email,
+            to.clientalgorithm = from.clientalgorithm;
     };
     MainPageComponent.prototype.login = function () {
         var _this = this;
@@ -1923,6 +1968,10 @@ var MainPageComponent = /** @class */ (function () {
             if (userObject && userObject.token) {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
                 localStorage.setItem('currentUser', JSON.stringify(userObject));
+                _this.userinfo.newpasswordrequired = userObject.newpasswordrequired;
+                if (_this.debug) {
+                    console.log('newpasswordrequired' + _this.userinfo.newpasswordrequired);
+                }
             }
             else {
                 console.error('invalid auth token');
@@ -2072,7 +2121,7 @@ var MainPageComponent = /** @class */ (function () {
             moduleId: module.i,
             selector: 'app-my-mainpage',
             template: __webpack_require__("../../../../../src/app/mainpage/mainpage.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/mainpage/mainpage.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/mainpage/mainpage.component.css"), __webpack_require__("../../../../../src/app/mainpage/login.css")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_app_services__["b" /* ContentService */],
             __WEBPACK_IMPORTED_MODULE_6_app_shared__["d" /* LoginService */],
@@ -3739,10 +3788,7 @@ var LoginService = /** @class */ (function () {
         var hashUtils = new __WEBPACK_IMPORTED_MODULE_1_app_helpers__["a" /* HashUtils */]();
         var url = this.getUrl('/resetpassword');
         var data = this.getRequestBody({ user: user });
-        return this.http.post(url, data, { headers: this.getHeaders() })
-            .map(function (response) {
-            var registerResponse = response.json();
-        });
+        return this.http.post(url, data, { headers: this.getHeaders() });
     };
     LoginService.prototype.publicinfo = function (user) {
         var url = this.getUrl('/publicinfo/' + user);
