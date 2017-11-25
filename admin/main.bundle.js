@@ -60,7 +60,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var AlertComponent = /** @class */ (function () {
+var AlertComponent = (function () {
     function AlertComponent(alertService) {
         this.alertService = alertService;
     }
@@ -80,7 +80,7 @@ var AlertComponent = /** @class */ (function () {
     return AlertComponent;
 }());
 
-//# sourceMappingURL=alert.component.js.map
+
 
 /***/ }),
 
@@ -91,7 +91,7 @@ var AlertComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__alert_component__ = __webpack_require__("../../../../../src/app/_directives/alert.component.ts");
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__alert_component__["a"]; });
 
-//# sourceMappingURL=index.js.map
+
 
 /***/ }),
 
@@ -101,7 +101,7 @@ var AlertComponent = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Base64; });
 // from https://gist.github.com/Juszczak/63e6d9e01decc850de03
-var Base64 = /** @class */ (function () {
+var Base64 = (function () {
     function Base64() {
         this.PADCHAR = '=';
         this.ALPHA = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
@@ -171,7 +171,7 @@ var Base64 = /** @class */ (function () {
     return Base64;
 }());
 
-//# sourceMappingURL=base64.js.map
+
 
 /***/ }),
 
@@ -180,7 +180,7 @@ var Base64 = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CmsApi; });
-var CmsApi = /** @class */ (function () {
+var CmsApi = (function () {
     function CmsApi() {
     }
     CmsApi.prototype.content = function () {
@@ -307,7 +307,7 @@ var CmsApi = /** @class */ (function () {
     return CmsApi;
 }());
 
-//# sourceMappingURL=cmsapi.js.map
+
 
 /***/ }),
 
@@ -451,11 +451,6 @@ function commonHttpFakeBackend(url, method, request) {
     return null;
 }
 function auth(params) {
-    //  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!! auth 0 ' + bodyStr);
-    // const decoded = decodeURIComponent(bodyStr);
-    // console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!! auth 1');
-    // const params = JSON.parse(decoded);
-    // console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!! auth 2');
     if (params.user && params.password) {
         var user = JSON.parse('{}');
         user.username = params.user;
@@ -482,7 +477,7 @@ function auth(params) {
         });
     }
 }
-//# sourceMappingURL=fake-backend.js.map
+
 
 /***/ }),
 
@@ -496,7 +491,7 @@ function auth(params) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__base64__ = __webpack_require__("../../../../../src/app/_helpers/base64.ts");
 
 
-var HashUtils = /** @class */ (function () {
+var HashUtils = (function () {
     function HashUtils() {
     }
     /**
@@ -520,7 +515,7 @@ var HashUtils = /** @class */ (function () {
     return HashUtils;
 }());
 
-//# sourceMappingURL=hashutils.js.map
+
 
 /***/ }),
 
@@ -534,7 +529,7 @@ var HashUtils = /** @class */ (function () {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__hashutils__["a"]; });
 
 
-//# sourceMappingURL=index.js.map
+
 
 /***/ }),
 
@@ -556,7 +551,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var MockHttpInterceptor = /** @class */ (function () {
+var MockHttpInterceptor = (function () {
     function MockHttpInterceptor() {
     }
     MockHttpInterceptor.prototype.intercept = function (request, next) {
@@ -567,13 +562,13 @@ var MockHttpInterceptor = /** @class */ (function () {
             next.handle(request); // fallback in case url isn't caught
     };
     MockHttpInterceptor = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
         __metadata("design:paramtypes", [])
     ], MockHttpInterceptor);
     return MockHttpInterceptor;
 }());
 
-//# sourceMappingURL=mock-http.interceptor.js.map
+
 
 /***/ }),
 
@@ -617,7 +612,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 * Credits :
 * based on http://jasonwatmore.com/post/2016/09/29/angular-2-user-registration-and-login-example-tutorial
 */
-var AdminService = /** @class */ (function (_super) {
+var AdminService = (function (_super) {
     __extends(AdminService, _super);
     function AdminService(http) {
         var _this = _super.call(this) || this;
@@ -774,13 +769,13 @@ var AdminService = /** @class */ (function (_super) {
         return this.http.put('/api/users/' + user.id, user, { headers: this.jwt() });
     };
     AdminService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5__angular_common_http__["b" /* HttpClient */]])
     ], AdminService);
     return AdminService;
 }(__WEBPACK_IMPORTED_MODULE_4_app_shared__["b" /* CommonClientService */]));
 
-//# sourceMappingURL=admin.service.js.map
+
 
 /***/ }),
 
@@ -816,7 +811,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var ContentService = /** @class */ (function (_super) {
+var ContentService = (function (_super) {
     __extends(ContentService, _super);
     function ContentService(http) {
         var _this = _super.call(this) || this;
@@ -850,8 +845,7 @@ var ContentService = /** @class */ (function (_super) {
          */
         _this.getIndex = function (type) {
             var url = _this.getUrl('/index/' + type);
-            console.log(url);
-            console.log('getRecords ' + url);
+            console.log('getIndex ' + url);
             return _this.http.get(url, { headers: _this.jwt() });
         };
         /**
@@ -928,13 +922,13 @@ var ContentService = /** @class */ (function (_super) {
         return _this;
     }
     ContentService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */]])
     ], ContentService);
     return ContentService;
 }(__WEBPACK_IMPORTED_MODULE_3_app_shared__["b" /* CommonClientService */]));
 
-//# sourceMappingURL=content.service.js.map
+
 
 /***/ }),
 
@@ -951,7 +945,7 @@ var ContentService = /** @class */ (function (_super) {
 
 
 
-//# sourceMappingURL=index.js.map
+
 
 /***/ }),
 
@@ -961,12 +955,9 @@ var ContentService = /** @class */ (function (_super) {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UploadService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/_esm5/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__("../../../../rxjs/_esm5/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/toPromise.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_app_shared__ = __webpack_require__("../../../../../src/app/shared/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_shared__ = __webpack_require__("../../../../../src/app/shared/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -990,15 +981,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-
-var UploadService = /** @class */ (function (_super) {
+var UploadService = (function (_super) {
     __extends(UploadService, _super);
     function UploadService(http) {
         var _this = _super.call(this) || this;
         _this.http = http;
-        _this.init(__WEBPACK_IMPORTED_MODULE_4_environments_environment__["a" /* environment */].server, __WEBPACK_IMPORTED_MODULE_4_environments_environment__["a" /* environment */].fileapi);
+        _this.init(__WEBPACK_IMPORTED_MODULE_1_environments_environment__["a" /* environment */].server, __WEBPACK_IMPORTED_MODULE_1_environments_environment__["a" /* environment */].fileapi);
         return _this;
     }
     UploadService.prototype.getFilesDescriptions = function (type, id) {
@@ -1008,7 +996,7 @@ var UploadService = /** @class */ (function (_super) {
     };
     UploadService.prototype.uploadFile = function (file, type, id) {
         var url = this.getUrl('/basicupload/' + type + '/' + id);
-        return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["a" /* Observable */].fromPromise(new Promise(function (resolve, reject) {
+        return new Promise(function (resolve, reject) {
             var formData = new FormData();
             var xhr = new XMLHttpRequest();
             formData.append('uploaded_file', file);
@@ -1036,11 +1024,25 @@ var UploadService = /** @class */ (function (_super) {
                 throw new Error('empty user');
             }
             xhr.send(formData);
-        }));
+        });
     };
     UploadService.prototype.sync = function (type, id, obj) {
         // eg : /content/calendar
         var url = this.getUrl('/download/' + type + '/' + id);
+        console.log(url);
+        var postData = '';
+        if (this.postFormData) {
+            // escape issue, with some characters like &
+            postData = 'requestbody=' + encodeURIComponent(JSON.stringify(JSON.parse(JSON.stringify(obj))));
+        }
+        else {
+            postData = obj;
+        }
+        return this.http.post(url, postData, { headers: this.jwtPost() });
+    };
+    UploadService.prototype.thumbnails = function (type, id, obj) {
+        // eg : /content/calendar
+        var url = this.getUrl('/thumbnails/' + type + '/' + id);
         console.log(url);
         var postData = '';
         if (this.postFormData) {
@@ -1067,13 +1069,13 @@ var UploadService = /** @class */ (function (_super) {
         return this.http.post(url, postData, { headers: this.jwtPost() });
     };
     UploadService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_6__angular_common_http__["b" /* HttpClient */]])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClient */]])
     ], UploadService);
     return UploadService;
-}(__WEBPACK_IMPORTED_MODULE_5_app_shared__["b" /* CommonClientService */]));
+}(__WEBPACK_IMPORTED_MODULE_2_app_shared__["b" /* CommonClientService */]));
 
-//# sourceMappingURL=upload.service.js.map
+
 
 /***/ }),
 
@@ -1085,7 +1087,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".mobilecms-mainpage {\n  font-family : Roboto, \"Helvetica Neue\", sans-serif;\n}\n", ""]);
 
 // exports
 
@@ -1098,7 +1100,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-my-mainpage></app-my-mainpage>\n"
+module.exports = "<app-my-mainpage class='mobilecms-mainpage'></app-my-mainpage>\n"
 
 /***/ }),
 
@@ -1110,7 +1112,6 @@ module.exports = "<app-my-mainpage></app-my-mainpage>\n"
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__("../../../../@ngx-translate/core/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__rxjs_extensions__ = __webpack_require__("../../../../../src/app/rxjs-extensions.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1123,17 +1124,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var AppComponent = /** @class */ (function () {
+var AppComponent = (function () {
     function AppComponent(translate) {
         this.translate = translate;
         this.title = '';
     }
     AppComponent.prototype.ngOnInit = function () {
         // this language will be used as a fallback when a translation isn't found in the current language
-        this.translate.setDefaultLang(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].defaultlang);
+        this.translate.setDefaultLang(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].defaultlocale);
         // the lang to use, if the lang isn't available, it will use the current loader to get them
-        this.translate.use(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].defaultlang);
+        this.translate.use(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].defaultlocale);
     };
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -1146,7 +1146,7 @@ var AppComponent = /** @class */ (function () {
     return AppComponent;
 }());
 
-//# sourceMappingURL=app.component.js.map
+
 
 /***/ }),
 
@@ -1233,11 +1233,11 @@ if (__WEBPACK_IMPORTED_MODULE_21_environments_environment__["a" /* environment *
         multi: true
     });
 }
-var AppModule = /** @class */ (function () {
+var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
             imports: [
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_9__app_routing__["a" /* routing */],
@@ -1266,20 +1266,23 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_14_app_register_index__["a" /* RegisterComponent */],
                 __WEBPACK_IMPORTED_MODULE_15_app_recordlist_index__["a" /* RecordListComponent */],
                 __WEBPACK_IMPORTED_MODULE_15_app_recordlist_index__["b" /* RecordListHelpDialogComponent */],
-                __WEBPACK_IMPORTED_MODULE_17_app_record__["e" /* RecordComponent */],
+                __WEBPACK_IMPORTED_MODULE_17_app_record__["g" /* RecordComponent */],
                 __WEBPACK_IMPORTED_MODULE_16_app_users__["b" /* UserListComponent */],
                 __WEBPACK_IMPORTED_MODULE_16_app_users__["c" /* UserRecordComponent */],
-                __WEBPACK_IMPORTED_MODULE_17_app_record__["f" /* RecordHelpDialogComponent */],
+                __WEBPACK_IMPORTED_MODULE_17_app_record__["h" /* RecordHelpDialogComponent */],
                 __WEBPACK_IMPORTED_MODULE_17_app_record__["a" /* DeleteDialogComponent */],
                 __WEBPACK_IMPORTED_MODULE_16_app_users__["a" /* DeleteUserDialogComponent */],
+                __WEBPACK_IMPORTED_MODULE_17_app_record__["e" /* LinkComponent */],
+                __WEBPACK_IMPORTED_MODULE_17_app_record__["f" /* MediaComponent */],
                 __WEBPACK_IMPORTED_MODULE_17_app_record__["b" /* EditLinksComponent */],
                 __WEBPACK_IMPORTED_MODULE_17_app_record__["c" /* EditMediaComponent */],
-                __WEBPACK_IMPORTED_MODULE_17_app_record__["d" /* ErrorDialogComponent */]
+                __WEBPACK_IMPORTED_MODULE_17_app_record__["d" /* ErrorDialogComponent */],
+                __WEBPACK_IMPORTED_MODULE_19_app_mainpage__["b" /* MenubuttonComponent */],
             ],
             entryComponents: [
                 __WEBPACK_IMPORTED_MODULE_13__home__["b" /* HomeHelpDialogComponent */],
                 __WEBPACK_IMPORTED_MODULE_18_app_login__["b" /* SendPasswordDialogComponent */],
-                __WEBPACK_IMPORTED_MODULE_17_app_record__["f" /* RecordHelpDialogComponent */],
+                __WEBPACK_IMPORTED_MODULE_17_app_record__["h" /* RecordHelpDialogComponent */],
                 __WEBPACK_IMPORTED_MODULE_15_app_recordlist_index__["b" /* RecordListHelpDialogComponent */],
                 __WEBPACK_IMPORTED_MODULE_17_app_record__["a" /* DeleteDialogComponent */],
                 __WEBPACK_IMPORTED_MODULE_16_app_users__["a" /* DeleteUserDialogComponent */],
@@ -1292,7 +1295,7 @@ var AppModule = /** @class */ (function () {
     return AppModule;
 }());
 
-//# sourceMappingURL=app.module.js.map
+
 
 /***/ }),
 
@@ -1328,7 +1331,7 @@ var appRoutes = [
     { path: '**', redirectTo: '' }
 ];
 var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["d" /* RouterModule */].forRoot(appRoutes, { useHash: true });
-//# sourceMappingURL=app.routing.js.map
+
 
 /***/ }),
 
@@ -1377,7 +1380,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var HomeComponent = /** @class */ (function () {
+var HomeComponent = (function () {
     function HomeComponent(dialog) {
         this.dialog = dialog;
     }
@@ -1397,12 +1400,12 @@ var HomeComponent = /** @class */ (function () {
             template: __webpack_require__("../../../../../src/app/home/home.component.html"),
             styles: [__webpack_require__("../../../../../src/app/home/home.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_material__["e" /* MdDialog */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_material__["d" /* MatDialog */]])
     ], HomeComponent);
     return HomeComponent;
 }());
 
-//# sourceMappingURL=home.component.js.map
+
 
 /***/ }),
 
@@ -1427,7 +1430,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/homehelpdialog.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--component html goes here -->\n<h2 md-dialog-title>{{'home.help.title' | translate}}</h2>\n<!-- help content -->\n  <md-dialog-content>\n    <md-list>\n     <md-list-item> <md-icon>menu</md-icon> {{'home.help.menu' | translate}} </md-list-item>\n     <md-list-item> <md-icon>home</md-icon> {{'home.help.home' | translate}} </md-list-item>\n     <md-list-item> <md-icon>close</md-icon> {{'home.help.disconnect' | translate}} </md-list-item>\n\n    </md-list>\n\n    </md-dialog-content>\n"
+module.exports = "<!--component html goes here -->\n<h2 mat-dialog-title>{{'home.help.title' | translate}}</h2>\n<!-- help content -->\n  <mat-dialog-content>\n    <mat-list>\n     <mat-list-item> <mat-icon>menu</mat-icon> {{'home.help.menu' | translate}} </mat-list-item>\n     <mat-list-item> <mat-icon>home</mat-icon> {{'home.help.home' | translate}} </mat-list-item>\n     <mat-list-item> <mat-icon>close</mat-icon> {{'home.help.disconnect' | translate}} </mat-list-item>\n\n    </mat-list>\n\n    </mat-dialog-content>\n"
 
 /***/ }),
 
@@ -1452,7 +1455,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 
 
-var HomeHelpDialogComponent = /** @class */ (function () {
+var HomeHelpDialogComponent = (function () {
     function HomeHelpDialogComponent(data) {
         this.data = data;
     }
@@ -1463,13 +1466,13 @@ var HomeHelpDialogComponent = /** @class */ (function () {
             template: __webpack_require__("../../../../../src/app/home/homehelpdialog.component.html"),
             styles: [__webpack_require__("../../../../../src/app/home/homehelpdialog.component.css")]
         }),
-        __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MD_DIALOG_DATA */])),
+        __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MAT_DIALOG_DATA */])),
         __metadata("design:paramtypes", [Object])
     ], HomeHelpDialogComponent);
     return HomeHelpDialogComponent;
 }());
 
-//# sourceMappingURL=homehelpdialog.component.js.map
+
 
 /***/ }),
 
@@ -1486,7 +1489,7 @@ var HomeHelpDialogComponent = /** @class */ (function () {
 
 
 
-//# sourceMappingURL=index.js.map
+
 
 /***/ }),
 
@@ -1495,7 +1498,7 @@ var HomeHelpDialogComponent = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StandardComponent; });
-var StandardComponent = /** @class */ (function () {
+var StandardComponent = (function () {
     function StandardComponent() {
         this.hasRole = false;
         this.hasAdminRole = false;
@@ -1514,10 +1517,13 @@ var StandardComponent = /** @class */ (function () {
             this.hasRole = this.currentUser.role === 'editor' || this.currentUser.role === 'admin';
         }
     };
+    StandardComponent.prototype.isAdminRole = function () {
+        return this.hasAdminRole;
+    };
     return StandardComponent;
 }());
 
-//# sourceMappingURL=standard.component.js.map
+
 
 /***/ }),
 
@@ -1531,7 +1537,7 @@ var StandardComponent = /** @class */ (function () {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__sendpassworddialog_component__["a"]; });
 
 
-//# sourceMappingURL=index.js.map
+
 
 /***/ }),
 
@@ -1556,7 +1562,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/login/modifypassword.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form *ngIf='!success' name='form' (ngSubmit)=\"f.form.valid && modifypassword() \" #f='ngForm' novalidate class='loginform'>\n\n\n  <div [ngClass]=\"{ 'has-error': f.submitted  && !newpassword.valid && isSecurePassword() }\">\n    <md-input-container class='loginform-input'>\n      <input type='password' mdInput placeholder='newpassword' name='newpassword' [(ngModel)]=\"model.newpassword\" #newpassword='ngModel' required />\n    </md-input-container>\n    <md-icon *ngIf='isSecurePassword()' class='success-label'>security</md-icon>\n    <md-icon *ngIf='!isSecurePassword()' class='error-label'>security</md-icon>\n  </div>\n\n  <div [ngClass]=\"{ 'has-error': f.submitted }\">\n    <md-input-container class='loginform-input'>\n      <input type='password' mdInput placeholder='newpassword2' name='newpassword2' [(ngModel)]=\"model.newpassword2\" #newpassword='ngModel' required />\n    </md-input-container>\n    <md-icon *ngIf='model.newpassword2 && model.newpassword !== model.newpassword2' class='error-label-message'>block</md-icon>\n  </div>\n\n  <div>\n    <button *ngIf='canSubmit()' md-button [disabled]=\"loading\"><md-icon>check_circle</md-icon></button>\n      <md-spinner *ngIf='loading' mode='indeterminate'></md-spinner>\n  </div>\n</form>\n\n\n<div *ngIf='success' >\n  <button md-button  [routerLink]='[\"/login\"]' ><md-icon>keyboard_return</md-icon></button>\n</div>\n"
+module.exports = "<form *ngIf='!success' name='form' (ngSubmit)=\"f.form.valid && modifypassword() \" #f='ngForm' novalidate class='loginform'>\n\n\n  <div [ngClass]=\"{ 'has-error': f.submitted  && !newpassword.valid && isSecurePassword() }\">\n    <mat-input-container class='loginform-input'>\n      <input type='password' matInput placeholder='newpassword' name='newpassword' [(ngModel)]=\"model.newpassword\" #newpassword='ngModel' required />\n    </mat-input-container>\n    <mat-icon *ngIf='isSecurePassword()' class='success-label'>security</mat-icon>\n    <mat-icon *ngIf='!isSecurePassword()' class='error-label'>security</mat-icon>\n  </div>\n\n  <div [ngClass]=\"{ 'has-error': f.submitted }\">\n    <mat-input-container class='loginform-input'>\n      <input type='password' matInput placeholder='newpassword2' name='newpassword2' [(ngModel)]=\"model.newpassword2\" #newpassword='ngModel' required />\n    </mat-input-container>\n    <mat-icon *ngIf='model.newpassword2 && model.newpassword !== model.newpassword2' class='error-label-message'>block</mat-icon>\n  </div>\n\n  <div>\n    <button *ngIf='canSubmit()' mat-button [disabled]=\"loading\"><mat-icon>check_circle</mat-icon></button>\n      <mat-spinner *ngIf='loading' mode='indeterminate'></mat-spinner>\n  </div>\n</form>\n\n\n<div *ngIf='success' >\n  <button mat-button  [routerLink]='[\"/login\"]' ><mat-icon>keyboard_return</mat-icon></button>\n</div>\n"
 
 /***/ }),
 
@@ -1580,7 +1586,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var ModifyPasswordComponent = /** @class */ (function () {
+var ModifyPasswordComponent = (function () {
     function ModifyPasswordComponent(router, authenticationService, alertService) {
         this.router = router;
         this.authenticationService = authenticationService;
@@ -1630,11 +1636,11 @@ var ModifyPasswordComponent = /** @class */ (function () {
         return this.model.newpassword === this.model.newpassword2 && this.isSecurePassword();
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
         __metadata("design:type", Object)
     ], ModifyPasswordComponent.prototype, "model", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
         __metadata("design:type", Object)
     ], ModifyPasswordComponent.prototype, "userinfo", void 0);
     ModifyPasswordComponent = __decorate([
@@ -1651,14 +1657,14 @@ var ModifyPasswordComponent = /** @class */ (function () {
     return ModifyPasswordComponent;
 }());
 
-//# sourceMappingURL=modifypassword.component.js.map
+
 
 /***/ }),
 
 /***/ "../../../../../src/app/login/sendpassworddialog.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 md-dialog-title>{{'sendpassworddialog.title' | translate}}</h2>\n<md-dialog-content>{{'sendpassworddialog.warning' | translate}}</md-dialog-content>\n<md-dialog-content>{{ data }}</md-dialog-content>\n<md-dialog-actions>\n  <button md-button md-dialog-close>{{'cancel.label' | translate}}</button>\n  <!-- Can optionally provide a result for the closing dialog. -->\n  <button md-button [md-dialog-close]=\"true\">{{'validate.label' | translate}}</button>\n</md-dialog-actions>\n"
+module.exports = "<h2 mat-dialog-title>{{'sendpassworddialog.title' | translate}}</h2>\n<mat-dialog-content>{{'sendpassworddialog.warning' | translate}}</mat-dialog-content>\n<mat-dialog-content>{{ data }}</mat-dialog-content>\n<mat-dialog-actions>\n  <button mat-button mat-dialog-close>{{'cancel.label' | translate}}</button>\n  <!-- Can optionally provide a result for the closing dialog. -->\n  <button mat-button [mat-dialog-close]=\"true\">{{'validate.label' | translate}}</button>\n</mat-dialog-actions>\n"
 
 /***/ }),
 
@@ -1683,7 +1689,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 
 
-var SendPasswordDialogComponent = /** @class */ (function () {
+var SendPasswordDialogComponent = (function () {
     function SendPasswordDialogComponent(data) {
         this.data = data;
     }
@@ -1692,13 +1698,13 @@ var SendPasswordDialogComponent = /** @class */ (function () {
             moduleId: module.i,
             template: __webpack_require__("../../../../../src/app/login/sendpassworddialog.component.html"),
         }),
-        __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MD_DIALOG_DATA */])),
+        __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MAT_DIALOG_DATA */])),
         __metadata("design:paramtypes", [Object])
     ], SendPasswordDialogComponent);
     return SendPasswordDialogComponent;
 }());
 
-//# sourceMappingURL=sendpassworddialog.component.js.map
+
 
 /***/ }),
 
@@ -1712,7 +1718,7 @@ var SendPasswordDialogComponent = /** @class */ (function () {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__menubutton_component__["a"]; });
 
 
-//# sourceMappingURL=index.js.map
+
 
 /***/ }),
 
@@ -1742,7 +1748,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".topmenucontent {\n  box-shadow: 5px 5px 10px 0 #656565;\n}\n\n\n\n.top-menu-spacer {\n padding-right: 1em;\n}\n\n\n.top-menu-title {\n  font-size: 1.25em;\n}\n\n.top-menu-icon {\n  padding: 0 0.875em;\n}\n\n\n\n\n\n.slidemenu {\nbox-shadow: 5px 5px 10px 0 #656565;\npadding-top: 1em;\n}\n\n.slidemenu-hidden {\n  display: none;\n}\n\n.my-content-default {\n  margin-left: 0;\n  min-height: 50em;\n}\n\n.my-content {\n  margin-left: 0;\n  min-height: 50em;\n}\n\n\n\n@media all and (min-width: 55em) {\n  .my-content-default {\n    margin-left: 0;\n    min-height: 50em;\n  }\n\n  .my-content {\n    padding-left: 4em;\n  }\n\n  .top-menu-spacer {\n   padding-right: 5em;\n  }\n\n  .slidemenu {\n  padding-top: 5em;\n  }\n}\n", ""]);
+exports.push([module.i, ".topmenucontent {\n  box-shadow: 5px 5px 10px 0 #656565;\n}\n\n\n\n.top-menu-spacer {\n padding-right: 1em;\n}\n\n\n.top-menu-title {\n  font-size: 1.25em;\n}\n\n.top-menu-icon {\n  padding: 0 0.875em;\n}\n\n\n\n\n\n.slidemenu {\nbox-shadow: 5px 5px 10px 0 #656565;\npadding-top: 1em;\n}\n\n.my-content-default {\n  margin-left: 0;\n  min-height: 50em;\n}\n\n.my-content {\n  min-height: 20em;\n  padding: 0;\n}\n\n\n\n@media all and (min-width: 55em) {\n  .my-content-default {\n    margin-left: 0;\n    min-height: 50em;\n  }\n\n  .my-content {\n    min-height: 50em;\n    padding: 0 0.4em 0 0.4em;\n    margin-left: 4em;\n  }\n\n  .top-menu-spacer {\n   padding-right: 5em;\n  }\n\n\n}\n", ""]);
 
 // exports
 
@@ -1755,7 +1761,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/mainpage/mainpage.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-toolbar color='primary' class='topmenucontent'>\n\n  <button *ngIf='isAuthenticated() && !menuOpened' md-button (click)='sidenav.open()'><md-icon>menu</md-icon></button>\n\n  <button [routerLink]='[\"/home\"]' md-button class='top-menu-title'>Admin</button>\n  <span class='fill-remaining-space'></span>\n  <button *ngIf='isAuthenticated() || isUserExists()' md-button (click)='disconnect()' class='top-menu-icon'><md-icon alt='disconnect'>cancel</md-icon></button>\n\n\n\n</md-toolbar>\n\n<md-sidenav-container>\n\n  <!-- slide menu -->\n\n  <md-sidenav  #sidenav [mode]='menuMode' [opened]='menuOpened' [ngClass]=\"{ 'slidemenu': isConnected(), 'slidemenu-hidden': !isConnected() }\">\n    <nav *ngIf='isConnected()'>\n      <!-- if condition is only at this level. The test on sidenav causes an issue, since the object may not exists -->\n\n      <div *ngIf='menuItems'>\n        <div *ngFor='let menu of menuItems'>\n          <app-menubutton *ngIf='menuMode !== \"over\"' [item]='menu'></app-menubutton>\n          <app-menubutton *ngIf='menuMode === \"over\"' [item]='menu' (click)='sidenav.close()'></app-menubutton>\n\n        </div>\n\n        <div *ngIf='hasAdminRole && adminMenuItems'>\n          <div *ngFor='let menu of adminMenuItems'>\n            <app-menubutton *ngIf='menuMode !== \"over\"' [item]='menu'></app-menubutton>\n            <app-menubutton *ngIf='menuMode === \"over\"' [item]='menu' (click)='sidenav.close()'></app-menubutton>\n          </div>\n        </div>\n\n\n      </div>\n\n    </nav>\n  </md-sidenav>\n\n\n  <!-- container -->\n\n\n  <div [ngClass]=\"{ 'my-content': isConnected(), 'my-content-default': !isConnected() }\">\n    <app-alert-message></app-alert-message>\n\n    <!-- content -->\n    <router-outlet *ngIf='isConnected()'></router-outlet>\n    <!-- login -->\n\n    <div *ngIf='!isConnected()'>\n    <md-card class='logincontainer'>\n\n\n    <div *ngIf='!isAuthenticated() && isUserExists()' class='loginform'>\n\n      <form name='form' (ngSubmit)='f.form.valid && login()' #f='ngForm' novalidate>\n\n        <md-input-container class='loginform-input'>\n          <input type='password' mdInput placeholder='{{\"login.password\" | translate}}' name='password' [(ngModel)]='model.password' #password='ngModel' required />\n        </md-input-container>\n\n          <md-toolbar  class='loginform-input'>\n            <span class='fill-remaining-space'></span>\n          <button md-raised-button color='primary' [disabled]='loading' class='login-button'><md-icon>check_circle</md-icon></button>\n          </md-toolbar>\n          <md-toolbar  class='loginform-input'>\n            <form name='form3' (ngSubmit)='f3.form.valid && openSendPassword()' #f3='ngForm' novalidate>\n                <button md-button [disabled]='loading'>{{'sendpassworddialog.warning' | translate}}<md-icon>settings_backup_restore</md-icon></button>\n            </form>\n          </md-toolbar>\n\n      </form>\n    </div>\n\n    <!-- username / email -->\n    <div *ngIf='!isAuthenticated() && !isUserExists()' class='loginform'>\n      <form name='form2' (ngSubmit)='f2.form.valid && validateuser()' #f2='ngForm' novalidate>\n        <div [ngClass]='{ \"has-error\": f2.submitted && !username.valid }'>\n          <md-input-container class='loginform-input'>\n            <input type='text' mdInput placeholder='{{\"login.user\" | translate}}' name='username' [(ngModel)]='model.username' #username='ngModel' required />\n          </md-input-container>\n\n        </div>\n\n\n          <md-toolbar class='loginform-input'>\n            <span class='fill-remaining-space'></span>\n          <button md-raised-button  color='primary' [disabled]='loading' class='login-button'>{{ 'next.label' | translate | uppercase }}</button>\n          </md-toolbar>\n\n\n      </form>\n\n    </div>\n\n    <!-- new password -->\n    <div *ngIf='isAuthenticated() && isNewPasswordRequired()' class='loginform'>\n      <form *ngIf='!success' name='form' (ngSubmit)=\"f.form.valid && modifypassword() \" #f='ngForm' novalidate class='loginform'>\n\n\n        <div [ngClass]=\"{ 'has-error': f.submitted  && !newpassword.valid && isSecurePassword() }\">\n          <md-input-container class='loginform-input'>\n            <input type='password' mdInput placeholder='newpassword' name='newpassword' [(ngModel)]=\"model.newpassword\" #newpassword='ngModel' required />\n          </md-input-container>\n          <md-icon *ngIf='isSecurePassword()' class='success-label'>security</md-icon>\n          <md-icon *ngIf='!isSecurePassword()' class='error-label'>security</md-icon>\n        </div>\n\n        <div [ngClass]=\"{ 'has-error': f.submitted }\">\n          <md-input-container class='loginform-input'>\n            <input type='password' mdInput placeholder='newpassword2' name='newpassword2' [(ngModel)]=\"model.newpassword2\" #newpassword='ngModel' required />\n          </md-input-container>\n          <md-icon *ngIf='model.newpassword2 && model.newpassword !== model.newpassword2' class='error-label-message'>block</md-icon>\n        </div>\n\n\n        <md-toolbar  class='loginform-input'>\n          <span class='fill-remaining-space'></span>\n        <button *ngIf='canSubmit()' md-raised-button color='primary' [disabled]='loading' class='login-button'><md-icon>check_circle</md-icon></button>\n        </md-toolbar>\n\n      </form>\n    </div>\n\n    <div class='loginform'>\n      <md-spinner *ngIf='loading' mode='indeterminate'></md-spinner>\n    </div>\n  </md-card> <!-- login container -->\n    </div>\n  </div>\n</md-sidenav-container>\n"
+module.exports = "<mat-toolbar color='primary' class='topmenucontent'>\n  <button mat-button  *ngIf='menuMode === \"over\" && isAuthenticated()' (click)='sidenav.toggle()'><mat-icon>menu</mat-icon></button>\n\n  <button [routerLink]='[\"/home\"]' mat-button class='top-menu-title'>Admin</button>\n  <span class='fill-remaining-space'></span>\n  <button *ngIf='isAuthenticated() || isUserExists()' mat-button (click)='disconnect()' class='top-menu-icon'><mat-icon alt='disconnect'>cancel</mat-icon></button>\n\n\n\n</mat-toolbar>\n\n<mat-sidenav-container>\n\n  <!-- slide menu -->\n\n  <mat-sidenav  #sidenav [mode]='menuMode' [opened]='false' class='slidemenu'>\n\n\n    <nav>\n      <!-- if condition is only at this level. The test on sidenav causes an issue, since the object may not exists -->\n      <div *ngIf='menuItems && isConnected()'>\n        <div *ngFor='let menu of menuItems'>\n          <app-menubutton *ngIf='menuMode !== \"over\"' [item]='menu'></app-menubutton>\n          <app-menubutton *ngIf='menuMode === \"over\"' [item]='menu' (click)='sidenav.close()'></app-menubutton>\n\n        </div>\n\n        <div *ngIf='hasAdminRole && adminMenuItems'>\n          <div *ngFor='let menu of adminMenuItems'>\n            <app-menubutton *ngIf='menuMode !== \"over\"' [item]='menu'></app-menubutton>\n            <app-menubutton *ngIf='menuMode === \"over\"' [item]='menu' (click)='sidenav.close()'></app-menubutton>\n          </div>\n        </div>\n\n\n      </div>\n\n      <!--\n      Issue : sidenav might overlap content  https://github.com/angular/material2/issues/7046\n      workaround : display something :-)\n     -->\n      <div>\n        <app-menubutton [item]='home'></app-menubutton>\n      </div>\n\n    </nav>\n  </mat-sidenav>\n\n\n  <!-- container -->\n\n\n  <div [ngClass]=\"{ 'my-content': isConnected(), 'my-content-default': !isConnected() }\">\n    <div (myEvent)=\"sidenav.open()\">\n\n    </div>\n    <app-alert-message></app-alert-message>\n\n    <!-- content -->\n    <router-outlet *ngIf='isConnected()'></router-outlet>\n    <!-- login -->\n\n    <div *ngIf='!isConnected()'>\n    <mat-card class='logincontainer'>\n\n\n    <div *ngIf='!isAuthenticated() && isUserExists()' class='loginform'>\n\n      <form name='form' (ngSubmit)='f.form.valid && login()' #f='ngForm' novalidate>\n\n        <mat-input-container class='loginform-input'>\n          <input type='password' matInput placeholder='{{\"login.password\" | translate}}' name='password' [(ngModel)]='model.password' #password='ngModel' required />\n        </mat-input-container>\n\n          <mat-toolbar  class='loginform-input'>\n            <span class='fill-remaining-space'></span>\n          <button mat-raised-button color='primary' [disabled]='loading' class='login-button'><mat-icon>check_circle</mat-icon></button>\n          </mat-toolbar>\n          <mat-toolbar  class='loginform-input'>\n            <form name='form3' (ngSubmit)='f3.form.valid && openSendPassword()' #f3='ngForm' novalidate>\n                <button mat-button [disabled]='loading'>{{'sendpassworddialog.warning' | translate}}<mat-icon>settings_backup_restore</mat-icon></button>\n            </form>\n          </mat-toolbar>\n\n      </form>\n    </div>\n\n    <!-- username / email -->\n    <div *ngIf='!isAuthenticated() && !isUserExists()' class='loginform'>\n      <form name='form2' (ngSubmit)='f2.form.valid && validateuser()' #f2='ngForm' novalidate>\n        <div [ngClass]='{ \"has-error\": f2.submitted && !username.valid }'>\n          <mat-input-container class='loginform-input'>\n            <input type='text' matInput placeholder='{{\"login.user\" | translate}}' name='username' [(ngModel)]='model.username' #username='ngModel' required />\n          </mat-input-container>\n\n        </div>\n\n\n          <mat-toolbar class='loginform-input'>\n            <span class='fill-remaining-space'></span>\n          <button mat-raised-button  color='primary' [disabled]='loading' class='login-button'>{{ 'next.label' | translate | uppercase }}</button>\n          </mat-toolbar>\n\n\n      </form>\n\n    </div>\n\n    <!-- new password -->\n    <div *ngIf='isAuthenticated() && isNewPasswordRequired()' class='loginform'>\n      <form *ngIf='!success' name='form' (ngSubmit)=\"f.form.valid && modifypassword() \" #f='ngForm' novalidate class='loginform'>\n\n\n        <div [ngClass]=\"{ 'has-error': f.submitted  && !newpassword.valid && isSecurePassword() }\">\n          <mat-input-container class='loginform-input'>\n            <input type='password' matInput placeholder='newpassword' name='newpassword' [(ngModel)]=\"model.newpassword\" #newpassword='ngModel' required />\n          </mat-input-container>\n          <mat-icon *ngIf='isSecurePassword()' class='success-label'>security</mat-icon>\n          <mat-icon *ngIf='!isSecurePassword()' class='error-label'>security</mat-icon>\n        </div>\n\n        <div [ngClass]=\"{ 'has-error': f.submitted }\">\n          <mat-input-container class='loginform-input'>\n            <input type='password' matInput placeholder='newpassword2' name='newpassword2' [(ngModel)]=\"model.newpassword2\" #newpassword='ngModel' required />\n          </mat-input-container>\n          <mat-icon *ngIf='model.newpassword2 && model.newpassword !== model.newpassword2' class='error-label-message'>block</mat-icon>\n        </div>\n\n\n        <mat-toolbar  class='loginform-input'>\n          <span class='fill-remaining-space'></span>\n        <button *ngIf='canSubmit()' mat-raised-button color='primary' [disabled]='loading' class='login-button'><mat-icon>check_circle</mat-icon></button>\n        </mat-toolbar>\n\n      </form>\n    </div>\n\n    <div class='loginform'>\n      <mat-spinner *ngIf='loading' mode='indeterminate'></mat-spinner>\n    </div>\n  </mat-card> <!-- login container -->\n    </div>\n  </div>\n</mat-sidenav-container>\n"
 
 /***/ }),
 
@@ -1771,6 +1777,7 @@ module.exports = "<md-toolbar color='primary' class='topmenucontent'>\n\n  <butt
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__menuitem__ = __webpack_require__("../../../../../src/app/mainpage/menuitem.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_app_login__ = __webpack_require__("../../../../../src/app/login/index.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_app_shared__ = __webpack_require__("../../../../../src/app/shared/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1787,26 +1794,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var MainPageComponent = /** @class */ (function () {
-    function MainPageComponent(contentService, authenticationService, locale, alertService, dialog, router, route) {
+
+var MainPageComponent = (function () {
+    function MainPageComponent(contentService, authenticationService, locale, alertService, windowService, dialog, router, route, cdr) {
         this.contentService = contentService;
         this.authenticationService = authenticationService;
         this.locale = locale;
         this.alertService = alertService;
+        this.windowService = windowService;
         this.dialog = dialog;
         this.router = router;
         this.route = route;
+        this.cdr = cdr;
         /*
-    
         https://material.angular.io/components/component/sidenav
         */
         this.menuMode = 'side';
-        /*
-        opened
-        https://www.npmjs.com/package/@angular2-material/sidenav
-        */
-        this.menuOpened = true;
-        this.mobileLayout = true;
+        // mobileLayout = false;
         this.hasRole = false;
         this.hasAdminRole = false;
         this.menuItems = null;
@@ -1816,12 +1820,23 @@ var MainPageComponent = /** @class */ (function () {
         this.userinfo = {};
         this.success = false;
         this.debug = false;
+        this.debug = __WEBPACK_IMPORTED_MODULE_7_environments_environment__["a" /* environment */].debug;
+        if (this.debug) {
+            console.log('initialize ...');
+        }
     }
     MainPageComponent.prototype.ngOnInit = function () {
+        if (this.debug) {
+            console.log('ngOnInit ...');
+        }
         this.lang = this.locale.getLang();
+        this.initLayout();
         this.initUser();
         if (this.isConnected()) {
-            this.initUi();
+            if (this.debug) {
+                console.log('already connected ...');
+            }
+            this.loadMenu();
         }
         else {
             if (this.debug) {
@@ -1829,23 +1844,34 @@ var MainPageComponent = /** @class */ (function () {
             }
             this.authenticationService.logout();
         }
+        this.home = new __WEBPACK_IMPORTED_MODULE_4__menuitem__["a" /* MenuItem */]();
+        this.home.url = __WEBPACK_IMPORTED_MODULE_7_environments_environment__["a" /* environment */].website;
+        this.home.label = 'site.label';
     };
-    MainPageComponent.prototype.initUi = function () {
-        this.initMenuLayout();
-        this.initMenu();
+    MainPageComponent.prototype.ngAfterViewInit = function () {
+        // tricky: if toggle() is called with init, it doesn't work
+        if (this.menuMode === 'side') {
+            if (this.debug) {
+                console.log('toggle menu ...');
+            }
+            this.sidenav.toggle();
+        }
+        this.cdr.detectChanges();
     };
-    MainPageComponent.prototype.initMenuLayout = function () {
-        // const layout = this.conf.getLayout();
-        var layout = this.getLayout();
-        this.mobileLayout = layout !== 'desktop';
-        switch (layout) {
-            case 'desktop':
-                this.menuMode = 'side';
-                this.menuOpened = true;
-                break;
-            default:
-                this.menuMode = 'over';
-                this.menuOpened = false;
+    MainPageComponent.prototype.initLayout = function () {
+        var layoutDebugMsg = '';
+        if (this.debug) {
+            layoutDebugMsg += 'default menuMode:' + this.menuMode + 'sidenav.opened:' + this.sidenav.opened;
+        }
+        this.menuMode = 'side';
+        if (this.windowService.isMobile()) {
+            this.menuMode = 'over';
+        }
+        if (this.debug) {
+            layoutDebugMsg += '=> init menuMode:' + this.menuMode + 'sidenav.opened:' + this.sidenav.opened;
+        }
+        if (this.debug) {
+            console.log(layoutDebugMsg);
         }
     };
     MainPageComponent.prototype.initUser = function () {
@@ -1862,7 +1888,7 @@ var MainPageComponent = /** @class */ (function () {
             this.updatePublicInfoFromLocalStorage(this.currentUser, this.userinfo);
             this.hasAdminRole = this.currentUser.role === 'admin';
             if (this.debug) {
-                console.log('currentUser ...' + this.currentUser.role + ' ' + this.currentUser.role);
+                console.log('currentUser ...' + this.currentUser.role + '' + this.currentUser.role);
             }
             this.hasRole = this.currentUser.role === 'editor' || this.currentUser.role === 'admin';
             if (this.debug) {
@@ -1877,15 +1903,18 @@ var MainPageComponent = /** @class */ (function () {
             }
         }
     };
-    MainPageComponent.prototype.initMenu = function () {
+    MainPageComponent.prototype.loadMenu = function () {
         var _this = this;
+        if (this.debug) {
+            console.log('loadMenu ... ');
+        }
         this.menuItems = [];
         this.adminMenuItems = [];
         //
         // About roles : this just a frontend features. Roles must be tested in the API.
         //
         if (this.debug) {
-            console.log('initMenu ...' + this.currentUser.role + ' ' + this.hasAdminRole);
+            console.log('loadMenu ...' + this.currentUser.role + '' + this.hasAdminRole);
         }
         if (this.authenticationService.isAuthenticated() && this.hasRole) {
             var recordTypes_1 = null;
@@ -1915,33 +1944,21 @@ var MainPageComponent = /** @class */ (function () {
                     _this.adminMenuItems.push(userlist);
                 }
                 if (_this.debug) {
-                    console.log('menu complete :' + _this.menuItems.length);
+                    console.log('loadMenu complete :' + _this.menuItems.length);
                 }
             }, function (error) {
-                console.error('init menu failure');
+                console.error('loadMenu menu failure');
                 _this.currentUser = _this.authenticationService.resetToken();
                 if (_this.debug) {
-                    console.log('isConnected' + _this.isConnected());
-                    console.log('isAuthenticated' + _this.authenticationService.isAuthenticated());
-                    console.log('isUserExists' + _this.isUserExists());
+                    console.log('loadMenu isConnected' + _this.isConnected());
                 }
-            }, function () { return console.log('init menu success'); });
+            }, function () { return console.log('loadMenu success'); });
         }
         else {
             if (this.debug) {
                 console.log('guest ');
             }
         }
-    };
-    MainPageComponent.prototype.getLayout = function () {
-        var layout = 'desktop';
-        if (window.matchMedia('(min-width: 55em)').matches) {
-            layout = 'desktop';
-        }
-        else {
-            layout = 'mobile';
-        }
-        return layout;
     };
     MainPageComponent.prototype.isAuthenticated = function () {
         return this.authenticationService.isAuthenticated();
@@ -1981,7 +1998,7 @@ var MainPageComponent = /** @class */ (function () {
             _this.initUser();
             if (_this.authenticationService.isAuthenticated()) {
                 _this.alertService.success('authenticated');
-                _this.initUi();
+                _this.loadMenu();
             }
             else {
                 _this.alertService.error('empty user');
@@ -2116,6 +2133,10 @@ var MainPageComponent = /** @class */ (function () {
     MainPageComponent.prototype.canSubmit = function () {
         return this.model.newpassword === this.model.newpassword2 && this.isSecurePassword();
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])('sidenav'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_material__["n" /* MatSidenav */])
+    ], MainPageComponent.prototype, "sidenav", void 0);
     MainPageComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             moduleId: module.i,
@@ -2126,13 +2147,14 @@ var MainPageComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_app_services__["b" /* ContentService */],
             __WEBPACK_IMPORTED_MODULE_6_app_shared__["d" /* LoginService */],
             __WEBPACK_IMPORTED_MODULE_6_app_shared__["c" /* LocaleService */], __WEBPACK_IMPORTED_MODULE_6_app_shared__["a" /* AlertService */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_material__["e" /* MdDialog */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]])
+            __WEBPACK_IMPORTED_MODULE_6_app_shared__["g" /* WindowService */], __WEBPACK_IMPORTED_MODULE_2__angular_material__["d" /* MatDialog */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* ChangeDetectorRef */]])
     ], MainPageComponent);
     return MainPageComponent;
 }());
 
-//# sourceMappingURL=mainpage.component.js.map
+
 
 /***/ }),
 
@@ -2144,7 +2166,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".menubutton {\n  font-weight: 500;\n  margin-top: 0.2em;\n  width: 100%;\n}\n", ""]);
 
 // exports
 
@@ -2157,7 +2179,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/mainpage/menubutton.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<a [routerLink]='item.routerLink' routerLinkActive='active' md-button color='primary'>\n<i *ngIf='item.icon'  class='material-icons slidemenu-button-icon' [innerHTML]='item.icon' ></i>\n<span  class='adminslidemenu-button-text' [innerHTML]='item.title'></span>\n</a>\n"
+module.exports = "\n<a *ngIf='item.routerLink' mat-raised-button [routerLink]='item.routerLink' routerLinkActive='active'  color='primary' class='menubutton'>\n<i *ngIf='item.icon'  class='material-icons slidemenu-button-icon' [innerHTML]='item.icon' ></i>\n<span *ngIf='item.label'  [innerHTML]='item.label | translate'></span>\n<span *ngIf='item.title'  [innerHTML]='item.title'></span>\n</a>\n\n\n<a *ngIf='item.url' mat-raised-button  [href]='item.url' color='primary' target='_blank' class='menubutton'>\n<i *ngIf='item.icon'  class='material-icons slidemenu-button-icon' [innerHTML]='item.icon' ></i>\n<span *ngIf='item.label'  [innerHTML]='item.label | translate'></span>\n<span *ngIf='item.title'  [innerHTML]='item.title'></span>\n</a>\n"
 
 /***/ }),
 
@@ -2181,7 +2203,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var MenubuttonComponent = /** @class */ (function () {
+var MenubuttonComponent = (function () {
     function MenubuttonComponent(router) {
         this.router = router;
     }
@@ -2191,7 +2213,7 @@ var MenubuttonComponent = /** @class */ (function () {
         this.router.navigate([this.item.routerLink]);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__menuitem__["a" /* MenuItem */])
     ], MenubuttonComponent.prototype, "item", void 0);
     MenubuttonComponent = __decorate([
@@ -2206,7 +2228,7 @@ var MenubuttonComponent = /** @class */ (function () {
     return MenubuttonComponent;
 }());
 
-//# sourceMappingURL=menubutton.component.js.map
+
 
 /***/ }),
 
@@ -2215,14 +2237,17 @@ var MenubuttonComponent = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuItem; });
-var MenuItem = /** @class */ (function () {
+/**
+* init with a routerLink for a local UI button, or with a URL for an external link
+*/
+var MenuItem = (function () {
     function MenuItem() {
         this.state = 'inactive';
     }
     return MenuItem;
 }());
 
-//# sourceMappingURL=menuitem.js.map
+
 
 /***/ }),
 
@@ -2233,6 +2258,7 @@ var MenuItem = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyMaterialModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material_button_toggle__ = __webpack_require__("../../../material/esm5/button-toggle.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2241,30 +2267,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 
 
-var MyMaterialModule = /** @class */ (function () {
+
+// NoConflictStyleCompatibilityMode https://github.com/angular/material2/blob/master/CHANGELOG.md#deprecation-of-md-prefix
+var MyMaterialModule = (function () {
     function MyMaterialModule() {
     }
     MyMaterialModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
-            imports: [__WEBPACK_IMPORTED_MODULE_1__angular_material__["l" /* MdSidenavModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["c" /* MdButtonModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["f" /* MdDialogModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MdListModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["h" /* MdInputModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["k" /* MdSelectModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["g" /* MdIconModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["j" /* MdProgressSpinnerModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["d" /* MdCardModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["n" /* MdTooltipModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["m" /* MdToolbarModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["b" /* MatExpansionModule */]],
-            exports: [__WEBPACK_IMPORTED_MODULE_1__angular_material__["l" /* MdSidenavModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["c" /* MdButtonModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["f" /* MdDialogModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MdListModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["h" /* MdInputModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["k" /* MdSelectModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["g" /* MdIconModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["j" /* MdProgressSpinnerModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["d" /* MdCardModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["n" /* MdTooltipModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["m" /* MdToolbarModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["b" /* MatExpansionModule */]],
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
+            imports: [__WEBPACK_IMPORTED_MODULE_1__angular_material__["o" /* MatSidenavModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["b" /* MatButtonModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["e" /* MatDialogModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MatListModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["h" /* MatInputModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["m" /* MatSelectModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["g" /* MatIconModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["l" /* MatProgressSpinnerModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["k" /* MatProgressBarModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["c" /* MatCardModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["q" /* MatTooltipModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatToolbarModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["f" /* MatExpansionModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["j" /* MatMenuModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_material_button_toggle__["a" /* MatButtonToggleModule */]],
+            exports: [__WEBPACK_IMPORTED_MODULE_1__angular_material__["o" /* MatSidenavModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["b" /* MatButtonModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["e" /* MatDialogModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MatListModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["h" /* MatInputModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["m" /* MatSelectModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["g" /* MatIconModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["l" /* MatProgressSpinnerModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["k" /* MatProgressBarModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["c" /* MatCardModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["q" /* MatTooltipModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatToolbarModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["f" /* MatExpansionModule */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["j" /* MatMenuModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_material_button_toggle__["a" /* MatButtonToggleModule */]],
         })
     ], MyMaterialModule);
     return MyMaterialModule;
 }());
 
-//# sourceMappingURL=mymaterial.module.js.map
+
 
 /***/ }),
 
 /***/ "../../../../../src/app/record/deletedialog.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 md-dialog-title>{{'deletedialog.title' | translate}}</h2>\n<md-dialog-content>{{'delete.warning.1' | translate}}</md-dialog-content>\n<md-dialog-content>{{ data }}</md-dialog-content>\n<md-dialog-content>{{'delete.warning.2' | translate}}</md-dialog-content>\n<md-dialog-actions>\n  <button md-button md-dialog-close>{{'cancel.label' | translate}}</button>\n  <!-- Can optionally provide a result for the closing dialog. -->\n  <button md-button [md-dialog-close]=\"true\">{{'delete.label' | translate}}</button>\n</md-dialog-actions>\n"
+module.exports = "<h2 mat-dialog-title>{{'deletedialog.title' | translate}}</h2>\n<mat-dialog-content>{{'delete.warning.1' | translate}}</mat-dialog-content>\n<mat-dialog-content>{{ data }}</mat-dialog-content>\n<mat-dialog-content>{{'delete.warning.2' | translate}}</mat-dialog-content>\n<mat-dialog-actions>\n  <button mat-button mat-dialog-close>{{'cancel.label' | translate}}</button>\n  <!-- Can optionally provide a result for the closing dialog. -->\n  <button mat-button [mat-dialog-close]=\"true\">{{'delete.label' | translate}}</button>\n</mat-dialog-actions>\n"
 
 /***/ }),
 
@@ -2289,7 +2319,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 
 
-var DeleteDialogComponent = /** @class */ (function () {
+var DeleteDialogComponent = (function () {
     function DeleteDialogComponent(data) {
         this.data = data;
     }
@@ -2299,13 +2329,13 @@ var DeleteDialogComponent = /** @class */ (function () {
             selector: 'app-confirmdialog',
             template: __webpack_require__("../../../../../src/app/record/deletedialog.component.html"),
         }),
-        __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MD_DIALOG_DATA */])),
+        __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MAT_DIALOG_DATA */])),
         __metadata("design:paramtypes", [Object])
     ], DeleteDialogComponent);
     return DeleteDialogComponent;
 }());
 
-//# sourceMappingURL=deletedialog.component.js.map
+
 
 /***/ }),
 
@@ -2317,7 +2347,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".full-width-input {\n  width: 100%;\n\n}\n\n.half-width-input {\n  width: 50%;\n\n}\n\n\n.full-width-textarea {\n  width: 100%;\n}\n\n.input-group {\n  padding-bottom: 0.2em;\n}\n\ninput:-moz-read-only {\n    background-color: #ddd;\n}\n\ninput:read-only {\n    background-color: #ddd;\n}\n\n\n.success-label-message {\n  font-size: 0.81em;\n  color: #777777;\n}\n\n.error-label-message {\n  font-size: 0.81em;\n  color: red;\n}\n\n/*\n* panel button on the left\n*/\n.panel-button {\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n}\n", ""]);
+exports.push([module.i, ".full-width-input {\n  width: 100%;\n\n}\n\n.half-width-input {\n  width: 50%;\n\n}\n\n\n.full-width-textarea {\n  width: 100%;\n}\n\n.input-group {\n  padding-bottom: 0.2em;\n}\n\n\n\n.success-label-message {\n  font-size: 0.81em;\n  color: #777777;\n}\n\n.error-label-message {\n  font-size: 0.81em;\n  color: red;\n}\n\n/*\n* panel button on the left\n*/\n.panel-button {\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n}\n", ""]);
 
 // exports
 
@@ -2330,7 +2360,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/record/editlinks.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<md-expansion-panel>\n  <md-expansion-panel-header>\n    <md-panel-title>\n        <span *ngIf='attachments'>{{title | translate}} : {{attachments.length}}</span>\n    </md-panel-title>\n    <md-panel-description>\n      {{ 'record.edit.attachments.subtitle' | translate }}\n    </md-panel-description>\n  </md-expansion-panel-header>\n\n\n\n<div>\n\n<div *ngFor='let attachment of attachments; let i=index' class='input-group'>\n\n  <md-card>\n    <md-input-container class='full-width-input'>\n      <input mdInput placeholder='{{\"field.label.attachment.title\" | translate}}' [(ngModel)]='attachments[i].title' type='text'>\n    </md-input-container>\n\n    <md-input-container class='full-width-input'>\n      <input mdInput placeholder='{{\"field.label.attachment.url\" | translate}}' [(ngModel)]='attachments[i].url' type='text'>\n    </md-input-container>\n\n    <md-input-container class='full-width-input'>\n      <input mdInput placeholder='{{\"field.label.attachment.description\" | translate}}' [(ngModel)]='attachments[i].description' type='text'>\n    </md-input-container>\n    <md-toolbar>\n      <span class='fill-remaining-space'></span>\n      <button (click)='moveAttachmentUp(i)'  md-raised-button color='primary'  class='panel-button'><md-icon>arrow_upward</md-icon></button>\n      <span class='toolbar-spacer'></span>\n      <button (click)='moveAttachmentDown(i)'  md-raised-button color='primary'  class='panel-button'><md-icon>arrow_downward</md-icon></button>\n      <span class='toolbar-spacer'></span>\n      <span class='toolbar-spacer'></span>\n      <button (click)='deleteAttachment(i)'  md-raised-button color='primary'  class='panel-button'><md-icon>delete_forever</md-icon></button>\n      <span class='toolbar-spacer'></span>\n      <button *ngIf='adminrole' (click)='download(i)'  md-raised-button color='primary' class='panel-button' ><md-icon>backup</md-icon></button>\n\n    </md-toolbar>\n  </md-card>\n\n</div>\n\n<md-action-row>\n  <button md-raised-button color='primary' (click)='addAttachmentBottom()' mdTooltip='{{\"record.edit.addattachment\" | translate}}' class='panel-button'><md-icon>insert_link</md-icon></button>\n  <md-spinner *ngIf='loading' mode='indeterminate'></md-spinner>\n  <div *ngIf='responsemessage && responsemessage.error' class='error-label-message'>\n    <md-icon>cloud_off</md-icon>  {{responsemessage.error}}\n  </div>\n  <div *ngIf='responsemessage && !responsemessage.error' class='success-label-message'>\n    <md-icon >cloud_done</md-icon>\n  </div>\n</md-action-row>\n</div>\n\n\n</md-expansion-panel>\n"
+module.exports = "\n<mat-expansion-panel>\n  <mat-expansion-panel-header>\n    <mat-panel-title>\n        <span *ngIf='attachments'>{{title | translate}} : {{attachments.length}}</span>\n    </mat-panel-title>\n    <mat-panel-description>\n      {{ 'record.edit.attachments.subtitle' | translate }}\n    </mat-panel-description>\n  </mat-expansion-panel-header>\n\n\n\n<div>\n  <mat-action-row>\n    <button mat-raised-button color='primary' (click)='addAttachmentBottom()' matTooltip='{{\"record.edit.addattachment\" | translate}}' class='panel-button'><mat-icon>insert_link</mat-icon></button>\n    <mat-spinner *ngIf='loading' mode='indeterminate'></mat-spinner>\n    <div *ngIf='responsemessage && responsemessage.error' class='error-label-message'>\n      <mat-icon>cloud_off</mat-icon>  {{responsemessage.error}}\n    </div>\n    <div *ngIf='responsemessage && !responsemessage.error' class='success-label-message'>\n      <mat-icon >cloud_done</mat-icon>\n    </div>\n  </mat-action-row>\n\n<div *ngFor='let attachment of attachments; let i=index' class='input-group'>\n  <app-link [type]='type' [current]='current' [attachments]='attachments' [index]='i'></app-link>\n</div>\n\n\n</div>\n\n\n</mat-expansion-panel>\n"
 
 /***/ }),
 
@@ -2356,7 +2386,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var EditLinksComponent = /** @class */ (function () {
+var EditLinksComponent = (function () {
+    // getAttachments()
+    // upload
+    // refresh()
+    // getResponseMessage()
     function EditLinksComponent(uploadService, dialog) {
         this.uploadService = uploadService;
         this.dialog = dialog;
@@ -2372,7 +2406,6 @@ var EditLinksComponent = /** @class */ (function () {
          * object data
          */
         this.current = null;
-        this.adminrole = false;
         this.loading = false;
     }
     EditLinksComponent.prototype.ngOnInit = function () {
@@ -2407,57 +2440,12 @@ var EditLinksComponent = /** @class */ (function () {
         array.splice(new_index, 0, array.splice(old_index, 1)[0]);
         return array;
     };
-    /**
-    * move an attachment upward
-    */
-    EditLinksComponent.prototype.moveAttachmentUp = function (index) {
-        if (index > -1) {
-            this.move(this.attachments, index, index - 1);
-        }
-    };
-    /**
-    * move an attachment downward
-    */
-    EditLinksComponent.prototype.moveAttachmentDown = function (index) {
-        var newPosition = index + 1;
-        if (index > -1 && newPosition < this.attachments.length) {
-            this.move(this.attachments, index, newPosition);
-        }
-    };
     EditLinksComponent.prototype.addAttachmentBottom = function () {
         this.attachments.push(this.getDefaultAttachment());
     };
     EditLinksComponent.prototype.getDefaultAttachment = function () {
         // TODO : create a attachment_metadata.json
         return JSON.parse('{"url":"", "title":""}');
-    };
-    EditLinksComponent.prototype.deleteAttachment = function (index) {
-        if (index > -1) {
-            this.attachments.splice(index, 1);
-        }
-    };
-    EditLinksComponent.prototype.download = function (index) {
-        var _this = this;
-        this.responsemessage = {};
-        var files = [];
-        files.push(this.attachments[index]);
-        console.log('files ' + files);
-        this.loading = true;
-        this.uploadService.sync(this.type, this.current.id, files)
-            .subscribe(function (mediadata) {
-            console.log('result ' + JSON.stringify(mediadata));
-            mediadata.forEach(function (f) {
-                console.log('adding ' + f.title);
-                _this.current.media.push(f);
-            });
-        }, function (error) {
-            _this.responsemessage.error = error;
-            console.error('post' + error);
-            _this.loading = false;
-        }, function () {
-            console.log('sync complete');
-            _this.loading = false;
-        });
     };
     EditLinksComponent.prototype.openDialog = function (msg) {
         this.dialog.open(__WEBPACK_IMPORTED_MODULE_2__errordialog_component__["a" /* ErrorDialogComponent */], {
@@ -2471,25 +2459,21 @@ var EditLinksComponent = /** @class */ (function () {
         return this.responsemessage;
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
         __metadata("design:type", Object)
     ], EditLinksComponent.prototype, "title", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
         __metadata("design:type", String)
     ], EditLinksComponent.prototype, "type", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
         __metadata("design:type", Object)
     ], EditLinksComponent.prototype, "current", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
         __metadata("design:type", Array)
     ], EditLinksComponent.prototype, "attachments", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
-        __metadata("design:type", Object)
-    ], EditLinksComponent.prototype, "adminrole", void 0);
     EditLinksComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             moduleId: module.i,
@@ -2497,12 +2481,12 @@ var EditLinksComponent = /** @class */ (function () {
             template: __webpack_require__("../../../../../src/app/record/editlinks.component.html"),
             styles: [__webpack_require__("../../../../../src/app/record/editlinks.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_app_services__["c" /* UploadService */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["e" /* MdDialog */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_app_services__["c" /* UploadService */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["d" /* MatDialog */]])
     ], EditLinksComponent);
     return EditLinksComponent;
 }());
 
-//# sourceMappingURL=editlinks.component.js.map
+
 
 /***/ }),
 
@@ -2514,7 +2498,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".full-width-input {\n  width: 100%;\n\n}\n\n.half-width-input {\n  width: 50%;\n\n}\n\n\n.full-width-textarea {\n  width: 100%;\n}\n\n.input-group {\n  padding-bottom: 0.2em;\n}\n\ninput:-moz-read-only {\n    background-color: #ddd;\n}\n\ninput:read-only {\n    background-color: #ddd;\n}\n", ""]);
+exports.push([module.i, ".full-width-input {\n  width: 100%;\n\n}\n\n.half-width-input {\n  width: 50%;\n\n}\n\n\n.full-width-textarea {\n  width: 100%;\n}\n\n.input-group {\n  padding-bottom: 0.2em;\n}\n", ""]);
 
 // exports
 
@@ -2527,7 +2511,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/record/editmedia.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<md-expansion-panel>\n  <md-expansion-panel-header>\n    <md-panel-title>\n      {{'record.edit.media' | translate}} : {{getAttachments().length}}\n    </md-panel-title>\n    <md-panel-description>\n      {{ 'record.edit.media.subtitle' | translate }}\n    </md-panel-description>\n  </md-expansion-panel-header>\n\n\n\n  <div>\n\n\n  <div *ngFor='let item of getAttachments(); let i=index' class='input-group'>\n\n\n    <md-card>\n      <md-input-container class='full-width-input'>\n        <input mdInput placeholder='{{\"field.label.attachment.title\" | translate}}' [(ngModel)]='getAttachments()[i].title' type='text'>\n      </md-input-container>\n\n      <md-input-container class='full-width-input'>\n        <input readonly mdInput placeholder='{{\"field.label.attachment.url\" | translate}}' [(ngModel)]='getAttachments()[i].url' type='text'>\n      </md-input-container>\n\n      <md-input-container class='half-width-input'>\n        <input readonly mdInput placeholder='{{\"field.label.attachment.mimetype\" | translate}}' [(ngModel)]='getAttachments()[i].mimetype' type='text'>\n      </md-input-container>\n\n      <md-input-container class='half-width-input'>\n        <input readonly mdInput placeholder='{{\"field.label.attachment.size\" | translate}}' [(ngModel)]='getAttachments()[i].size' type='text'>\n      </md-input-container>\n\n      <md-input-container class='full-width-input'>\n        <input mdInput placeholder='{{\"field.label.attachment.description\" | translate}}' [(ngModel)]='getAttachments()[i].description' type='text'>\n      </md-input-container>\n      <md-toolbar>\n      <span class='fill-remaining-space'></span>\n      <button (click)='moveAttachmentUp(i)'  md-raised-button color='primary' ><md-icon>arrow_upward</md-icon></button>\n      <span class='toolbar-spacer'></span>\n      <button (click)='moveAttachmentDown(i)'  md-raised-button color='primary' ><md-icon>arrow_downward</md-icon></button>\n      <span class='toolbar-spacer'></span>\n      <button (click)='deleteMedia(i)'  md-raised-button color='primary' ><md-icon>delete_forever</md-icon></button>\n      </md-toolbar>\n    </md-card>\n\n  </div>\n  <!-- ngFor -->\n\n\n  <md-action-row>\n    <input type='file' #file (change)='upload(file.files)' multiple='multiple' />\n    <button  md-raised-button color='primary' (click)='refresh()' ><md-icon>autorenew</md-icon></button>\n\n    <md-spinner *ngIf='isLoading()' mode='indeterminate'></md-spinner>\n    <div *ngIf='getResponseMessage() && getResponseMessage().error' class='error-label-message'>\n      <md-icon>cloud_off</md-icon>  {{getResponseMessage().error}}\n    </div>\n    <div *ngIf='getResponseMessage() && !getResponseMessage().error' class='success-label-message'>\n      <md-icon>cloud_done</md-icon>\n    </div>\n  </md-action-row>\n  </div>\n</md-expansion-panel>\n"
+module.exports = "\n\n<mat-expansion-panel>\n  <mat-expansion-panel-header>\n    <mat-panel-title>\n      {{'record.edit.media' | translate}} : {{getAttachments().length}}\n    </mat-panel-title>\n    <mat-panel-description>\n      {{ 'record.edit.media.subtitle' | translate }}\n    </mat-panel-description>\n  </mat-expansion-panel-header>\n\n\n\n  <div>\n    <mat-progress-bar *ngIf='isLoading()' mode=\"indeterminate\"></mat-progress-bar>\n    <mat-action-row>\n      <input type='file' #file (change)='upload(file.files)' multiple='multiple' />\n    </mat-action-row>\n    <mat-action-row>\n      <button  mat-raised-button color='primary' (click)='refresh()' ><mat-icon>autorenew</mat-icon></button>\n      <button  mat-raised-button color='primary' (click)='createThumbnails()' ><mat-icon>photo_size_select_small</mat-icon></button>\n\n      <div *ngIf='getResponseMessage() && getResponseMessage().error' class='error-label-message'>\n        <mat-icon>cloud_off</mat-icon>  {{getResponseMessage().error}}\n      </div>\n      <div *ngIf='getResponseMessage() && !getResponseMessage().error' class='success-label-message'>\n        <mat-icon>cloud_done</mat-icon>\n      </div>\n    </mat-action-row>\n\n  <div *ngFor='let item of getAttachments(); let i=index' class='input-group'>\n\n    <app-media [type]='type' [current]='current' [attachments]='getAttachments()' [index]='i'></app-media>\n\n\n  </div>\n  <!-- ngFor -->\n\n\n\n  </div>\n</mat-expansion-panel>\n"
 
 /***/ }),
 
@@ -2556,34 +2540,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 
 
-var EditMediaComponent = /** @class */ (function (_super) {
+var EditMediaComponent = (function (_super) {
     __extends(EditMediaComponent, _super);
     function EditMediaComponent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    EditMediaComponent.prototype.deleteMedia = function (index) {
-        var _this = this;
-        console.log('deleteMedia ' + index + '/' + this.attachments.length);
-        this.responsemessage = {};
-        var files = [];
-        files.push(this.attachments[index]);
-        console.log('deleteMedia ' + JSON.stringify(files));
-        this.loading = true;
-        this.uploadService.delete(this.type, this.current.id, files)
-            .subscribe(function (mediadata) {
-            console.log('result ' + JSON.stringify(mediadata));
-            if (index > -1) {
-                _this.attachments.splice(index, 1);
-            }
-        }, function (error) {
-            _this.responsemessage.error = error;
-            console.error('post' + error);
-            _this.loading = false;
-        }, function () {
-            console.log('delete complete');
-            _this.loading = false;
-        });
-    };
     EditMediaComponent.prototype.upload = function (files) {
         var _this = this;
         this.responsemessage = {};
@@ -2594,7 +2555,7 @@ var EditMediaComponent = /** @class */ (function (_super) {
                 console.log('uploading  ' + JSON.stringify(files[i]));
                 this.loading = true;
                 this.uploadService.uploadFile(files[i], this.type, this.current.id)
-                    .subscribe(function (mediadata) {
+                    .then(function (mediadata) {
                     if (mediadata.error) {
                         _this.openDialog('Upload failed : ' + mediadata.error);
                     }
@@ -2607,14 +2568,25 @@ var EditMediaComponent = /** @class */ (function (_super) {
                                 _this.current.media.push(f);
                             }
                         });
+                        _this.thumbnails(_this.current.media.length - 1);
                     }
+                    _this.loading = false;
                 }, function (error) {
                     _this.loading = false;
                     _this.responsemessage.error = error;
                     _this.openDialog('Upload error : ' + error);
-                }, function () {
-                    _this.loading = false;
                 });
+                /*
+                ,
+                error => {
+                  this.loading = false;
+                  this.responsemessage.error = error;
+                  this.openDialog('Upload error : ' + error);
+                },
+                () => {
+                  this.loading = false;
+                }
+                */
             }
         }
         else {
@@ -2631,6 +2603,61 @@ var EditMediaComponent = /** @class */ (function (_super) {
             result = filter.length > 0;
         }
         return result;
+    };
+    EditMediaComponent.prototype.thumbnails = function (index) {
+        var _this = this;
+        this.responsemessage = {};
+        var files = [];
+        // const file = JSON.parse('{"url":""}');
+        var file = {};
+        file.url = this.attachments[index].url;
+        files.push(file);
+        this.loading = true;
+        this.uploadService.thumbnails(this.type, this.current.id, files)
+            .subscribe(function (mediadata) {
+            mediadata.forEach(function (fileAndThumbnails) {
+                _this.attachments[index].thumbnails = fileAndThumbnails.thumbnails;
+                console.log('thumbnails ' + JSON.stringify(_this.attachments[index]));
+            });
+        }, function (error) {
+            _this.responsemessage.error = error;
+            console.error('thumbnails ' + error);
+            _this.loading = false;
+        }, function () {
+            console.log('thumbnails complete');
+            _this.loading = false;
+        });
+    };
+    EditMediaComponent.prototype.createThumbnails = function () {
+        var _this = this;
+        this.responsemessage = {};
+        var files = [];
+        this.attachments.forEach(function (attachment) {
+            var file = { url: attachment.url };
+            files.push(file);
+        });
+        console.log('createThumbnails ' + JSON.stringify(files));
+        this.loading = true;
+        this.uploadService.thumbnails(this.type, this.current.id, files)
+            .subscribe(function (mediadata) {
+            mediadata.forEach(function (fileAndThumbnails) {
+                var attachment = _this.getAttachmentByUrl(fileAndThumbnails.url);
+                if (attachment) {
+                    console.log('createThumbnails ' + JSON.stringify(fileAndThumbnails));
+                    attachment.thumbnails = fileAndThumbnails.thumbnails;
+                }
+                else {
+                    console.warn('createThumbnails url not found ' + fileAndThumbnails.url);
+                }
+            });
+        }, function (error) {
+            _this.responsemessage.error = error;
+            console.error('createThumbnails' + error);
+            _this.loading = false;
+        }, function () {
+            console.log('createThumbnails complete');
+            _this.loading = false;
+        });
     };
     EditMediaComponent.prototype.refresh = function () {
         var _this = this;
@@ -2661,14 +2688,9 @@ var EditMediaComponent = /** @class */ (function (_super) {
     EditMediaComponent.prototype.getAttachments = function () {
         return this.attachments;
     };
-    EditMediaComponent.prototype.moveAttachmentUp = function (index) {
-        _super.prototype.moveAttachmentUp.call(this, index);
-    };
-    /**
-    * move an attachment downward
-    */
-    EditMediaComponent.prototype.moveAttachmentDown = function (index) {
-        _super.prototype.moveAttachmentDown.call(this, index);
+    EditMediaComponent.prototype.getAttachmentByUrl = function (url) {
+        var matched = this.attachments.filter(function (u) { return u.url === url; });
+        return matched.length ? matched[0] : null;
     };
     EditMediaComponent.prototype.isLoading = function () {
         return _super.prototype.isLoading.call(this);
@@ -2687,14 +2709,14 @@ var EditMediaComponent = /** @class */ (function (_super) {
     return EditMediaComponent;
 }(__WEBPACK_IMPORTED_MODULE_1__editlinks_component__["a" /* EditLinksComponent */]));
 
-//# sourceMappingURL=editmedia.component.js.map
+
 
 /***/ }),
 
 /***/ "../../../../../src/app/record/errordialog.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 md-dialog-title>Error</h2>\n<md-dialog-content>{{ data }}</md-dialog-content>\n<md-dialog-actions>\n  <button md-button md-dialog-close><md-icon>clear</md-icon></button>\n</md-dialog-actions>\n"
+module.exports = "<h2 mat-dialog-title>Error</h2>\n<mat-dialog-content>{{ data }}</mat-dialog-content>\n<mat-dialog-actions>\n  <button mat-button mat-dialog-close><mat-icon>clear</mat-icon></button>\n</mat-dialog-actions>\n"
 
 /***/ }),
 
@@ -2719,7 +2741,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 
 
-var ErrorDialogComponent = /** @class */ (function () {
+var ErrorDialogComponent = (function () {
     function ErrorDialogComponent(data) {
         this.data = data;
     }
@@ -2729,13 +2751,13 @@ var ErrorDialogComponent = /** @class */ (function () {
             selector: 'app-errordialog',
             template: __webpack_require__("../../../../../src/app/record/errordialog.component.html"),
         }),
-        __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MD_DIALOG_DATA */])),
+        __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MAT_DIALOG_DATA */])),
         __metadata("design:paramtypes", [Object])
     ], ErrorDialogComponent);
     return ErrorDialogComponent;
 }());
 
-//# sourceMappingURL=errordialog.component.js.map
+
 
 /***/ }),
 
@@ -2748,20 +2770,417 @@ var ErrorDialogComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__errordialog_component__ = __webpack_require__("../../../../../src/app/record/errordialog.component.ts");
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_1__errordialog_component__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__record_component__ = __webpack_require__("../../../../../src/app/record/record.component.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_2__record_component__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__editlinks_component__ = __webpack_require__("../../../../../src/app/record/editlinks.component.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__editlinks_component__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__editmedia_component__ = __webpack_require__("../../../../../src/app/record/editmedia.component.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_4__editmedia_component__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__recordhelpdialog_component__ = __webpack_require__("../../../../../src/app/record/recordhelpdialog.component.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_5__recordhelpdialog_component__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_2__record_component__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__link_component__ = __webpack_require__("../../../../../src/app/record/link.component.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_3__link_component__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__media_component__ = __webpack_require__("../../../../../src/app/record/media.component.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_4__media_component__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__editlinks_component__ = __webpack_require__("../../../../../src/app/record/editlinks.component.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_5__editlinks_component__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__editmedia_component__ = __webpack_require__("../../../../../src/app/record/editmedia.component.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_6__editmedia_component__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__recordhelpdialog_component__ = __webpack_require__("../../../../../src/app/record/recordhelpdialog.component.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_7__recordhelpdialog_component__["a"]; });
 
 
 
 
 
 
-//# sourceMappingURL=index.js.map
+
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/record/link.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".attachment-title {\n\n}\n\n.full-width-input {\n  width: 100%;\n}\n\n.half-width-input {\n  width: 50%;\n}\n\n.link-card {\nborder-color: black;\nbox-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);\nmargin-bottom: 1em;\n}\n\n.custom-card {\n/*  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);*/\n  border: 1px black solid;\n}\n\n\n.large-button {\n  background-color: #F5F5F5;\n  width: 100%;\n}\n/*\n* panel button on the left\n*/\n.panel-button {\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n}\n\n.whitetoolbar {\n  background-color: white;\n}\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/record/link.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class='link-card'>\n\n        <button (click)='toggleDisplayDetails()' mat-button class='large-button'>\n          <span class='attachment-title'>{{attachments[index].title}}</span>\n          <mat-icon *ngIf='!displayDetails'>keyboard_arrow_down</mat-icon>\n          <mat-icon *ngIf='displayDetails'>keyboard_arrow_up</mat-icon>\n        </button>\n\n\n\n<div *ngIf='displayDetails'>\n  <mat-input-container class='full-width-input'>\n    <input matInput placeholder='{{\"field.label.attachment.title\" | translate}}' [(ngModel)]='attachments[index].title' type='text'>\n  </mat-input-container>\n\n  <mat-input-container class='full-width-input'>\n    <input matInput placeholder='{{\"field.label.attachment.url\" | translate}}' [(ngModel)]='attachments[index].url' type='text'>\n  </mat-input-container>\n\n  <mat-input-container class='full-width-input'>\n    <input matInput placeholder='{{\"field.label.attachment.description\" | translate}}' [(ngModel)]='attachments[index].description' type='text'>\n  </mat-input-container>\n  <mat-toolbar class='whitetoolbar'>\n    <span class='fill-remaining-space'></span>\n    <button (click)='moveAttachmentUp(index)'  mat-raised-button color='primary'  class='panel-button'><mat-icon>arrow_upward</mat-icon></button>\n    <span class='toolbar-spacer'></span>\n    <button (click)='moveAttachmentDown(index)'  mat-raised-button color='primary'  class='panel-button'><mat-icon>arrow_downward</mat-icon></button>\n    <span class='toolbar-spacer'></span>\n    <span class='toolbar-spacer'></span>\n    <button (click)='deleteAttachment(index)'  mat-raised-button color='primary'  class='panel-button'><mat-icon>delete_forever</mat-icon></button>\n\n  </mat-toolbar>\n\n\n\n</div>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/record/link.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LinkComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__errordialog_component__ = __webpack_require__("../../../../../src/app/record/errordialog.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_services__ = __webpack_require__("../../../../../src/app/_services/index.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var LinkComponent = (function () {
+    function LinkComponent(uploadService, dialog) {
+        this.uploadService = uploadService;
+        this.dialog = dialog;
+        /**
+         * title
+         */
+        this.title = 'record.edit.attachments';
+        /**
+         * object data
+         */
+        this.type = null;
+        /**
+         * object data
+         */
+        this.current = null;
+        this.loading = false;
+        this.displayDetails = false;
+    }
+    LinkComponent.prototype.ngOnInit = function () {
+        if (!this.type) {
+            console.error('empty type');
+        }
+        if (!this.current) {
+            console.error('empty current');
+        }
+        if (!this.attachments) {
+            console.error('empty attachments');
+        }
+        if (!this.attachments[this.index].title) {
+            this.displayDetails = true;
+        }
+    };
+    // <!--
+    // attachments
+    // moveAttachmentUp
+    //
+    //
+    // moveAttachmentDown
+    // deleteAttachment
+    //
+    // download
+    //
+    // -->
+    /**
+    * add an attachment at the beginning
+    */
+    LinkComponent.prototype.addAttachmentTop = function () {
+        this.attachments.push(this.getDefaultAttachment());
+        this.attachments = this.move(this.attachments, this.attachments.length - 1, 0);
+    };
+    LinkComponent.prototype.addAttachmentBottom = function () {
+        this.attachments.push(this.getDefaultAttachment());
+    };
+    LinkComponent.prototype.toggleDisplayDetails = function () {
+        this.displayDetails = !this.displayDetails;
+    };
+    /**
+    * move item in array
+    * TODO : utility class
+    */
+    LinkComponent.prototype.move = function (array, old_index, new_index) {
+        if (new_index >= array.length) {
+            var k = new_index - array.length;
+            while ((k--) + 1) {
+                array.push(undefined);
+            }
+        }
+        array.splice(new_index, 0, array.splice(old_index, 1)[0]);
+        return array;
+    };
+    /**
+    * move an attachment upward
+    */
+    LinkComponent.prototype.moveAttachmentUp = function (index) {
+        if (index > -1) {
+            this.move(this.attachments, index, index - 1);
+        }
+    };
+    /**
+    * move an attachment downward
+    */
+    LinkComponent.prototype.moveAttachmentDown = function (index) {
+        var newPosition = index + 1;
+        if (index > -1 && newPosition < this.attachments.length) {
+            this.move(this.attachments, index, newPosition);
+        }
+    };
+    LinkComponent.prototype.getDefaultAttachment = function () {
+        // TODO : create a attachment_metadata.json
+        return JSON.parse('{"url":"", "title":""}');
+    };
+    LinkComponent.prototype.deleteAttachment = function (index) {
+        if (index > -1) {
+            this.attachments.splice(index, 1);
+        }
+    };
+    LinkComponent.prototype.download = function (index) {
+        var _this = this;
+        this.responsemessage = {};
+        var files = [];
+        files.push(this.attachments[index]);
+        console.log('files ' + files);
+        this.loading = true;
+        this.uploadService.sync(this.type, this.current.id, files)
+            .subscribe(function (mediadata) {
+            console.log('result ' + JSON.stringify(mediadata));
+            mediadata.forEach(function (f) {
+                console.log('adding ' + f.title);
+                _this.current.media.push(f);
+            });
+        }, function (error) {
+            _this.responsemessage.error = error;
+            console.error('post' + error);
+            _this.loading = false;
+        }, function () {
+            console.log('sync complete');
+            _this.loading = false;
+        });
+    };
+    LinkComponent.prototype.openDialog = function (msg) {
+        this.dialog.open(__WEBPACK_IMPORTED_MODULE_2__errordialog_component__["a" /* ErrorDialogComponent */], {
+            data: msg,
+        });
+    };
+    LinkComponent.prototype.isLoading = function () {
+        return this.loading;
+    };
+    LinkComponent.prototype.getResponseMessage = function () {
+        return this.responsemessage;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LinkComponent.prototype, "title", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
+        __metadata("design:type", String)
+    ], LinkComponent.prototype, "type", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LinkComponent.prototype, "current", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
+        __metadata("design:type", Array)
+    ], LinkComponent.prototype, "attachments", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
+        __metadata("design:type", Number)
+    ], LinkComponent.prototype, "index", void 0);
+    LinkComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            moduleId: module.i,
+            selector: 'app-link',
+            template: __webpack_require__("../../../../../src/app/record/link.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/record/link.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_app_services__["c" /* UploadService */], __WEBPACK_IMPORTED_MODULE_1__angular_material__["d" /* MatDialog */]])
+    ], LinkComponent);
+    return LinkComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/record/media.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/record/media.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class='link-card'>\n\n        <button (click)='toggleDisplayDetails()' mat-button class='large-button'>\n          <span class='attachment-title'>{{attachments[index].title}}</span>\n          <mat-icon *ngIf='!displayDetails'>keyboard_arrow_down</mat-icon>\n          <mat-icon *ngIf='displayDetails'>keyboard_arrow_up</mat-icon>\n        </button>\n\n<div *ngIf='displayDetails'>\n      <mat-input-container class='full-width-input'>\n        <input matInput placeholder='{{\"field.label.attachment.title\" | translate}}' [(ngModel)]='getAttachments()[index].title' type='text'>\n      </mat-input-container>\n\n      <mat-input-container class='full-width-input'>\n        <input readonly matInput placeholder='{{\"field.label.attachment.url\" | translate}}' [(ngModel)]='getAttachments()[index].url' type='text'>\n      </mat-input-container>\n\n      <mat-input-container class='half-width-input'>\n        <input readonly matInput placeholder='{{\"field.label.attachment.mimetype\" | translate}}' [(ngModel)]='getAttachments()[index].mimetype' type='text'>\n      </mat-input-container>\n\n      <mat-input-container class='half-width-input'>\n        <input readonly matInput placeholder='{{\"field.label.attachment.size\" | translate}}' [(ngModel)]='getAttachments()[index].size' type='text'>\n      </mat-input-container>\n\n      <mat-input-container class='full-width-input'>\n        <input matInput placeholder='{{\"field.label.attachment.description\" | translate}}' [(ngModel)]='getAttachments()[index].description' type='text'>\n      </mat-input-container>\n      <div class='full-width-input'>\n        <span *ngFor='let item of getThumbnails(index)' >{{item.width}}px </span>\n      </div>\n      <mat-toolbar class='whitetoolbar'>\n      <span class='fill-remaining-space'></span>\n      <button (click)='moveAttachmentUp(index)'  mat-raised-button color='primary' ><mat-icon>arrow_upward</mat-icon></button>\n      <span class='toolbar-spacer'></span>\n      <button (click)='moveAttachmentDown(index)'  mat-raised-button color='primary' ><mat-icon>arrow_downward</mat-icon></button>\n      <span class='toolbar-spacer'></span>\n      <button (click)='deleteMedia(index)'  mat-raised-button color='primary' ><mat-icon>delete_forever</mat-icon></button>\n      <span class='toolbar-spacer'></span>\n      <button  (click)='thumbnails(index)'  mat-raised-button color='primary' class='panel-button' ><mat-icon>photo_size_select_small</mat-icon></button>\n\n      </mat-toolbar>\n\n    </div>\n    </div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/record/media.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MediaComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__link_component__ = __webpack_require__("../../../../../src/app/record/link.component.ts");
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var MediaComponent = (function (_super) {
+    __extends(MediaComponent, _super);
+    function MediaComponent() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MediaComponent.prototype.deleteMedia = function (index) {
+        var _this = this;
+        console.log('deleteMedia ' + index + '/' + this.attachments.length);
+        this.responsemessage = {};
+        var files = [];
+        files.push(this.attachments[index]);
+        console.log('deleteMedia ' + JSON.stringify(files));
+        this.loading = true;
+        this.uploadService.delete(this.type, this.current.id, files)
+            .subscribe(function (mediadata) {
+            console.log('result ' + JSON.stringify(mediadata));
+            if (index > -1) {
+                _this.attachments.splice(index, 1);
+            }
+        }, function (error) {
+            _this.responsemessage.error = error;
+            console.error('post' + error);
+            _this.loading = false;
+        }, function () {
+            console.log('delete complete');
+            _this.loading = false;
+        });
+    };
+    MediaComponent.prototype.thumbnails = function (index) {
+        var _this = this;
+        this.responsemessage = {};
+        var files = [];
+        // const file = JSON.parse('{"url":""}');
+        var file = {};
+        file.url = this.attachments[index].url;
+        files.push(file);
+        this.loading = true;
+        this.uploadService.thumbnails(this.type, this.current.id, files)
+            .subscribe(function (mediadata) {
+            mediadata.forEach(function (fileAndThumbnails) {
+                _this.attachments[index].thumbnails = fileAndThumbnails.thumbnails;
+                console.log('thumbnails ' + JSON.stringify(_this.attachments[index]));
+            });
+        }, function (error) {
+            _this.responsemessage.error = error;
+            console.error('post' + error);
+            _this.loading = false;
+        }, function () {
+            console.log('thumbnails complete');
+            _this.loading = false;
+        });
+    };
+    MediaComponent.prototype.getThumbnails = function (index) {
+        return this.attachments[index].thumbnails;
+    };
+    MediaComponent.prototype.exists = function (array, key, value) {
+        var result = false;
+        if (array) {
+            var filter = array.filter(function (e) {
+                return e[key] === value;
+            });
+            result = filter.length > 0;
+        }
+        return result;
+    };
+    MediaComponent.prototype.getAttachments = function () {
+        return this.attachments;
+    };
+    MediaComponent.prototype.moveAttachmentUp = function (index) {
+        _super.prototype.moveAttachmentUp.call(this, index);
+    };
+    /**
+    * move an attachment downward
+    */
+    MediaComponent.prototype.moveAttachmentDown = function (index) {
+        _super.prototype.moveAttachmentDown.call(this, index);
+    };
+    MediaComponent.prototype.isLoading = function () {
+        return _super.prototype.isLoading.call(this);
+    };
+    MediaComponent.prototype.getResponseMessage = function () {
+        return _super.prototype.getResponseMessage.call(this);
+    };
+    /**
+    * TODO usage ?
+    */
+    MediaComponent.prototype.refresh = function () {
+        var _this = this;
+        this.uploadService.getFilesDescriptions(this.type, this.current.id)
+            .subscribe(function (mediadata) {
+            if (mediadata.error) {
+                _this.openDialog('refresh failed : ' + mediadata.error);
+            }
+            else {
+                console.log('upload result ' + JSON.stringify(mediadata));
+                mediadata.forEach(function (f) {
+                    console.log('-> ' + f.title);
+                    var test = _this.current.media.filter(function (e) { return e.url === f.url; });
+                    if (test.length === 0) {
+                        console.log('adding ' + f.title);
+                        _this.current.media.push(f);
+                    }
+                });
+            }
+        }, function (error) {
+            _this.loading = false;
+            _this.responsemessage.error = error;
+            _this.openDialog('Upload error : ' + error);
+        }, function () {
+            _this.loading = false;
+        });
+    };
+    MediaComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            moduleId: module.i,
+            selector: 'app-media',
+            template: __webpack_require__("../../../../../src/app/record/media.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/record/link.component.css"), __webpack_require__("../../../../../src/app/record/media.component.css")]
+        })
+    ], MediaComponent);
+    return MediaComponent;
+}(__WEBPACK_IMPORTED_MODULE_1__link_component__["a" /* LinkComponent */]));
+
+
 
 /***/ }),
 
@@ -2773,7 +3192,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".full-width-input {\n  width: 100%;\n\n}\n\n.half-width-input {\n  width: 50%;\n\n}\n\n\n.full-width-textarea {\n  width: 100%;\n}\n\n.input-group {\n  padding-bottom: 0.2em;\n}\n\ninput:-moz-read-only {\n    background-color: #ddd;\n}\n\ninput:read-only {\n    background-color: #ddd;\n}\n\n.container {\n  padding: 0.2em;\n}\n\n@media all and (min-width: 55em) {\n  .container {\n    padding: 2em;\n  }\n}\n\n\n.list-container {\n  padding-bottom: 0.5em;\n}\n\n.success-label-message {\n  font-size: 0.81em;\n  color: #777777;\n}\n\n.error-label-message {\n  font-size: 0.81em;\n  color: red;\n}\n", ""]);
+exports.push([module.i, ".full-width-input {\n  width: 100%;\n\n}\n\n.half-width-input {\n  width: 15em;\n}\n\n\n.full-width-textarea {\n  width: 100%;\n}\n\n.input-group {\n  padding-bottom: 0.2em;\n}\n\ninput:-moz-read-only {\n    background-color: #ddd;\n}\n\ninput:read-only {\n    background-color: #ddd;\n}\n\n\n\n\n\n.list-container {\n  padding-bottom: 0.5em;\n}\n\n.success-label-message {\n  color: #777777;\n  font-size: 0.81em;\n}\n\n.error-label-message {\n  color: red;\n  font-size: 0.81em;\n}\n\n\n/* Material like CSS\ncf html: issue with mat-input-container : throw an ExpressionChangedAfterItHasBeenCheckedError\n*/\n.my-mat-input-container {\n  padding-bottom: 0.4em;\n}\n\n.my-mat-input-placeholder {\n  color: #818181;\n  font-size: 0.8em;\n}\n\n.my-mat-input {\n  border-bottom: 0.09em solid #919191;\n}\n.my-mat-input:focus {\n  border-bottom: 0.1em solid #7800A1;\n}\n", ""]);
 
 // exports
 
@@ -2786,7 +3205,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/record/record.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<md-toolbar class='secondary-button-bar'>\n  <!-- deprecated ?\n  <span *ngIf='responsemessage && !responsemessage.error' class='success-label-message'>\n    <md-icon mdTooltip='{{responsemessage.since}} - {{responsemessage.savedate}}'>save</md-icon>\n  </span>\n-->\n  <span *ngIf='isModified()' class='success-label-message'>\n    <md-icon>warning</md-icon> {{'record.edit.unsaved' | translate}}\n  </span>\n  <span class='fill-remaining-space'></span>\n  <button   md-raised-button color='primary'  *ngIf=\"f.form.valid && !loading\" (click)=\"save()\" mdTooltip=\"{{'record.edit.save' | translate }}\"><md-icon>save</md-icon></button>\n\n  <button   md-raised-button color='primary'  *ngIf=\"!newrecord && isAdminRole()\" (click)=\"preview()\"> <md-icon>open_in_new</md-icon></button>\n  <span class='toolbar-spacer'></span>\n  <button   md-raised-button color='primary'  *ngIf=\"!newrecord\" (click)=\"openConfirmDialog()\" mdTooltip=\"{{'record.edit.delete' | translate }}\"> <md-icon>delete</md-icon></button>\n  <span class='toolbar-spacer'></span>\n  <button   md-raised-button color='primary'  (click)='openHelpDialog()'><md-icon alt='help'>help_outline</md-icon></button>\n</md-toolbar>\n<form name='form' (ngSubmit)='f.form.valid' #f='ngForm' novalidate>\n<div class=\"container\">\n  <div>\n\n    <span *ngIf='responsemessage && responsemessage.error' class='error-label-message'>\n      <md-icon>cloud_off</md-icon> {{responsemessage.error}}\n    </span>\n\n    <div *ngIf=\"current\">\n\n\n      <div *ngFor=\"let property of properties\">\n\n        <!-- multiline text edit -->\n\n        <md-input-container *ngIf=\"property.editor === 'text'\" class=\"full-width-textarea\">\n          <textarea (blur)='autosave()' mdInput placeholder=\"{{'field.label.' + property.name | translate }}\" rows=\"10\" cols=\"\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\">{{current[property.name]}}</textarea>\n        </md-input-container>\n\n\n        <!-- single line text edit -->\n        <div *ngIf=\"property.name === 'id'\">\n          <md-input-container class=\"full-width-input\" *ngIf=\"property.editor === 'line'\">\n            <input readonly mdInput placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\" type=\"text\">\n          </md-input-container>\n        </div>\n        <div *ngIf=\"property.name === 'title'\">\n          <md-input-container class=\"full-width-input\" *ngIf=\"property.editor === 'line'\">\n            <input (blur)='autosave()' (keypress)=\"generateId()\" (change)=\"generateId()\" mdInput placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\" type=\"text\" required>\n          </md-input-container>\n        </div>\n\n        <div *ngIf=\"property.name !== 'id' && property.name !== 'title'\">\n          <md-input-container class=\"full-width-input\" *ngIf=\"property.editor === 'line'\">\n            <input (blur)='autosave()' mdInput placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\" type=\"text\" >\n          </md-input-container>\n        </div>\n\n        <div *ngIf=\"property.editor === 'date'\">\n          <md-input-container *ngIf=\"property.editor === 'date'\">\n            <input (blur)='autosave()' mdInput placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\" type=\"date\" required>\n          </md-input-container>\n        </div>\n\n        <!-- choice list -->\n        <div *ngIf=\"property.editor === 'choice'\">\n          <md-select placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\">\n            <!-- list of choices from metadata -->\n            <md-option *ngFor=\"let choice of property.choices\" [value]=\"choice\">{{ choice }}</md-option>\n          </md-select>\n\n        </div>\n\n        <div *ngIf=\"!newrecord && property.editor === 'medialist' && property.name === 'media'\" class=\"list-container\">\n          <app-editmedia [type]='type' [current]='current' [attachments]='current.media' [title]='\"record.edit.media\"'></app-editmedia>\n        </div>\n        <!-- list-container -->\n\n\n\n        <div *ngIf=\"property.editor === 'imagelist' && property.name === 'images'\" class=\"list-container\">\n          <app-editlinks [type]='type' [current]='current' [attachments]='current.images' [title]='\"record.edit.images\"' [adminrole]='isAdminRole()'></app-editlinks>\n        </div>\n\n        <div *ngIf=\"property.editor === 'attachmentlist' && property.name === 'attachments'\" class=\"list-container\">\n          <app-editlinks [type]='type' [current]='current' [attachments]='current.attachments' [title]='\"record.edit.attachments\"' [adminrole]='isAdminRole()'></app-editlinks>\n        </div>\n        <!-- attachments -->\n\n\n\n      </div>\n      <!-- properties -->\n\n\n\n\n\n\n    </div>\n    <!-- current -->\n\n\n  </div>\n</div>\n</form>\n"
+module.exports = "<mat-toolbar class='secondary-button-bar'>\n  <!-- deprecated ?\n  <span *ngIf='responsemessage && !responsemessage.error' class='success-label-message'>\n    <mat-icon matTooltip='{{responsemessage.since}} - {{responsemessage.savedate}}'>save</mat-icon>\n  </span>\n-->\n  <span *ngIf='isModified()' class='success-label-message'>\n    <mat-icon >warning</mat-icon>{{\"record.edit.unsaved\" | translate}}\n  </span>\n  <span class='fill-remaining-space'></span>\n\n  <span *ngIf='getLayout() === \"mobile\"'>\n  <button mat-raised-button color='primary' [matMenuTriggerFor]='menu'><mat-icon>more_horiz</mat-icon></button>\n  <mat-menu #menu=\"matMenu\">\n    <button mat-menu-item *ngIf=\"f.form.valid && !loading\" (click)=\"save()\" matTooltip=\"{{'record.edit.save' | translate }}\"><mat-icon>save</mat-icon> {{'record.edit.save' | translate }}</button>\n    <button mat-menu-item  *ngIf=\"!newrecord\" (click)=\"preview()\" matTooltip=\"{{'record.edit.preview' | translate }}\"> <mat-icon>open_in_new</mat-icon> {{'record.edit.preview' | translate }}</button>\n    <button mat-menu-item  *ngIf=\"!newrecord\" (click)=\"openConfirmDialog()\" matTooltip=\"{{'record.edit.delete' | translate }}\"> <mat-icon>delete</mat-icon> {{'record.edit.delete' | translate }}</button>\n    <button mat-menu-item  (click)='openHelpDialog()' matTooltip=\"{{'help.label' | translate }}\"><mat-icon alt='help'>help_outline</mat-icon> {{'help.label' | translate }}</button>\n  </mat-menu>\n  </span>\n\n  <span *ngIf='getLayout() === \"desktop\"'>\n    <button  mat-raised-button color='primary'  *ngIf=\"f.form.valid && !loading\" (click)=\"save()\" matTooltip=\"{{'record.edit.save' | translate }}\"><mat-icon>save</mat-icon></button>\n    <button   mat-raised-button color='primary'  *ngIf=\"!newrecord\" (click)=\"preview()\" matTooltip=\"{{'record.edit.preview' | translate }}\"> <mat-icon>open_in_new</mat-icon></button>\n    <button   mat-raised-button color='primary'  *ngIf=\"!newrecord\" (click)=\"openConfirmDialog()\" matTooltip=\"{{'record.edit.delete' | translate }}\"> <mat-icon>delete</mat-icon></button>\n    <button   mat-raised-button color='primary'  (click)='openHelpDialog()' matTooltip=\"{{'help.label' | translate }}\"><mat-icon alt='help'>help_outline</mat-icon></button>\n  </span>\n\n\n</mat-toolbar>\n<form name='form' (ngSubmit)='f.form.valid' #f='ngForm' novalidate>\n  <div class=\"container\">\n    <div>\n\n      <span *ngIf='responsemessage && responsemessage.error' class='error-label-message'>\n      <mat-icon>cloud_off</mat-icon> {{responsemessage.error}}\n    </span>\n\n      <div *ngIf=\"current\">\n\n\n        <div *ngFor=\"let property of properties\" [ngSwitch]='property.editor'>\n\n\n\n          <!-- single line text edit -->\n          <div *ngIf=\"property.name === 'id'\">\n            <mat-input-container class=\"full-width-input\" *ngIf=\"property.editor === 'line'\">\n              <input readonly matInput placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\" type=\"text\">\n            </mat-input-container>\n          </div>\n          <div *ngIf=\"property.name === 'title'\">\n            <mat-input-container class=\"full-width-input\" *ngIf=\"property.editor === 'line'\">\n              <input (blur)='autosave()' (keypress)=\"generateId()\" (change)=\"generateId()\" matInput placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\" type=\"text\" required>\n            </mat-input-container>\n          </div>\n\n          <div *ngIf=\"property.name !== 'id' && property.name !== 'title'\">\n            <mat-input-container class=\"full-width-input\" *ngIf=\"property.editor === 'line'\">\n              <input (blur)='autosave()' matInput placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\" type=\"text\">\n            </mat-input-container>\n          </div>\n\n          <div *ngSwitchCase='\"date\"' >\n            <mat-input-container *ngIf=\"property.editor === 'date'\">\n              <input (blur)='autosave()' matInput placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\" type=\"date\" required>\n            </mat-input-container>\n          </div>\n\n          <!-- choice list -->\n          <div *ngSwitchCase='\"choice\"' class='my-mat-input-container'>\n            <!-- issue:  placeholder not working -->\n            <div class='my-mat-input-placeholder'>{{'field.label.' + property.name | translate }}</div>\n            <mat-select placeholder='{{\"field.label.\" + property.name | translate }}' [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\" class='my-mat-input half-width-input'>\n              <!-- list of choices from metadata -->\n              <mat-option *ngFor=\"let choice of property.choices\" [value]=\"choice\">{{ choice }}</mat-option>\n            </mat-select>\n\n          </div>\n\n          <div *ngSwitchCase='\"medialist\"' class=\"list-container\">\n            <app-editmedia  *ngIf=\"!newrecord && property.name === 'media'\" [type]='type' [current]='current' [attachments]='current.media' [title]='\"record.edit.media\"'></app-editmedia>\n          </div>\n          <!-- list-container -->\n\n\n\n          <div *ngSwitchCase='\"imagelist\"' class=\"list-container\">\n            <app-editlinks  *ngIf=\"property.name === 'images'\" [type]='type' [current]='current' [attachments]='current.images' [title]='\"record.edit.images\"' ></app-editlinks>\n          </div>\n\n          <div *ngSwitchCase='\"attachmentlist\"'class=\"list-container\">\n            <app-editlinks *ngIf=\"property.name === 'attachments'\"  [type]='type' [current]='current' [attachments]='current.attachments' [title]='\"record.edit.attachments\"' ></app-editlinks>\n          </div>\n          <!-- attachments -->\n\n          <div *ngSwitchCase='\"text\"' class='my-mat-input-container'>\n            <!-- issue with mat-input-container : throw an ExpressionChangedAfterItHasBeenCheckedError -->\n            <span class='my-mat-input-placeholder'>{{'field.label.' + property.name | translate }}</span>\n            <div >\n            <textarea  matInput rows=\"10\" cols=\"\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\" class='my-mat-input'>{{current[property.name]}}</textarea>\n            </div>\n\n          </div>\n\n        </div>\n\n\n        <!-- properties -->\n\n\n\n\n\n\n      </div>\n      <!-- current -->\n\n\n    </div>\n  </div>\n</form>\n"
 
 /***/ }),
 
@@ -2804,7 +3223,6 @@ module.exports = "\n<md-toolbar class='secondary-button-bar'>\n  <!-- deprecated
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__deletedialog_component__ = __webpack_require__("../../../../../src/app/record/deletedialog.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__recordhelpdialog_component__ = __webpack_require__("../../../../../src/app/record/recordhelpdialog.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_Observable__ = __webpack_require__("../../../../rxjs/_esm5/Observable.js");
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -2833,14 +3251,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var RecordComponent = /** @class */ (function (_super) {
+var RecordComponent = (function (_super) {
     __extends(RecordComponent, _super);
-    function RecordComponent(contentService, locale, route, router, dialog, uploadService, stringUtils) {
+    function RecordComponent(contentService, locale, route, router, windowService, dialog, uploadService, stringUtils) {
         var _this = _super.call(this) || this;
         _this.contentService = contentService;
         _this.route = route;
         _this.router = router;
+        _this.windowService = windowService;
         _this.dialog = dialog;
         _this.uploadService = uploadService;
         _this.stringUtils = stringUtils;
@@ -2901,6 +3319,9 @@ var RecordComponent = /** @class */ (function (_super) {
         if (this.timerSub) {
             this.timerSub.unsubscribe();
         }
+    };
+    RecordComponent.prototype.getLayout = function () {
+        return this.windowService.getLayout();
     };
     RecordComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -2986,11 +3407,12 @@ var RecordComponent = /** @class */ (function (_super) {
         if (this.timerSub) {
             this.timerSub.unsubscribe();
         }
-        if (this.enableTimer) {
-            this.timer = __WEBPACK_IMPORTED_MODULE_9_rxjs_Observable__["a" /* Observable */].timer(this.timerTickRate, this.timerTickRate);
-            // subscribing to a observable returns a subscription object
-            this.timerSub = this.timer.subscribe(function (t) { return _this.tickerFunc(t); });
-        }
+        // issue : error TS2339: Property 'timer' does not exist on type 'typeof Observable'.
+        // if (this.enableTimer) {
+        //   this.timer = Observable.timer(this.timerTickRate, this.timerTickRate);
+        //   // subscribing to a observable returns a subscription object
+        //   this.timerSub = this.timer.subscribe(t => this.tickerFunc(t));
+        // }
     };
     RecordComponent.prototype.isAutosaveReady = function () {
         // TODO : form valid ? (date, title attachments, ...)
@@ -3043,11 +3465,20 @@ var RecordComponent = /** @class */ (function (_super) {
     RecordComponent.prototype.generateId = function () {
         if (this.newrecord) {
             // replace accents by US ASCII
-            var newId = this.stringUtils.removeDiacritics(this.current.title);
+            var newId = '';
+            if (this.current.date) {
+                newId += new Date(this.current.date).getFullYear().toString() + '_'; // weird issue when using '-'
+            }
+            newId += this.stringUtils.removeDiacritics(this.current.title);
             // remove all remaining special characters
             newId = newId.replace(/[^\w\s]/gi, '');
             // replace space by '-'
             newId = newId.replace(/\s/g, '-');
+            newId = newId.replace('_', '-');
+            // too much space
+            while (newId.indexOf('--') > -1) {
+                newId = newId.replace('--', '-');
+            }
             this.current.id = newId;
         }
     };
@@ -3092,9 +3523,6 @@ var RecordComponent = /** @class */ (function (_super) {
         });
         dialogRef.afterClosed().subscribe(function (result) { console.log('Dialog result'); });
     };
-    RecordComponent.prototype.isAdminRole = function () {
-        return this.hasAdminRole;
-    };
     RecordComponent.prototype.tickerFunc = function (t) {
         if (this.isAutosaveReady() && this.lastSaveDate && (new Date().getTime() - this.lastSaveDate.getTime()) > this.autosaveDelay) {
             this.autosave();
@@ -3114,13 +3542,15 @@ var RecordComponent = /** @class */ (function (_super) {
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_app_services__["b" /* ContentService */],
             __WEBPACK_IMPORTED_MODULE_4_app_shared__["c" /* LocaleService */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */], __WEBPACK_IMPORTED_MODULE_2__angular_material__["e" /* MdDialog */],
-            __WEBPACK_IMPORTED_MODULE_3_app_services__["c" /* UploadService */], __WEBPACK_IMPORTED_MODULE_4_app_shared__["e" /* StringUtils */]])
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_4_app_shared__["g" /* WindowService */], __WEBPACK_IMPORTED_MODULE_2__angular_material__["d" /* MatDialog */],
+            __WEBPACK_IMPORTED_MODULE_3_app_services__["c" /* UploadService */],
+            __WEBPACK_IMPORTED_MODULE_4_app_shared__["e" /* StringUtils */]])
     ], RecordComponent);
     return RecordComponent;
 }(__WEBPACK_IMPORTED_MODULE_5_app_home__["c" /* StandardComponent */]));
 
-//# sourceMappingURL=record.component.js.map
+
 
 /***/ }),
 
@@ -3145,7 +3575,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/record/recordhelpdialog.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--component html goes here -->\n<h2 md-dialog-title>{{'home.help.title' | translate}}</h2>\n<!-- help content -->\n  <md-dialog-content>\n    <md-list>\n     <md-list-item>  {{'record.edit.media' | translate}} </md-list-item> {{'record.help.media' | translate}}\n     <md-list-item> <md-icon>insert_link</md-icon> {{'record.edit.attachments' | translate}} </md-list-item> {{'record.help.attachments' | translate}}\n     <md-list-item> <md-icon>insert_link</md-icon> {{'record.edit.images' | translate}} </md-list-item> {{'record.help.images' | translate}}\n    </md-list>\n\n    </md-dialog-content>\n"
+module.exports = "<!--component html goes here -->\n<h2 mat-dialog-title>{{'home.help.title' | translate}}</h2>\n<!-- help content -->\n  <mat-dialog-content>\n    <mat-list>\n     <mat-list-item>  {{'record.edit.media' | translate}} </mat-list-item> {{'record.help.media' | translate}}\n     <mat-list-item> <mat-icon>insert_link</mat-icon> {{'record.edit.attachments' | translate}} </mat-list-item> {{'record.help.attachments' | translate}}\n     <mat-list-item> <mat-icon>insert_link</mat-icon> {{'record.edit.images' | translate}} </mat-list-item> {{'record.help.images' | translate}}\n    </mat-list>\n\n    </mat-dialog-content>\n"
 
 /***/ }),
 
@@ -3170,7 +3600,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 
 
-var RecordHelpDialogComponent = /** @class */ (function () {
+var RecordHelpDialogComponent = (function () {
     function RecordHelpDialogComponent(data) {
         this.data = data;
     }
@@ -3181,13 +3611,13 @@ var RecordHelpDialogComponent = /** @class */ (function () {
             template: __webpack_require__("../../../../../src/app/record/recordhelpdialog.component.html"),
             styles: [__webpack_require__("../../../../../src/app/record/recordhelpdialog.component.css")]
         }),
-        __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MD_DIALOG_DATA */])),
+        __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MAT_DIALOG_DATA */])),
         __metadata("design:paramtypes", [Object])
     ], RecordHelpDialogComponent);
     return RecordHelpDialogComponent;
 }());
 
-//# sourceMappingURL=recordhelpdialog.component.js.map
+
 
 /***/ }),
 
@@ -3201,7 +3631,7 @@ var RecordHelpDialogComponent = /** @class */ (function () {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__recordlisthelpdialog_component__["a"]; });
 
 
-//# sourceMappingURL=index.js.map
+
 
 /***/ }),
 
@@ -3226,7 +3656,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/recordlist/recordlist.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <md-toolbar class='secondary-button-bar'>\n    <span class='fill-remaining-space'></span>\n    <span mdTooltip='{{ \"record.list.create\" | translate }}'>\n      <a  md-raised-button color='primary' [routerLink]='[\"/record\", type ,  \"new\"]'><md-icon>add</md-icon> </a>\n    </span>\n    <span class='toolbar-spacer'></span>\n  <button md-raised-button color='primary' (click)='rebuildIndex()' ><md-icon>refresh</md-icon></button>\n  <span class='toolbar-spacer'></span>\n  <button md-raised-button color='primary' (click)='openHelpDialog()' ><md-icon alt='help'>help_outline</md-icon></button>\n</md-toolbar>\n\n\n\n  <div *ngIf='items'>\n    <div *ngFor='let item of items'>\n      <button *ngIf='item.title' md-button [routerLink]='[\"/record\", type ,  item.id]' class='item-title'>{{item.title}}</button>\n      <button *ngIf='!item.title' md-button [routerLink]='[\"/record\", type ,  item.id]'>{{item.id}}</button>\n    </div>\n  </div>\n\n</div>\n"
+module.exports = "<div>\n  <mat-toolbar class='secondary-button-bar'>\n<span class='fill-remaining-space'></span>\n\n  <span *ngIf='getLayout() === \"mobile\"'>\n  <button mat-raised-button color='primary' [matMenuTriggerFor]='menu'><mat-icon>more_horiz</mat-icon></button>\n  <mat-menu #menu=\"matMenu\">\n\n    <button mat-menu-item color='primary' [routerLink]='[\"/record\", type ,  \"new\"]' ><mat-icon>add</mat-icon>{{ \"record.list.create\" | translate }} </button>\n\n\n    <button mat-menu-item color='primary' (click)='rebuildIndex()' matTooltip='{{\"record.list.refresh\" | translate }}'><mat-icon>refresh</mat-icon> {{'record.list.refresh' | translate }}</button>\n\n    <button mat-menu-item color='primary' (click)='openHelpDialog()' ><mat-icon alt='help'>help_outline</mat-icon> {{'help.label' | translate }}</button>\n\n\n  </mat-menu>\n  </span>\n\n  <span *ngIf='getLayout() === \"desktop\"'>\n\n    <span matTooltip='{{ \"record.list.create\" | translate }}'>\n      <a  mat-raised-button color='primary' [routerLink]='[\"/record\", type ,  \"new\"]'><mat-icon>add</mat-icon> </a>\n    </span>\n    <span class='toolbar-spacer'></span>\n  <button mat-raised-button color='primary' (click)='rebuildIndex()'matTooltip='{{\"record.list.refresh\" | translate }}' ><mat-icon>refresh</mat-icon></button>\n  <span class='toolbar-spacer'></span>\n  <button mat-raised-button color='primary' (click)='openHelpDialog()' matTooltip='{{\"help.label\" | translate }}'><mat-icon alt='help'>help_outline</mat-icon></button>\n\n  </span>\n\n</mat-toolbar>\n\n\n\n  <div *ngIf='items'>\n    <div *ngFor='let item of items'>\n      <button *ngIf='item.title' mat-button [routerLink]='[\"/record\", type ,  item.id]' class='item-title'>{{item.title}}</button>\n      <button *ngIf='!item.title' mat-button [routerLink]='[\"/record\", type ,  item.id]' class='item-title'>{{item.id}}</button>\n    </div>\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -3270,12 +3700,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var RecordListComponent = /** @class */ (function (_super) {
+var RecordListComponent = (function (_super) {
     __extends(RecordListComponent, _super);
-    function RecordListComponent(contentService, locale, route, orderby, dialog) {
+    function RecordListComponent(contentService, locale, route, windowService, orderby, dialog) {
         var _this = _super.call(this) || this;
         _this.contentService = contentService;
         _this.route = route;
+        _this.windowService = windowService;
         _this.orderby = orderby;
         _this.dialog = dialog;
         /**
@@ -3292,6 +3723,9 @@ var RecordListComponent = /** @class */ (function (_super) {
         _this.response = null;
         return _this;
     }
+    RecordListComponent.prototype.getLayout = function () {
+        return this.windowService.getLayout();
+    };
     RecordListComponent.prototype.ngOnInit = function () {
         var _this = this;
         _super.prototype.ngOnInit.call(this);
@@ -3331,7 +3765,7 @@ var RecordListComponent = /** @class */ (function (_super) {
         dialogRef.afterClosed().subscribe(function (result) { console.log('Dialog result'); });
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
         __metadata("design:type", String)
     ], RecordListComponent.prototype, "recordtype", void 0);
     RecordListComponent = __decorate([
@@ -3343,12 +3777,13 @@ var RecordListComponent = /** @class */ (function (_super) {
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_app_services__["b" /* ContentService */],
             __WEBPACK_IMPORTED_MODULE_5_app_shared__["c" /* LocaleService */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */],
-            __WEBPACK_IMPORTED_MODULE_6_app_shared_filters__["a" /* OrderbyPipe */], __WEBPACK_IMPORTED_MODULE_2__angular_material__["e" /* MdDialog */]])
+            __WEBPACK_IMPORTED_MODULE_5_app_shared__["g" /* WindowService */], __WEBPACK_IMPORTED_MODULE_6_app_shared_filters__["a" /* OrderbyPipe */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_material__["d" /* MatDialog */]])
     ], RecordListComponent);
     return RecordListComponent;
 }(__WEBPACK_IMPORTED_MODULE_7_app_home__["c" /* StandardComponent */]));
 
-//# sourceMappingURL=recordlist.component.js.map
+
 
 /***/ }),
 
@@ -3373,7 +3808,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/recordlist/recordlisthelpdialog.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--component html goes here -->\n<h2 md-dialog-title>{{'home.help.title' | translate}}</h2>\n<!-- help content -->\n  <md-dialog-content>\n    <md-list>\n     <md-list-item> <md-icon>refresh</md-icon></md-list-item> {{'recordlist.help.refresh' | translate}}\n    </md-list>\n\n    </md-dialog-content>\n"
+module.exports = "<!--component html goes here -->\n<h2 mat-dialog-title>{{'home.help.title' | translate}}</h2>\n<!-- help content -->\n  <mat-dialog-content>\n    <mat-list>\n     <mat-list-item> <mat-icon>refresh</mat-icon></mat-list-item> {{'recordlist.help.refresh' | translate}}\n    </mat-list>\n\n    </mat-dialog-content>\n"
 
 /***/ }),
 
@@ -3398,7 +3833,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 
 
-var RecordListHelpDialogComponent = /** @class */ (function () {
+var RecordListHelpDialogComponent = (function () {
     function RecordListHelpDialogComponent(data) {
         this.data = data;
     }
@@ -3409,13 +3844,13 @@ var RecordListHelpDialogComponent = /** @class */ (function () {
             template: __webpack_require__("../../../../../src/app/recordlist/recordlisthelpdialog.component.html"),
             styles: [__webpack_require__("../../../../../src/app/recordlist/recordlisthelpdialog.component.css")]
         }),
-        __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MD_DIALOG_DATA */])),
+        __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MAT_DIALOG_DATA */])),
         __metadata("design:paramtypes", [Object])
     ], RecordListHelpDialogComponent);
     return RecordListHelpDialogComponent;
 }());
 
-//# sourceMappingURL=recordlisthelpdialog.component.js.map
+
 
 /***/ }),
 
@@ -3426,7 +3861,7 @@ var RecordListHelpDialogComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__register_component__ = __webpack_require__("../../../../../src/app/register/register.component.ts");
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__register_component__["a"]; });
 
-//# sourceMappingURL=index.js.map
+
 
 /***/ }),
 
@@ -3451,7 +3886,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/register/register.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n\n  <form name='form' (ngSubmit)='f.form.valid && register()' #f='ngForm' novalidate class='loginform'>\n    <div [ngClass]='{ \"has-error\": f.submitted && !email.valid }'>\n\n      <md-input-container class='loginform-input'>\n        <input type='text' mdInput placeholder='Username' name='name' [(ngModel)]='model.name' #name='ngModel' required />\n      </md-input-container>\n\n\n    </div>\n\n    <div [ngClass]='{ \"has-error\": f.submitted && !email.valid }'>\n      <md-input-container class='loginform-input'>\n        <input type='text' mdInput placeholder='email' name='email' [(ngModel)]='model.email' #email='ngModel' required />\n      </md-input-container>\n\n    </div>\n    <div [ngClass]='{ \"has-error\": f.submitted && !password.valid }'>\n      <md-input-container class='loginform-input'>\n        <input type='password' mdInput placeholder='password' name='password' [(ngModel)]='model.password' #password='ngModel' required />\n      </md-input-container>\n    </div>\n\n\n\n\n\n\n    <div>\n      <button md-button [disabled]='loading'><md-icon>check_circle</md-icon></button>\n      <md-spinner *ngIf='loading' mode='indeterminate'></md-spinner>\n\n    </div>\n  </form>\n</div>\n"
+module.exports = "<div>\n\n  <form name='form' (ngSubmit)='f.form.valid && register()' #f='ngForm' novalidate class='loginform'>\n    <div [ngClass]='{ \"has-error\": f.submitted && !email.valid }'>\n\n      <mat-input-container class='loginform-input'>\n        <input type='text' matInput placeholder='Username' name='name' [(ngModel)]='model.name' #name='ngModel' required />\n      </mat-input-container>\n\n\n    </div>\n\n    <div [ngClass]='{ \"has-error\": f.submitted && !email.valid }'>\n      <mat-input-container class='loginform-input'>\n        <input type='text' matInput placeholder='email' name='email' [(ngModel)]='model.email' #email='ngModel' required />\n      </mat-input-container>\n\n    </div>\n    <div [ngClass]='{ \"has-error\": f.submitted && !password.valid }'>\n      <mat-input-container class='loginform-input'>\n        <input type='password' matInput placeholder='password' name='password' [(ngModel)]='model.password' #password='ngModel' required />\n      </mat-input-container>\n    </div>\n\n\n\n\n\n\n    <div>\n      <button mat-button [disabled]='loading'><mat-icon>check_circle</mat-icon></button>\n      <mat-spinner *ngIf='loading' mode='indeterminate'></mat-spinner>\n\n    </div>\n  </form>\n</div>\n"
 
 /***/ }),
 
@@ -3475,7 +3910,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var RegisterComponent = /** @class */ (function () {
+var RegisterComponent = (function () {
     function RegisterComponent(router, userService, alertService) {
         this.router = router;
         this.userService = userService;
@@ -3508,44 +3943,7 @@ var RegisterComponent = /** @class */ (function () {
     return RegisterComponent;
 }());
 
-//# sourceMappingURL=register.component.js.map
 
-/***/ }),
-
-/***/ "../../../../../src/app/rxjs-extensions.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_observable_of__ = __webpack_require__("../../../../rxjs/_esm5/add/observable/of.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_observable_throw__ = __webpack_require__("../../../../rxjs/_esm5/add/observable/throw.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/catch.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_debounceTime__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/debounceTime.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_distinctUntilChanged__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/distinctUntilChanged.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_do__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/do.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_filter__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/filter.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_switchMap__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/switchMap.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_Rx__ = __webpack_require__("../../../../rxjs/_esm5/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rxjs_add_operator_toPromise__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/toPromise.js");
-// Observable class extensions
-
-
-// Observable operators
-
-
-
-
-
-
-
-
-
-/*
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/
-//# sourceMappingURL=rxjs-extensions.js.map
 
 /***/ }),
 
@@ -3556,7 +3954,7 @@ can be found in the LICENSE file at http://angular.io/license
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user_route_access_service__ = __webpack_require__("../../../../../src/app/shared/auth/user-route-access-service.ts");
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__user_route_access_service__["a"]; });
 
-//# sourceMappingURL=index.js.map
+
 
 /***/ }),
 
@@ -3584,7 +3982,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var UserRouteAccessService = /** @class */ (function () {
+var UserRouteAccessService = (function () {
     function UserRouteAccessService(router, contentService, http) {
         this.router = router;
         this.contentService = contentService;
@@ -3608,13 +4006,13 @@ var UserRouteAccessService = /** @class */ (function () {
         this.router.navigate(['/login']);
     };
     UserRouteAccessService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */], __WEBPACK_IMPORTED_MODULE_4__services__["b" /* CommonClientService */], __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClient */]])
     ], UserRouteAccessService);
     return UserRouteAccessService;
 }());
 
-//# sourceMappingURL=user-route-access-service.js.map
+
 
 /***/ }),
 
@@ -3625,7 +4023,7 @@ var UserRouteAccessService = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__orderby_pipe__ = __webpack_require__("../../../../../src/app/shared/filters/orderby.pipe.ts");
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__orderby_pipe__["a"]; });
 
-//# sourceMappingURL=index.js.map
+
 
 /***/ }),
 
@@ -3646,7 +4044,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 https://angular.io/docs/ts/latest/guide/pipes.html
 
 */
-var OrderbyPipe = /** @class */ (function () {
+var OrderbyPipe = (function () {
     function OrderbyPipe() {
     }
     OrderbyPipe.prototype.transform = function (items, arg, dir) {
@@ -3669,15 +4067,15 @@ var OrderbyPipe = /** @class */ (function () {
         });
     };
     OrderbyPipe = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Pipe */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Pipe */])({
             name: 'orderby'
         }),
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])()
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])()
     ], OrderbyPipe);
     return OrderbyPipe;
 }());
 
-//# sourceMappingURL=orderby.pipe.js.map
+
 
 /***/ }),
 
@@ -3696,11 +4094,12 @@ var OrderbyPipe = /** @class */ (function () {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__services__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_3__services__["d"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_3__services__["e"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_3__services__["f"]; });
 
 
 
 
-//# sourceMappingURL=index.js.map
+
 
 /***/ }),
 
@@ -3711,7 +4110,7 @@ var OrderbyPipe = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__login_service__ = __webpack_require__("../../../../../src/app/shared/login/login.service.ts");
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__login_service__["a"]; });
 
-//# sourceMappingURL=index.js.map
+
 
 /***/ }),
 
@@ -3742,7 +4141,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 * Credits :
 * based on http://jasonwatmore.com/post/2016/09/29/angular-2-user-registration-and-login-example-tutorial
 */
-var LoginService = /** @class */ (function () {
+var LoginService = (function () {
     function LoginService(http) {
         this.http = http;
         this.serverUrl = __WEBPACK_IMPORTED_MODULE_3_environments_environment__["a" /* environment */].server;
@@ -3863,13 +4262,13 @@ var LoginService = /** @class */ (function () {
         return result;
     };
     LoginService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClient */]])
     ], LoginService);
     return LoginService;
 }());
 
-//# sourceMappingURL=login.service.js.map
+
 
 /***/ }),
 
@@ -3893,11 +4292,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var AlertService = /** @class */ (function () {
+var AlertService = (function () {
     function AlertService(router) {
         var _this = this;
         this.router = router;
-        this.subject = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__["b" /* Subject */]();
+        this.subject = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__["a" /* Subject */]();
         this.keepAfterNavigationChange = false;
         // clear alert message on route change
         router.events.subscribe(function (event) {
@@ -3927,13 +4326,13 @@ var AlertService = /** @class */ (function () {
         return this.subject.asObservable();
     };
     AlertService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]])
     ], AlertService);
     return AlertService;
 }());
 
-//# sourceMappingURL=alert.service.js.map
+
 
 /***/ }),
 
@@ -3954,7 +4353,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 
-var CommonClientService = /** @class */ (function (_super) {
+var CommonClientService = (function (_super) {
     __extends(CommonClientService, _super);
     function CommonClientService() {
         var _this = _super.call(this) || this;
@@ -3991,7 +4390,7 @@ var CommonClientService = /** @class */ (function (_super) {
     return CommonClientService;
 }(__WEBPACK_IMPORTED_MODULE_0__jwtclient_service__["a" /* JwtClientService */]));
 
-//# sourceMappingURL=commonclient.service.js.map
+
 
 /***/ }),
 
@@ -4009,12 +4408,15 @@ var CommonClientService = /** @class */ (function (_super) {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_3__locale_service__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__stringutils_service__ = __webpack_require__("../../../../../src/app/shared/services/stringutils.service.ts");
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_4__stringutils_service__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__window_service__ = __webpack_require__("../../../../../src/app/shared/services/window.service.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_5__window_service__["a"]; });
 
 
 
 
 
-//# sourceMappingURL=index.js.map
+
+
 
 /***/ }),
 
@@ -4025,7 +4427,7 @@ var CommonClientService = /** @class */ (function (_super) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JwtClientService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
 
-var JwtClientService = /** @class */ (function () {
+var JwtClientService = (function () {
     function JwtClientService() {
         this.postFormData = false;
     }
@@ -4066,7 +4468,7 @@ var JwtClientService = /** @class */ (function () {
     return JwtClientService;
 }());
 
-//# sourceMappingURL=jwtclient.service.js.map
+
 
 /***/ }),
 
@@ -4088,7 +4490,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var LocaleService = /** @class */ (function () {
+var LocaleService = (function () {
     function LocaleService(http) {
         var _this = this;
         this.http = http;
@@ -4114,13 +4516,13 @@ var LocaleService = /** @class */ (function () {
         return lang;
     };
     LocaleService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */]])
     ], LocaleService);
     return LocaleService;
 }());
 
-//# sourceMappingURL=locale.service.js.map
+
 
 /***/ }),
 
@@ -4137,7 +4539,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var StringUtils = /** @class */ (function () {
+var StringUtils = (function () {
     function StringUtils() {
     }
     StringUtils.prototype.parseOldDate = function (str) {
@@ -4259,12 +4661,59 @@ var StringUtils = /** @class */ (function () {
             .replace(/[\t]/g, '\\t');
     };
     StringUtils = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])()
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])()
     ], StringUtils);
     return StringUtils;
 }());
 
-//# sourceMappingURL=stringutils.service.js.map
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/shared/services/window.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WindowService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var WindowService = (function () {
+    function WindowService() {
+        this.layout = this.initLayout();
+    }
+    WindowService.prototype.isMobile = function () {
+        return 'mobile' === this.layout;
+    };
+    WindowService.prototype.isDesktop = function () {
+        return 'mobile' !== this.layout;
+    };
+    WindowService.prototype.initLayout = function () {
+        var layout = 'mobile';
+        if (window.matchMedia('(min-width: 55em)').matches) {
+            layout = 'desktop';
+        }
+        return layout;
+    };
+    WindowService.prototype.getLayout = function () {
+        return this.layout;
+    };
+    WindowService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+        __metadata("design:paramtypes", [])
+    ], WindowService);
+    return WindowService;
+}());
+
+
 
 /***/ }),
 
@@ -4287,11 +4736,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AdminCmsSharedLibsModule = /** @class */ (function () {
+var AdminCmsSharedLibsModule = (function () {
     function AdminCmsSharedLibsModule() {
     }
     AdminCmsSharedLibsModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_common__["b" /* CommonModule */],
@@ -4307,7 +4756,7 @@ var AdminCmsSharedLibsModule = /** @class */ (function () {
     return AdminCmsSharedLibsModule;
 }());
 
-//# sourceMappingURL=shared-libs.module.js.map
+
 
 /***/ }),
 
@@ -4334,11 +4783,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AdminCmsSharedModule = /** @class */ (function () {
+var AdminCmsSharedModule = (function () {
     function AdminCmsSharedModule() {
     }
     AdminCmsSharedModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__shared_libs_module__["a" /* AdminCmsSharedLibsModule */],
             ],
@@ -4353,6 +4802,7 @@ var AdminCmsSharedModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_5__services__["a" /* AlertService */],
                 __WEBPACK_IMPORTED_MODULE_5__services__["d" /* LocaleService */],
                 __WEBPACK_IMPORTED_MODULE_5__services__["e" /* StringUtils */],
+                __WEBPACK_IMPORTED_MODULE_5__services__["f" /* WindowService */],
                 __WEBPACK_IMPORTED_MODULE_1__login_login_service__["a" /* LoginService */]
             ],
             entryComponents: [],
@@ -4365,14 +4815,14 @@ var AdminCmsSharedModule = /** @class */ (function () {
     return AdminCmsSharedModule;
 }());
 
-//# sourceMappingURL=shared.module.js.map
+
 
 /***/ }),
 
 /***/ "../../../../../src/app/users/deleteuserdialog.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 md-dialog-title>{{'deletedialog.title' | translate}}</h2>\n<md-dialog-content>{{'delete.warning.1' | translate}}</md-dialog-content>\n<md-dialog-content>{{ data }}</md-dialog-content>\n<md-dialog-content>{{'delete.warning.2' | translate}}</md-dialog-content>\n<md-dialog-actions>\n  <button md-button md-dialog-close>{{'cancel.label' | translate}}</button>\n  <!-- Can optionally provide a result for the closing dialog. -->\n  <button md-button [md-dialog-close]=\"true\">{{'delete.label' | translate}}</button>\n</md-dialog-actions>\n"
+module.exports = "<h2 mat-dialog-title>{{'deletedialog.title' | translate}}</h2>\n<mat-dialog-content>{{'delete.warning.1' | translate}}</mat-dialog-content>\n<mat-dialog-content>{{ data }}</mat-dialog-content>\n<mat-dialog-content>{{'delete.warning.2' | translate}}</mat-dialog-content>\n<mat-dialog-actions>\n  <button mat-button mat-dialog-close>{{'cancel.label' | translate}}</button>\n  <!-- Can optionally provide a result for the closing dialog. -->\n  <button mat-button [mat-dialog-close]=\"true\">{{'delete.label' | translate}}</button>\n</mat-dialog-actions>\n"
 
 /***/ }),
 
@@ -4397,7 +4847,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 
 
-var DeleteUserDialogComponent = /** @class */ (function () {
+var DeleteUserDialogComponent = (function () {
     function DeleteUserDialogComponent(data) {
         this.data = data;
     }
@@ -4407,13 +4857,13 @@ var DeleteUserDialogComponent = /** @class */ (function () {
             selector: 'app-confirmdeleteuserdialog',
             template: __webpack_require__("../../../../../src/app/users/deleteuserdialog.component.html"),
         }),
-        __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MD_DIALOG_DATA */])),
+        __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MAT_DIALOG_DATA */])),
         __metadata("design:paramtypes", [Object])
     ], DeleteUserDialogComponent);
     return DeleteUserDialogComponent;
 }());
 
-//# sourceMappingURL=deleteuserdialog.component.js.map
+
 
 /***/ }),
 
@@ -4430,7 +4880,7 @@ var DeleteUserDialogComponent = /** @class */ (function () {
 
 
 
-//# sourceMappingURL=index.js.map
+
 
 /***/ }),
 
@@ -4455,7 +4905,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/users/userlist.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <md-toolbar>\n    <span mdTooltip='{{ \"record.list.create\" | translate }}'><button md-button [routerLink]='[\"/userrecord\", \"new\"]'><md-icon>add</md-icon> </button></span>\n\n</md-toolbar>\n\n  <div *ngIf='items'>\n    <div *ngFor='let item of items'>\n      <button *ngIf='item.name' md-button [routerLink]='[\"/userrecord\", item.email]' class='item-title'>{{item.name}}</button>\n      <button *ngIf='!item.name' md-button [routerLink]='[\"/userrecord\", item.email]'>{{item.email}}</button>\n    </div>\n  </div>\n\n</div>\n"
+module.exports = "<div>\n  <mat-toolbar>\n    <span matTooltip='{{ \"record.list.create\" | translate }}'><button mat-button [routerLink]='[\"/userrecord\", \"new\"]'><mat-icon>add</mat-icon> </button></span>\n\n</mat-toolbar>\n\n  <div *ngIf='items'>\n    <div *ngFor='let item of items'>\n      <button *ngIf='item.name' mat-button [routerLink]='[\"/userrecord\", item.email]' class='item-title'>{{item.name}}</button>\n      <button *ngIf='!item.name' mat-button [routerLink]='[\"/userrecord\", item.email]'>{{item.email}}</button>\n    </div>\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -4485,7 +4935,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var UserListComponent = /** @class */ (function () {
+var UserListComponent = (function () {
     function UserListComponent(contentService, locale, route, orderby, dialog) {
         this.contentService = contentService;
         this.route = route;
@@ -4518,7 +4968,7 @@ var UserListComponent = /** @class */ (function () {
             .subscribe(function (data) { return _this.response = JSON.stringify(data); }, function (error) { return console.error('post' + error); }, function () { console.log('post complete'); });
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
         __metadata("design:type", String)
     ], UserListComponent.prototype, "recordtype", void 0);
     UserListComponent = __decorate([
@@ -4530,12 +4980,12 @@ var UserListComponent = /** @class */ (function () {
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_app_services_index__["a" /* AdminService */],
             __WEBPACK_IMPORTED_MODULE_4_app_shared__["c" /* LocaleService */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */],
-            __WEBPACK_IMPORTED_MODULE_5_app_shared_filters__["a" /* OrderbyPipe */], __WEBPACK_IMPORTED_MODULE_2__angular_material__["e" /* MdDialog */]])
+            __WEBPACK_IMPORTED_MODULE_5_app_shared_filters__["a" /* OrderbyPipe */], __WEBPACK_IMPORTED_MODULE_2__angular_material__["d" /* MatDialog */]])
     ], UserListComponent);
     return UserListComponent;
 }());
 
-//# sourceMappingURL=userlist.component.js.map
+
 
 /***/ }),
 
@@ -4547,7 +4997,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".full-width-input {\n  width: 100%;\n\n}\n\n.half-width-input {\n  width: 50%;\n\n}\n\n\n.full-width-textarea {\n  width: 100%;\n}\n\n.input-group {\n  padding-bottom: 0.2em;\n}\n\ninput:-moz-read-only {\n    background-color: #ddd;\n}\n\ninput:read-only {\n    background-color: #ddd;\n}\n\n.container {\n  padding: 0.2em;\n}\n\n@media all and (min-width: 55em) {\n  .container {\n    padding: 2em;\n  }\n}\n\n\n.list-container {\n  padding-bottom: 0.5em;\n}\n\n.success-label-message {\n  font-size: 0.81em;\n  color: #777777;\n}\n\n.error-label-message {\n  font-size: 0.81em;\n  color: red;\n}\n", ""]);
+exports.push([module.i, ".full-width-input {\n  width: 100%;\n\n}\n\n.half-width-input {\n  width: 50%;\n\n}\n\n\n.full-width-textarea {\n  width: 100%;\n}\n\n.input-group {\n  padding-bottom: 0.2em;\n}\n\n\n\n.container {\n  padding: 0.2em;\n}\n\n@media all and (min-width: 55em) {\n  .container {\n    padding: 2em;\n  }\n}\n\n\n.list-container {\n  padding-bottom: 0.5em;\n}\n\n.success-label-message {\n  font-size: 0.81em;\n  color: #777777;\n}\n\n.error-label-message {\n  font-size: 0.81em;\n  color: red;\n}\n", ""]);
 
 // exports
 
@@ -4560,7 +5010,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/users/userrecord.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-card>\n  <button md-button *ngIf=\"f.form.valid\" (click)=\"save()\" mdTooltip=\"{{'record.edit.save' | translate }}\"><md-icon>save</md-icon></button>\n  <button md-button *ngIf=\"!newrecord\" (click)=\"openConfirmDialog()\" mdTooltip=\"{{'record.edit.delete' | translate }}\"> <md-icon>delete</md-icon></button>\n  <button md-button (click)='openHelpDialog()'><md-icon alt='help'>help_outline</md-icon></button>\n</md-card>\n<div *ngIf='responsemessage && responsemessage.error' class='error-label-message'>\n  <md-icon>cloud_off</md-icon> {{responsemessage.error}}\n</div>\n<div *ngIf='responsemessage && !responsemessage.error' class='success-label-message'>\n  <md-icon mdTooltip='{{responsemessage.savedate}}'>cloud_done</md-icon> {{responsemessage.since}}\n</div>\n\n<form name='form' (ngSubmit)='f.form.valid' #f='ngForm' novalidate>\n  <div class=\"container\">\n\n\n\n    <div *ngIf=\"current\">\n      <div *ngIf=\"newrecord\">\n        <div *ngFor=\"let property of properties\">\n\n        <div *ngIf=\"property.name === 'email'\">\n          <md-input-container class=\"full-width-input\" *ngIf=\"property.editor === 'line'\">\n            <input mdInput placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\" type=\"text\">\n          </md-input-container>\n        </div>\n\n\n        <div *ngIf=\"property.name === 'name'\">\n          <md-input-container class=\"full-width-input\" *ngIf=\"property.editor === 'line'\">\n            <input mdInput placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\" type=\"text\">\n          </md-input-container>\n        </div>\n\n        <div *ngIf=\"property.name === 'password'\">\n          <md-input-container>\n            <input mdInput placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\" type=\"text\">\n          </md-input-container>\n        </div>\n      </div>\n      </div>\n\n      <div *ngIf=\"!newrecord\">\n\n        <div *ngFor=\"let property of properties\">\n\n          <div *ngIf=\"property.name === 'email'\">\n            <md-input-container class=\"full-width-input\" *ngIf=\"property.editor === 'line'\">\n              <input mdInput readonly placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\" type=\"text\">\n            </md-input-container>\n          </div>\n\n\n          <div *ngIf=\"property.name === 'name'\">\n            <md-input-container class=\"full-width-input\" *ngIf=\"property.editor === 'line'\">\n              <input mdInput placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\" type=\"text\">\n            </md-input-container>\n          </div>\n\n\n          <!-- choice list -->\n          <div *ngIf=\"property.editor === 'choice'\">\n            <md-select placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\">\n              <!-- list of choices from metadata -->\n              <md-option *ngFor=\"let choice of property.choices\" [value]=\"choice\">{{ choice }}</md-option>\n            </md-select>\n            <br/>\n          </div>\n\n\n          <div *ngIf=\"property.name === 'password'\">\n            <md-input-container>\n              <input mdInput placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\" type=\"text\">\n            </md-input-container>\n          </div>\n\n        </div>\n      </div>\n      <!-- properties -->\n\n    </div>\n    <!-- current -->\n\n\n  </div>\n  <!-- container -->\n\n</form>\n"
+module.exports = "<mat-card>\n  <button mat-button *ngIf=\"f.form.valid\" (click)=\"save()\" matTooltip=\"{{'record.edit.save' | translate }}\"><mat-icon>save</mat-icon></button>\n  <button mat-button *ngIf=\"!newrecord\" (click)=\"openConfirmDialog()\" matTooltip=\"{{'record.edit.delete' | translate }}\"> <mat-icon>delete</mat-icon></button>\n  <button mat-button (click)='openHelpDialog()'><mat-icon alt='help'>help_outline</mat-icon></button>\n</mat-card>\n<div *ngIf='responsemessage && responsemessage.error' class='error-label-message'>\n  <mat-icon>cloud_off</mat-icon> {{responsemessage.error}}\n</div>\n<div *ngIf='responsemessage && !responsemessage.error' class='success-label-message'>\n  <mat-icon matTooltip='{{responsemessage.savedate}}'>cloud_done</mat-icon> {{responsemessage.since}}\n</div>\n\n<form name='form' (ngSubmit)='f.form.valid' #f='ngForm' novalidate>\n  <div class=\"container\">\n\n\n\n    <div *ngIf=\"current\">\n      <div *ngIf=\"newrecord\">\n        <div *ngFor=\"let property of properties\">\n\n        <div *ngIf=\"property.name === 'email'\">\n          <mat-input-container class=\"full-width-input\" *ngIf=\"property.editor === 'line'\">\n            <input matInput placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\" type=\"text\">\n          </mat-input-container>\n        </div>\n\n\n        <div *ngIf=\"property.name === 'name'\">\n          <mat-input-container class=\"full-width-input\" *ngIf=\"property.editor === 'line'\">\n            <input matInput placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\" type=\"text\">\n          </mat-input-container>\n        </div>\n\n        <div *ngIf=\"property.name === 'password'\">\n          <mat-input-container>\n            <input matInput placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\" type=\"text\">\n          </mat-input-container>\n        </div>\n      </div>\n      </div>\n\n      <div *ngIf=\"!newrecord\">\n\n        <div *ngFor=\"let property of properties\">\n\n          <div *ngIf=\"property.name === 'email'\">\n            <mat-input-container class=\"full-width-input\" *ngIf=\"property.editor === 'line'\">\n              <input matInput readonly placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\" type=\"text\">\n            </mat-input-container>\n          </div>\n\n\n          <div *ngIf=\"property.name === 'name'\">\n            <mat-input-container class=\"full-width-input\" *ngIf=\"property.editor === 'line'\">\n              <input matInput placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\" type=\"text\">\n            </mat-input-container>\n          </div>\n\n\n          <!-- choice list -->\n          <div *ngIf=\"property.editor === 'choice'\">\n            <mat-select placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\">\n              <!-- list of choices from metadata -->\n              <mat-option *ngFor=\"let choice of property.choices\" [value]=\"choice\">{{ choice }}</mat-option>\n            </mat-select>\n            <br/>\n          </div>\n\n\n          <div *ngIf=\"property.name === 'password'\">\n            <mat-input-container>\n              <input matInput placeholder=\"{{'field.label.' + property.name | translate }}\" [(ngModel)]=\"current[property.name]\" name=\"{{property.name}}\" type=\"text\">\n            </mat-input-container>\n          </div>\n\n        </div>\n      </div>\n      <!-- properties -->\n\n    </div>\n    <!-- current -->\n\n\n  </div>\n  <!-- container -->\n\n</form>\n"
 
 /***/ }),
 
@@ -4602,7 +5052,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var UserRecordComponent = /** @class */ (function (_super) {
+var UserRecordComponent = (function (_super) {
     __extends(UserRecordComponent, _super);
     function UserRecordComponent(contentService, locale, route, router, dialog, uploadService, stringUtils) {
         var _this = _super.call(this) || this;
@@ -4773,13 +5223,13 @@ var UserRecordComponent = /** @class */ (function (_super) {
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_app_services__["a" /* AdminService */],
             __WEBPACK_IMPORTED_MODULE_4_app_shared__["c" /* LocaleService */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */], __WEBPACK_IMPORTED_MODULE_2__angular_material__["e" /* MdDialog */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */], __WEBPACK_IMPORTED_MODULE_2__angular_material__["d" /* MatDialog */],
             __WEBPACK_IMPORTED_MODULE_3_app_services__["c" /* UploadService */], __WEBPACK_IMPORTED_MODULE_4_app_shared__["e" /* StringUtils */]])
     ], UserRecordComponent);
     return UserRecordComponent;
 }(__WEBPACK_IMPORTED_MODULE_5_app_home__["c" /* StandardComponent */]));
 
-//# sourceMappingURL=userrecord.component.js.map
+
 
 /***/ }),
 
@@ -4790,16 +5240,17 @@ var UserRecordComponent = /** @class */ (function (_super) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 var environment = {
     production: true,
+    debug: true,
     server: '',
     website: 'https://olivierb29.github.io/mobilecms-demo/#',
-    defaultlang: 'en',
+    defaultlocale: 'fr',
     usemockbackend: true,
     api: '/cmsapi/v1',
     adminapi: '/adminapi/v1',
     fileapi: '/fileapi/v1',
     authapi: '/authapi/v1'
 };
-//# sourceMappingURL=environment.js.map
+
 
 /***/ }),
 
@@ -4817,10 +5268,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_17" /* enableProdMode */])();
 }
-Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
-//# sourceMappingURL=main.js.map
+Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
+    .catch(function (err) { return console.log(err); });
+
 
 /***/ }),
 
