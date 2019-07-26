@@ -1,5 +1,346 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/app.component.html":
+/*!**************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/app.component.html ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<app-sidenav-container class='appcomponent'></app-sidenav-container>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/activity/activitybutton.component.html":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/activity/activitybutton.component.html ***!
+  \**********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = " <div class='my-activity'>\r\n    <button routerLink='{{url}}' class='my-activity-button my-mat-button-lighter shadow'>\r\n    <h3>{{activity.name | uppercase}}</h3>\r\n\r\n\r\n    <img *ngIf='activity.logo' src='{{logo}}'  alt='{{activity.name}}' class='logo'>\r\n\r\n    </button>\r\n\r\n </div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/article/article.component.html":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/article/article.component.html ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\r\n<div *ngIf='item' class='article-content shadow'>\r\n  <article>\r\n    \t\t\t<div  class='article-title article-title-decoration shadow'>\r\n            <span >{{item.title}}</span>\r\n          </div>\r\n          <div  *ngIf='item.organization' class='article-subtitle article-title-moreinfo'>\r\n              <span class='article-title-moreinfo'> {{item.organization}}</span>\r\n    \t\t\t</div>\r\n\r\n\r\n\r\n      <div class='article-description-container'>\r\n       <div *ngIf='item.activity && item.date' class='article-subtitle' >{{item.activity | uppercase}} {{item.date | localedate}}</div>\r\n\r\n        <div class='article-description'>{{item.description | br}}</div>\r\n\r\n        <div *ngIf='item.location'><i class='material-icons'>pin_drop</i> {{item.location}}</div>\r\n\r\n        <!-- media -->\r\n\r\n        <app-attachments *ngIf='item.media || item.attachments' recorduri='{{getRecordUri()}}' [attachments]='getAttachments()'></app-attachments>\r\n        <app-imagelist *ngIf='item.media || item.images' recorduri='{{getRecordUri()}}' [images]='getImages()' [lazyload]='lazyload'></app-imagelist>\r\n        <app-videolist *ngIf='item.media || item.attachments' recorduri='{{getRecordUri()}}' [videos]='getVideos()'></app-videolist>\r\n\r\n\r\n\r\n      </div>\r\n    </article>\r\n  </div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/article/articlelist.component.html":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/article/articlelist.component.html ***!
+  \******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "  <div *ngFor=\"let currentItem of items ; let i=index\">\r\n\r\n\r\n    <app-article type='news' id='{{currentItem.id}}' ></app-article>\r\n\r\n  </div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/article/articlepreview.component.html":
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/article/articlepreview.component.html ***!
+  \*********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf='item' class='article-content article-preview-content'   routerLink='{{url}}'>\r\n  <div class='article-title my-mat-button-dark' >\r\n    <div >{{item.date | localedate}} {{item.activity | uppercase}}</div>\r\n    <span >{{item.title}}</span>\r\n  </div>\r\n\r\n  <div class='article-subtitle'>{{item.activity | uppercase}} - {{item.date | localedate}}</div>\r\n\r\n\r\n  <div class='article-previewdescription-container' *ngIf='image'>\r\n    <div class='thumbnail-container' *ngIf='image'>\r\n      <img src='{{getThumbnail(image)}}' alt='{{image.title}}' >\r\n    </div>\r\n    <div class='article-previewdescription description-and-thumbnail'>{{getPreviewDescription()}}</div>\r\n\r\n  </div>\r\n\r\n  <div class='article-previewdescription-container' *ngIf='!image'>\r\n    <div class='article-previewdescription'>{{getPreviewDescription()}}</div>\r\n  </div>\r\n\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/article/attachments.component.html":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/article/attachments.component.html ***!
+  \******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!-- attachments -->\r\n<div *ngIf='attachments && attachments.length > 0'>\r\n<div *ngFor='let attachment of attachments' class='tooltip'>\r\n\r\n\r\n    <a *ngIf='attachment.url' href='{{attachment.url}}' >{{attachment.title}}</a>\r\n    <span *ngIf='attachment.thumbnails'><img src='{{getDefaultImage(attachment)}}' srcset='{{getThumbnailSrcSet(attachment)}}' alt='{{attachment.title}}' sizes='(min-width: 55em) 10vw, 20vw'>\r\n      </span>\r\n\r\n\r\n</div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/article/items.component.html":
+/*!************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/article/items.component.html ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class='article-list' >\r\n\r\n\r\n  <div *ngIf='items'>\r\n\r\n    <div *ngFor=\"let currentItem of items\" >\r\n\r\n      <app-article type='{{type}}' id='{{currentItem.id}}'></app-article>\r\n\r\n    </div>\r\n  </div>\r\n\r\n  </div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/calendar/calendar-time-line-month.component.html":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/calendar/calendar-time-line-month.component.html ***!
+  \********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class='flexcontainer'>\r\n\r\n<div class='monthtable' *ngFor='let month of months; let i=index'>\r\n\r\n<div class=\"divTable\">\r\n\r\n  <div class='divTableHeading'>\r\n    <div class='divTableHead dayCell'>{{month.name}} <span *ngIf='month.number === 0 || i === 0'>{{month.year}}</span></div>\r\n\r\n  </div><!-- divTableHeading -->\r\n<div class=\"divTableBody\">\r\n<div class='divTableRow' *ngFor='let day of month.days'>\r\n  <div class='divTableCell monthdaycell' >\r\n        <div class='cellBody \"  + getDayOfMonthStyle(day.date.getDay())'>\r\n        <span>{{day.number}}</span>\r\n        <span>{{day.name}}</span>\r\n\r\n        <span *ngIf='day.items.length > 0' >\r\n    <div *ngFor=\"let currentItem of day.items\" class='feed-article shadow \" + getCssColor(currentItem.activity)' routerLink='{{getUrl(currentItem)}}'>\r\n      <span class='calendar-icon' >{{getItemTitleMonthFormat(currentItem)}}</span>\r\n    </div>\r\n\r\n  </span>\r\n    </div>\r\n  </div><!-- divTableCell -->\r\n</div><!-- divTableRow -->\r\n</div><!-- body -->\r\n</div><!-- table -->\r\n\r\n\r\n</div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/calendar/calendar-time-line-week.component.html":
+/*!*******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/calendar/calendar-time-line-week.component.html ***!
+  \*******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\r\n<div class=\"divTable\">\r\n  <div class='divTableHeading'>\r\n    <div class='divTableHead dayCell'>L</div>\r\n    <div class='divTableHead dayCell'>M</div>\r\n    <div class='divTableHead dayCell'>M</div>\r\n    <div class='divTableHead dayCell'>J</div>\r\n    <div class='divTableHead dayCell'>V</div>\r\n    <div class='divTableHead dayCell'>S</div>\r\n    <div class='divTableHead dayCell'>D</div>\r\n\r\n  </div><!-- divTableHeading -->\r\n<div class=\"divTableBody\">\r\n\r\n<div class='divTableRow' *ngFor='let week of weeks'>\r\n  <div class='divTableCell dayCell' *ngFor='let day of week.days'>\r\n        <div class='cellBody \"  + getCellStyle(day.date.getMonth())'>\r\n        <span>{{day.number}}</span>\r\n        <span *ngIf='day.number === 1' class='monthline'>{{day.monthname}}</span>\r\n        <span *ngIf='day.items.length > 0' >\r\n    <div *ngFor=\"let currentItem of day.items\" class='feed-article my-mat-button-dark shadow' routerLink='{{getUrl(currentItem)}}'>\r\n      <span class='calendar-icon' >{{getShortTitle(currentItem)}}</span>\r\n    </div>\r\n\r\n  </span>\r\n    </div>\r\n  </div><!-- divTableCell -->\r\n\r\n</div><!-- divTableRow -->\r\n</div><!-- body -->\r\n</div><!-- table -->\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/calendar/calendar-time-line.component.html":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/calendar/calendar-time-line.component.html ***!
+  \**************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngFor=\"let currentItem of items\" class='feed-article my-mat-button-dark shadow' routerLink='{{getUrl(currentItem)}}'>\r\n  <i class='material-icons calendar-icon'>event</i>\r\n  <span>{{(currentItem.activity | uppercase)}}</span>: <span >{{currentItem.title}}</span>\r\n  <span class='feed-subtitle'>{{currentItem.date}}</span>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/calendar/calendaractivities.component.html":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/calendar/calendaractivities.component.html ***!
+  \**************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\r\n\r\n<div *ngIf=\"!activity\" >\r\n\r\n  <div class='flexcontainer'>\r\n  <div class='flexfeedcontainer'>\r\n    <div *ngFor=\"let activityLink of activityObjectList\">\r\n     <app-activitybutton [activity]='activityLink'></app-activitybutton>\r\n    </div>\r\n  </div>\r\n  <div class='flexmaincontent'>\r\n    <app-calendar-time-line-month></app-calendar-time-line-month>\r\n  </div>\r\n</div>\r\n\r\n</div>\r\n\r\n<div  *ngIf=\"activity\" class='article-list'>\r\n    <app-my-calendar-list [activity]='activity'></app-my-calendar-list>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/calendar/calendarevent.component.html":
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/calendar/calendarevent.component.html ***!
+  \*********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\r\n<div class='calendarevent-container'>\r\n\r\n  <div *ngIf='item' class='article-title theme-primary'>\r\n    <div>\r\n      <i class='material-icons calendar-icon'>event</i>\r\n      <span>{{item.date | localedate}} </span><span *ngIf='item.enddate && item.enddate !== item.date'> - </span><span *ngIf='item.enddate && item.enddate !== item.date' >{{item.enddate | localedate}} </span> : <span class='feed-subtitle'>{{item.activity | uppercase}}</span>\r\n    </div>\r\n  </div>\r\n\r\n  <div *ngIf='item' class='shadow'>\r\n      \t\t\t<div  class='article-title theme-primary shadow'>\r\n              <span >{{item.title}}</span>\r\n            </div>\r\n            <div  *ngIf='item.organization' class='article-subtitle article-title-moreinfo'>\r\n                <span class='article-title-moreinfo'> {{item.organization}}</span>\r\n      \t\t\t</div>\r\n\r\n\r\n\r\n        <div class='article-description-container'>\r\n\r\n          <div class='article-description'>{{item.description | br}}</div>\r\n\r\n          <div *ngIf='item.location'><i class='material-icons'>pin_drop</i> {{item.location}}</div>\r\n\r\n          <!-- media -->\r\n\r\n          <app-attachments *ngIf='item.media || item.attachments' recorduri='{{getRecordUri()}}' [attachments]='getAttachments()'></app-attachments>\r\n          <app-imagelist *ngIf='item.media || item.images' recorduri='{{getRecordUri()}}' [images]='getImages()' [lazyload]='lazyload'></app-imagelist>\r\n\r\n\r\n\r\n        </div>\r\n\r\n    </div>\r\n\r\n<div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/calendar/calendarfeed.component.html":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/calendar/calendarfeed.component.html ***!
+  \********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngFor=\"let item of items; let i=index\">\r\n\r\n  <div>\r\n    <app-calendarpreview  *ngIf='item.description' type='calendar' [item]='item' show='description'></app-calendarpreview>\r\n    <app-calendarpreview  *ngIf='!item.description' type='calendar' id='{{item.id}}' show='description'></app-calendarpreview>\r\n  </div>\r\n\r\n  <div class='article-feed-spacer'></div>\r\n\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/calendar/calendarlist.component.html":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/calendar/calendarlist.component.html ***!
+  \********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\r\n<div *ngIf=\"activity\">\r\n<h3><span>{{activity | uppercase}}</span></h3>\r\n\r\n  <div class='article-list' *ngIf='items' >\r\n      <div *ngFor=\"let currentItem of items\" >\r\n\r\n        <app-calendarpreview type='{{type}}' id='{{currentItem.id}}' show='description'></app-calendarpreview>\r\n\r\n    </div>\r\n  </div>\r\n\r\n\r\n\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/calendar/calendarpreview.component.html":
+/*!***********************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/calendar/calendarpreview.component.html ***!
+  \***********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<a *ngIf='item' class='hidelink' href='{{getUrl()}}'>\r\n  <div class='shadow'>\r\n\r\n    <div class='my-mat-button-dark'>\r\n      <div>\r\n        <i class='material-icons calendar-icon'>event</i>\r\n        <span>{{item.date | localedate}}</span> | <span class='feed-subtitle'>{{item.activity | uppercase}}</span> : \r\n        <span class='feed-subtitle'>{{item.title}}</span>\r\n      </div>\r\n    </div>\r\n\r\n    <div *ngIf='show === \"description\"' class='largeview'>\r\n      <div class='calendar-preview-table-row'>\r\n        <div *ngIf='image'>\r\n\r\n            <img src='{{getThumbnail(image)}}' alt='{{image.title}}'>\r\n\r\n        </div>\r\n        <div>\r\n          <span class='calendar-preview-description'>{{getPreviewDescription()}}</span>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</a>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/club/clubactivities.component.html":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/club/clubactivities.component.html ***!
+  \******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class='article-list'>\r\n  \r\n  <div *ngIf='!activity'>\r\n    <div *ngFor='let activityLink of activityObjectList'>\r\n      <app-activitybutton [activity]='activityLink'></app-activitybutton>\r\n    </div>\r\n  </div>\r\n\r\n  <div *ngIf='activity'>\r\n    <app-my-clubs-list [activity]='activity'></app-my-clubs-list>\r\n  </div>\r\n\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/club/clubdetail.component.html":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/club/clubdetail.component.html ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "      <div *ngIf='item' class='club-content' >\r\n    \t\t\t<div class='club-title' >\r\n            <a *ngIf='item.url' target='_blank' href='{{item.url}}' title=\"{{item.url}}\"  class=\"club-website\">{{item.title}} <i class='material-icons'>open_in_new</i></a>\r\n            <span *ngIf='!item.url' class=\"club-website\">{{item.title}}</span>\r\n            </div>\r\n          <div>{{item.description | br}}</div>\r\n\r\n      </div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/club/clublist.component.html":
+/*!************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/club/clublist.component.html ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\r\n<div class='article-list'>\r\n  <h3><span>{{activity | uppercase}}</span> </h3>\r\n<div *ngIf=\"activity\" class='department-list'>\r\n\r\n\r\n<div *ngFor='let dep of departmentObjectList'>\r\n\r\n  <button  [value]='dep.code' (click)='displayClubs(dep.code)' class='department-button my-mat-button-lighter shadow'>\r\n    <div >{{dep.name}}</div>\r\n\r\n  </button>\r\n\r\n</div>\r\n\r\n</div>\r\n\r\n\r\n\r\n<div *ngIf=\"activity  && department \">\r\n  <div class='article-list'>\r\n    <div *ngFor='let club of (clubs | propertyfilter: \"activity\":activity | propertyfilter: \"department\":department)' class='club-content'>\r\n      <app-my-clubdetail-component [id]=\"club.id\"></app-my-clubdetail-component>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/image/imagelist.component.html":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/image/imagelist.component.html ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\r\n\r\n\r\n\r\n<ngui-inview *ngIf='this.enableinview'  [blurEnabled]='false'>\r\n  <div *ngIf>\r\n<!-- images -->\r\n    <div *ngIf='images && images.length > 0' class='images-container'>\r\n    <div *ngFor='let image of images'>\r\n      <a href='{{image.url}}' title='{{image.title}}'>\r\n    \r\n        <img  src='{{getDefaultImage(image)}}' srcset='{{getThumbnailSrcSet(image)}}' alt='{{image.title}}' sizes='(min-width: 55em) 60vw, 100vw'>\r\n    \r\n      </a>\r\n    </div>\r\n  </div>\r\n  </div>\r\n\r\n</ngui-inview>\r\n\r\n<div *ngIf='!this.enableinview' >\r\n    <div *ngIf='images && images.length > 0' class='images-container'>\r\n        <div *ngFor='let image of images'>\r\n          <a href='{{image.url}}' title='{{image.title}}'>\r\n        \r\n            <img  src='{{getDefaultImage(image)}}' srcset='{{getThumbnailSrcSet(image)}}' alt='{{image.title}}' sizes='(min-width: 55em) 60vw, 100vw'>\r\n        \r\n          </a>\r\n        </div>\r\n      </div>\r\n</div>"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/news/news.component.html":
+/*!********************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/news/news.component.html ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<section>\r\n<div class='article-list'>\r\n\r\n \r\n\r\n  <div *ngFor=\"let item of items\">\r\n\r\n                <app-article *ngIf='item.description' type='{{type}}' [itemparam]='item' ></app-article>\r\n                <app-article *ngIf='!item.description' type='{{type}}' id='{{item.id}}' ></app-article>\r\n\r\n          \r\n  </div>\r\n</div>\r\n</section>"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/news/newsdetails.component.html":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/news/newsdetails.component.html ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<app-article *ngIf=\"id\" type='{{type}}' id='{{id}}' ></app-article>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/news/newspreview.component.html":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/news/newspreview.component.html ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\r\n\r\n<div class='article-list'>\r\n\r\n  <div *ngFor=\"let currentItem of items; let i=index\"  class=\"news-preview-container\">\r\n\r\n    <app-articlepreview type='news' id='{{currentItem.id}}'></app-articlepreview>\r\n\r\n  </div>\r\n\r\n\r\n\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/video/video.component.html":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/video/video.component.html ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\r\n<div *ngIf=\"sanitized\" class=\"videoWrapper\" >\r\n  <iframe type=\"text/html\" width=\"640\" height=\"360\" src=\"{{videoUrl}}\" frameborder=\"0\" allowfullscreen></iframe>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/maincontent/video/videolist.component.html":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/maincontent/video/videolist.component.html ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!-- images -->\r\n<div *ngIf='videos && videos.length > 0' >\r\n<div *ngFor='let video of videos'>\r\n  <app-video url='{{video.url}}'></app-video>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/sidenav/banner/banner.component.html":
+/*!********************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/sidenav/banner/banner.component.html ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "  <header>\r\n  <div class='banner-container'>\r\n\r\n    <img src='{{url}}' class='banner'>\r\n  </div>\r\n</header>"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/sidenav/featured/featured.component.html":
+/*!************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/sidenav/featured/featured.component.html ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"feed-content\">\r\n\r\n<div></div>\r\n<div *ngFor=\"let currentItem of items\" (click)=\"gotoDetail(currentItem)\" class='feed-article'>\r\n    {{currentItem.title}}\r\n</div>\r\n<div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/sidenav/footer/footer.component.html":
+/*!********************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/sidenav/footer/footer.component.html ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\r\n<div class='footer-content'>\r\n  <div *ngFor=\"let currentItem of items\" class='footer-article' >\r\n\r\n    <span *ngIf=\"currentItem.title\" class=\"footer-title\" >{{currentItem.title}}</span>\r\n    <div *ngIf=\"currentItem.description\">{{currentItem.description}}</div>\r\n\r\n  </div>\r\n\r\n<div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/sidenav/home.component.html":
+/*!***********************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/sidenav/home.component.html ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\r\n<div [ngClass]='{\"flexcontainer\": isModernBrowser()}'>\r\n\r\n  <div class='article-list' [ngClass]='{\"flexfeedcontainer\": isModernBrowser()}'>\r\n    <app-my-calendar-feed [max]='max'></app-my-calendar-feed>\r\n  </div>\r\n\r\n  <div  [ngClass]='{\"flexmaincontent\": isModernBrowser()}'>\r\n    <app-my-news-component [max]='max'></app-my-news-component>\r\n    <div routerLink='news' class='expand-title shadow'>\r\n      <i class='material-icons'>expand_more</i>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/sidenav/menubutton.component.html":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/sidenav/menubutton.component.html ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<a href='' routerLink='{{item.routerLink}}'  routerLinkActive='active'  title='{{item.title}}' class='slidemenu-button slidemenu-button-container my-mat-button-dark'>\r\n\r\n<i  class='icon-container material-icons slidemenu-button-icon'>{{item.icon}}</i>\r\n<span *ngIf='expanded' class='slidemenu-button-text' >{{item.title}}</span>\r\n\r\n</a>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/sidenav/sidenav.component.html":
+/*!**************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/sidenav/sidenav.component.html ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<nav>\r\n<div *ngIf='isOpen()' class='menu-container theme-primary'  [ngClass]='{\"menu-container-expanded\": isExpanded()}'>\r\n<div class='buttonseparator'></div>\r\n<span *ngFor='let menu of menuItems' (click)='expandClose()' >\r\n  <app-menubutton [item]='menu' [expanded]='expanded' ></app-menubutton>\r\n  <div class='buttonseparator'></div>\r\n</span>\r\n\r\n</div>\r\n</nav>"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/sidenav/sidenavcontainer.component.html":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/sidenav/sidenavcontainer.component.html ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\r\n\r\n<div class='top-menu-bar theme-dark'>\r\n\r\n  <!-- burger menu icon -->\r\n  <div (click)='sidenav.expandMenu()' >\r\n    <span class='top-menu-icon-container my-mat-button-darker' >\r\n      <i class='material-icons'>menu</i>\r\n    </span>\r\n  </div>\r\n\r\n  <!-- title -->\r\n  <div class='top-menu-title-container my-mat-button-darker' routerLink='/'>\r\n    <span class='top-menu-title' >{{title}}</span>\r\n  </div>\r\n\r\n</div>\r\n\r\n\r\n<div class='my-body'>\r\n\r\n    <app-sidenav #sidenav [mode]='menuMode' [opened]='menuOpened'></app-sidenav>\r\n\r\n  <!-- fading backdrop : close menu on click -->\r\n  <div *ngIf='sidenav.isOverMenuOpened()'  class='my-mat-sidenav-backdrop\"' [ngClass]='{\"my-mat-sidenav-shown\": sidenav.isOpen()}' (click)='sidenav.open()'></div>\r\n\r\n  <!-- container -->\r\n  <div class='router-container'>\r\n    <div  class='banner-container'  routerLink='/'>\r\n      <img class='shadow' src='{{bannerurl}}' srcset='{{getBannerSrcSet()}}' alt='' sizes='(min-width: 55em) 60vw, 100vw'>\r\n    </div>\r\n    <!-- content -->\r\n    <main>\r\n    <router-outlet></router-outlet>\r\n    </main>\r\n  </div>\r\n\r\n</div>\r\n"
+
+/***/ }),
+
 /***/ "./src/$$_lazy_route_resource lazy recursive":
 /*!**********************************************************!*\
   !*** ./src/$$_lazy_route_resource lazy namespace object ***!
@@ -77,18 +418,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".appcomponent {\n  font-family : Roboto, \"Helvetica Neue\", sans-serif;\n  background-color: #F2F2F2;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrREFBa0Q7RUFDbEQseUJBQXlCO0FBQzNCIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYXBwY29tcG9uZW50IHtcbiAgZm9udC1mYW1pbHkgOiBSb2JvdG8sIFwiSGVsdmV0aWNhIE5ldWVcIiwgc2Fucy1zZXJpZjtcbiAgYmFja2dyb3VuZC1jb2xvcjogI0YyRjJGMjtcbn1cbiJdfQ== */"
-
-/***/ }),
-
-/***/ "./src/app/app.component.html":
-/*!************************************!*\
-  !*** ./src/app/app.component.html ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<app-sidenav-container [class]='\"appcomponent\"'></app-sidenav-container>\n"
+module.exports = ".appcomponent {\r\n  font-family : Roboto, \"Helvetica Neue\", sans-serif;\r\n  background-color: #F2F2F2;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrREFBa0Q7RUFDbEQseUJBQXlCO0FBQzNCIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYXBwY29tcG9uZW50IHtcclxuICBmb250LWZhbWlseSA6IFJvYm90bywgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBzYW5zLXNlcmlmO1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICNGMkYyRjI7XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -113,7 +443,7 @@ var AppComponent = /** @class */ (function () {
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-root',
-            template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
+            template: __webpack_require__(/*! raw-loader!./app.component.html */ "./node_modules/raw-loader/index.js!./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
         })
     ], AppComponent);
@@ -258,18 +588,7 @@ var ActivityModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".my-activity {\n padding-top: 0.5em;\n text-align: center;\n width: 100%;\n}\n.my-activity-button {\n border: none;\n margin: 0.5em;\n min-height: 8em;\n width: 90%;\n}\n.logo {\n    margin-bottom: 0.5em;\n    max-width: 3em;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbmNvbnRlbnQvYWN0aXZpdHkvYWN0aXZpdHlidXR0b24uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtDQUNDLGtCQUFrQjtDQUNsQixrQkFBa0I7Q0FDbEIsV0FBVztBQUNaO0FBQ0E7Q0FDQyxZQUFZO0NBQ1osYUFBYTtDQUNiLGVBQWU7Q0FDZixVQUFVO0FBQ1g7QUFJQTtJQUNJLG9CQUFvQjtJQUNwQixjQUFjO0FBQ2xCIiwiZmlsZSI6InNyYy9hcHAvbWFpbmNvbnRlbnQvYWN0aXZpdHkvYWN0aXZpdHlidXR0b24uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5teS1hY3Rpdml0eSB7XG4gcGFkZGluZy10b3A6IDAuNWVtO1xuIHRleHQtYWxpZ246IGNlbnRlcjtcbiB3aWR0aDogMTAwJTtcbn1cbi5teS1hY3Rpdml0eS1idXR0b24ge1xuIGJvcmRlcjogbm9uZTtcbiBtYXJnaW46IDAuNWVtO1xuIG1pbi1oZWlnaHQ6IDhlbTtcbiB3aWR0aDogOTAlO1xufVxuXG5cblxuLmxvZ28ge1xuICAgIG1hcmdpbi1ib3R0b206IDAuNWVtO1xuICAgIG1heC13aWR0aDogM2VtO1xufVxuIl19 */"
-
-/***/ }),
-
-/***/ "./src/app/maincontent/activity/activitybutton.component.html":
-/*!********************************************************************!*\
-  !*** ./src/app/maincontent/activity/activitybutton.component.html ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = " <div class='my-activity'>\n    <button [routerLink]='url' class='my-activity-button my-mat-button-lighter shadow'>\n    <h3 [innerHTML]='activity.name | uppercase'></h3>\n\n\n    <img *ngIf='activity.logo' [src]=\"logo\"  [alt]='activity.name' class='logo'>\n\n    </button>\n\n </div>\n"
+module.exports = ".my-activity {\r\n padding-top: 0.5em;\r\n text-align: center;\r\n width: 100%;\r\n}\r\n.my-activity-button {\r\n border: none;\r\n margin: 0.5em;\r\n min-height: 8em;\r\n width: 90%;\r\n}\r\n.logo {\r\n    margin-bottom: 0.5em;\r\n    max-width: 3em;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbmNvbnRlbnQvYWN0aXZpdHkvYWN0aXZpdHlidXR0b24uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtDQUNDLGtCQUFrQjtDQUNsQixrQkFBa0I7Q0FDbEIsV0FBVztBQUNaO0FBQ0E7Q0FDQyxZQUFZO0NBQ1osYUFBYTtDQUNiLGVBQWU7Q0FDZixVQUFVO0FBQ1g7QUFJQTtJQUNJLG9CQUFvQjtJQUNwQixjQUFjO0FBQ2xCIiwiZmlsZSI6InNyYy9hcHAvbWFpbmNvbnRlbnQvYWN0aXZpdHkvYWN0aXZpdHlidXR0b24uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5teS1hY3Rpdml0eSB7XHJcbiBwYWRkaW5nLXRvcDogMC41ZW07XHJcbiB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiB3aWR0aDogMTAwJTtcclxufVxyXG4ubXktYWN0aXZpdHktYnV0dG9uIHtcclxuIGJvcmRlcjogbm9uZTtcclxuIG1hcmdpbjogMC41ZW07XHJcbiBtaW4taGVpZ2h0OiA4ZW07XHJcbiB3aWR0aDogOTAlO1xyXG59XHJcblxyXG5cclxuXHJcbi5sb2dvIHtcclxuICAgIG1hcmdpbi1ib3R0b206IDAuNWVtO1xyXG4gICAgbWF4LXdpZHRoOiAzZW07XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -320,7 +639,7 @@ var ActivityButtonComponent = /** @class */ (function () {
     ActivityButtonComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-activitybutton',
-            template: __webpack_require__(/*! ./activitybutton.component.html */ "./src/app/maincontent/activity/activitybutton.component.html"),
+            template: __webpack_require__(/*! raw-loader!./activitybutton.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/activity/activitybutton.component.html"),
             styles: [__webpack_require__(/*! ./activitybutton.component.css */ "./src/app/maincontent/activity/activitybutton.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
@@ -357,17 +676,6 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports) {
 
 module.exports = "\n.article-title-decoration {\n\tbackground-color: #e9e9e9;\n}\n\n.emptytext {\n\tbackground-color: #F6F7F9;\n\tcolor : #B1B1B1;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbmNvbnRlbnQvYXJ0aWNsZS9hcnRpY2xlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0NBQ0MseUJBQXlCO0FBQzFCOztBQUVBO0NBQ0MseUJBQXlCO0NBQ3pCLGVBQWU7QUFDaEIiLCJmaWxlIjoic3JjL2FwcC9tYWluY29udGVudC9hcnRpY2xlL2FydGljbGUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLmFydGljbGUtdGl0bGUtZGVjb3JhdGlvbiB7XG5cdGJhY2tncm91bmQtY29sb3I6ICNlOWU5ZTk7XG59XG5cbi5lbXB0eXRleHQge1xuXHRiYWNrZ3JvdW5kLWNvbG9yOiAjRjZGN0Y5O1xuXHRjb2xvciA6ICNCMUIxQjE7XG59XG4iXX0= */"
-
-/***/ }),
-
-/***/ "./src/app/maincontent/article/article.component.html":
-/*!************************************************************!*\
-  !*** ./src/app/maincontent/article/article.component.html ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n<div *ngIf='item' [class]='\"article-content shadow\"'>\n  <article>\n    \t\t\t<div  [class]='\"article-title article-title-decoration shadow\"'>\n            <span [innerHTML]='item.title'></span>\n          </div>\n          <div  *ngIf='item.organization' class='article-subtitle article-title-moreinfo'>\n              <span class='article-title-moreinfo'> {{item.organization}}</span>\n    \t\t\t</div>\n\n\n\n      <div [class]='\"article-description-container\"'>\n       <div *ngIf='item.activity && item.date' [class]='\"article-subtitle\"' >{{item.activity | uppercase}} {{item.date | localedate}}</div>\n\n        <div [innerHTML]='item.description | br' [class]='\"article-description\"'></div>\n\n        <div *ngIf='item.location'><i class='material-icons'>pin_drop</i> {{item.location}}</div>\n\n        <!-- media -->\n\n        <app-attachments *ngIf='item.media || item.attachments' [recorduri]='getRecordUri()' [attachments]='getAttachments()'></app-attachments>\n        <app-imagelist *ngIf='item.media || item.images' [recorduri]='getRecordUri()' [images]='getImages()' [lazyload]='lazyload'></app-imagelist>\n        <app-videolist *ngIf='item.media || item.attachments' [recorduri]='getRecordUri()' [videos]='getVideos()'></app-videolist>\n\n\n\n      </div>\n    </article>\n  </div>\n"
 
 /***/ }),
 
@@ -494,6 +802,14 @@ var ArticleComponent = /** @class */ (function () {
     ArticleComponent.prototype.getRecordUri = function () {
         return this.type + '/' + this.getId();
     };
+    ArticleComponent.ctorParameters = function () { return [
+        { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Title"] },
+        { type: src_app_shared_services_log_service__WEBPACK_IMPORTED_MODULE_4__["Log"] },
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_3__["ReadService"] },
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_3__["MediaService"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] }
+    ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
@@ -517,7 +833,7 @@ var ArticleComponent = /** @class */ (function () {
     ArticleComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-article',
-            template: __webpack_require__(/*! ./article.component.html */ "./src/app/maincontent/article/article.component.html"),
+            template: __webpack_require__(/*! raw-loader!./article.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/article/article.component.html"),
             styles: [__webpack_require__(/*! ./article.css */ "./src/app/maincontent/article/article.css"), __webpack_require__(/*! ./article.component.css */ "./src/app/maincontent/article/article.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Title"],
@@ -670,17 +986,6 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 
 /***/ }),
 
-/***/ "./src/app/maincontent/article/articlelist.component.html":
-/*!****************************************************************!*\
-  !*** ./src/app/maincontent/article/articlelist.component.html ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "  <div *ngFor=\"let currentItem of items ; let i=index\">\n\n\n    <app-article [type]='\"news\" ' [id]='currentItem.id' ></app-article>\n\n  </div>\n"
-
-/***/ }),
-
 /***/ "./src/app/maincontent/article/articlelist.component.ts":
 /*!**************************************************************!*\
   !*** ./src/app/maincontent/article/articlelist.component.ts ***!
@@ -713,7 +1018,7 @@ var ArticlelistComponent = /** @class */ (function () {
     ArticlelistComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-articlelist',
-            template: __webpack_require__(/*! ./articlelist.component.html */ "./src/app/maincontent/article/articlelist.component.html"),
+            template: __webpack_require__(/*! raw-loader!./articlelist.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/article/articlelist.component.html"),
             styles: [__webpack_require__(/*! ./articlelist.component.css */ "./src/app/maincontent/article/articlelist.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
@@ -732,18 +1037,7 @@ var ArticlelistComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".article-previewdescription-container {\n      align-content: flex-start;\n      display: flex;\n      flex-direction: row;\n}\n\n.thumbnail-container {\n  margin-right: 16px;\n  display: block;\n  min-width: 80px;\n  max-width: 144px;\n  overflow: hidden;\n}\n\n.thumbnail-container img {\n  height: auto;\n}\n\n.article-previewdescription {\n  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#ddd));\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  display: inline-block;\n}\n\n.description-and-thumbnail {\n  width: 80%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbmNvbnRlbnQvYXJ0aWNsZS9hcnRpY2xlcHJldmlldy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO01BQ00seUJBQXlCO01BQ3pCLGFBQWE7TUFDYixtQkFBbUI7QUFDekI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsY0FBYztFQUNkLGVBQWU7RUFDZixnQkFBZ0I7RUFDaEIsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsWUFBWTtBQUNkOztBQUVBO0VBQ0UsaUZBQWlGO0VBQ2pGLDZCQUE2QjtFQUM3QixvQ0FBb0M7RUFDcEMscUJBQXFCO0FBQ3ZCOztBQUVBO0VBQ0UsVUFBVTtBQUNaIiwiZmlsZSI6InNyYy9hcHAvbWFpbmNvbnRlbnQvYXJ0aWNsZS9hcnRpY2xlcHJldmlldy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmFydGljbGUtcHJldmlld2Rlc2NyaXB0aW9uLWNvbnRhaW5lciB7XG4gICAgICBhbGlnbi1jb250ZW50OiBmbGV4LXN0YXJ0O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGZsZXgtZGlyZWN0aW9uOiByb3c7XG59XG5cbi50aHVtYm5haWwtY29udGFpbmVyIHtcbiAgbWFyZ2luLXJpZ2h0OiAxNnB4O1xuICBkaXNwbGF5OiBibG9jaztcbiAgbWluLXdpZHRoOiA4MHB4O1xuICBtYXgtd2lkdGg6IDE0NHB4O1xuICBvdmVyZmxvdzogaGlkZGVuO1xufVxuXG4udGh1bWJuYWlsLWNvbnRhaW5lciBpbWcge1xuICBoZWlnaHQ6IGF1dG87XG59XG5cbi5hcnRpY2xlLXByZXZpZXdkZXNjcmlwdGlvbiB7XG4gIGJhY2tncm91bmQ6IC13ZWJraXQtZ3JhZGllbnQobGluZWFyLCBsZWZ0IHRvcCwgbGVmdCBib3R0b20sIGZyb20oIzAwMCksIHRvKCNkZGQpKTtcbiAgLXdlYmtpdC1iYWNrZ3JvdW5kLWNsaXA6IHRleHQ7XG4gIC13ZWJraXQtdGV4dC1maWxsLWNvbG9yOiB0cmFuc3BhcmVudDtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xufVxuXG4uZGVzY3JpcHRpb24tYW5kLXRodW1ibmFpbCB7XG4gIHdpZHRoOiA4MCU7XG59XG4iXX0= */"
-
-/***/ }),
-
-/***/ "./src/app/maincontent/article/articlepreview.component.html":
-/*!*******************************************************************!*\
-  !*** ./src/app/maincontent/article/articlepreview.component.html ***!
-  \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div *ngIf='item' class='article-content article-preview-content'   [routerLink]='url'>\n  <div class='article-title my-mat-button-dark' >\n    <div >{{item.date | localedate}} {{item.activity | uppercase}}</div>\n    <span [innerHTML]='item.title'></span>\n  </div>\n\n  <div class='article-subtitle'>{{item.activity | uppercase}} - {{item.date | localedate}}</div>\n\n\n  <div class='article-previewdescription-container' *ngIf='image'>\n    <div class='thumbnail-container' *ngIf='image'>\n      <img [src]='getThumbnail(image)' [alt]='image.title' >\n    </div>\n    <div [innerHTML]='getPreviewDescription()'  class='article-previewdescription description-and-thumbnail'></div>\n\n  </div>\n\n  <div class='article-previewdescription-container' *ngIf='!image'>\n    <div [innerHTML]='getPreviewDescription()'  class='article-previewdescription'></div>\n  </div>\n\n</div>\n"
+module.exports = ".article-previewdescription-container {\n      align-content: flex-start;\n      display: -webkit-box;\n      display: flex;\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n              flex-direction: row;\n}\n\n.thumbnail-container {\n  margin-right: 16px;\n  display: block;\n  min-width: 80px;\n  max-width: 144px;\n  overflow: hidden;\n}\n\n.thumbnail-container img {\n  height: auto;\n}\n\n.article-previewdescription {\n  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#ddd));\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  display: inline-block;\n}\n\n.description-and-thumbnail {\n  width: 80%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbmNvbnRlbnQvYXJ0aWNsZS9hcnRpY2xlcHJldmlldy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO01BQ00seUJBQXlCO01BQ3pCLG9CQUFhO01BQWIsYUFBYTtNQUNiLDhCQUFtQjtNQUFuQiw2QkFBbUI7Y0FBbkIsbUJBQW1CO0FBQ3pCOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLGNBQWM7RUFDZCxlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLFlBQVk7QUFDZDs7QUFFQTtFQUNFLGlGQUFpRjtFQUNqRiw2QkFBNkI7RUFDN0Isb0NBQW9DO0VBQ3BDLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLFVBQVU7QUFDWiIsImZpbGUiOiJzcmMvYXBwL21haW5jb250ZW50L2FydGljbGUvYXJ0aWNsZXByZXZpZXcuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5hcnRpY2xlLXByZXZpZXdkZXNjcmlwdGlvbi1jb250YWluZXIge1xuICAgICAgYWxpZ24tY29udGVudDogZmxleC1zdGFydDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBmbGV4LWRpcmVjdGlvbjogcm93O1xufVxuXG4udGh1bWJuYWlsLWNvbnRhaW5lciB7XG4gIG1hcmdpbi1yaWdodDogMTZweDtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG1pbi13aWR0aDogODBweDtcbiAgbWF4LXdpZHRoOiAxNDRweDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbn1cblxuLnRodW1ibmFpbC1jb250YWluZXIgaW1nIHtcbiAgaGVpZ2h0OiBhdXRvO1xufVxuXG4uYXJ0aWNsZS1wcmV2aWV3ZGVzY3JpcHRpb24ge1xuICBiYWNrZ3JvdW5kOiAtd2Via2l0LWdyYWRpZW50KGxpbmVhciwgbGVmdCB0b3AsIGxlZnQgYm90dG9tLCBmcm9tKCMwMDApLCB0bygjZGRkKSk7XG4gIC13ZWJraXQtYmFja2dyb3VuZC1jbGlwOiB0ZXh0O1xuICAtd2Via2l0LXRleHQtZmlsbC1jb2xvcjogdHJhbnNwYXJlbnQ7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbn1cblxuLmRlc2NyaXB0aW9uLWFuZC10aHVtYm5haWwge1xuICB3aWR0aDogODAlO1xufVxuIl19 */"
 
 /***/ }),
 
@@ -827,6 +1121,13 @@ var ArticlePreviewComponent = /** @class */ (function () {
     ArticlePreviewComponent.prototype.getAttachments = function () {
         return this.mediaService.getAttachments(this.getItem());
     };
+    ArticlePreviewComponent.ctorParameters = function () { return [
+        { type: src_app_shared_services_log_service__WEBPACK_IMPORTED_MODULE_3__["Log"] },
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_2__["ReadService"] },
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_2__["MediaService"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"] },
+        { type: src_app_maincontent_image__WEBPACK_IMPORTED_MODULE_6__["ImageService"] }
+    ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
@@ -846,7 +1147,7 @@ var ArticlePreviewComponent = /** @class */ (function () {
     ArticlePreviewComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-articlepreview',
-            template: __webpack_require__(/*! ./articlepreview.component.html */ "./src/app/maincontent/article/articlepreview.component.html"),
+            template: __webpack_require__(/*! raw-loader!./articlepreview.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/article/articlepreview.component.html"),
             styles: [__webpack_require__(/*! ./article.css */ "./src/app/maincontent/article/article.css"), __webpack_require__(/*! ./articlepreview.css */ "./src/app/maincontent/article/articlepreview.css"), __webpack_require__(/*! ./articlepreview.component.css */ "./src/app/maincontent/article/articlepreview.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_shared_services_log_service__WEBPACK_IMPORTED_MODULE_3__["Log"], src_app_shared_services__WEBPACK_IMPORTED_MODULE_2__["ReadService"],
@@ -882,17 +1183,6 @@ module.exports = ".tooltip {\n  position: relative;\n}\n\n.tooltip span {\n  mar
 
 /***/ }),
 
-/***/ "./src/app/maincontent/article/attachments.component.html":
-/*!****************************************************************!*\
-  !*** ./src/app/maincontent/article/attachments.component.html ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<!-- attachments -->\n<div *ngIf='attachments && attachments.length > 0'>\n<div *ngFor='let attachment of attachments' class='tooltip'>\n\n\n    <a *ngIf='attachment.url' [href]='attachment.url' [innerHTML]='attachment.title'></a>\n    <span *ngIf='attachment.thumbnails'><img [src]='getDefaultImage(attachment)' [srcset]='getThumbnailSrcSet(attachment)' [alt]='attachment.title' sizes='(min-width: 55em) 10vw, 20vw'>\n      </span>\n\n\n</div>\n</div>\n"
-
-/***/ }),
-
 /***/ "./src/app/maincontent/article/attachments.component.ts":
 /*!**************************************************************!*\
   !*** ./src/app/maincontent/article/attachments.component.ts ***!
@@ -924,6 +1214,9 @@ var AttachmentsComponent = /** @class */ (function () {
     AttachmentsComponent.prototype.getThumbnailSrcSet = function (picture) {
         return this.imageService.getThumbnailSrcSet(src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].server, this.recorduri, picture);
     };
+    AttachmentsComponent.ctorParameters = function () { return [
+        { type: src_app_maincontent_image__WEBPACK_IMPORTED_MODULE_3__["ImageService"] }
+    ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
@@ -935,7 +1228,7 @@ var AttachmentsComponent = /** @class */ (function () {
     AttachmentsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-attachments',
-            template: __webpack_require__(/*! ./attachments.component.html */ "./src/app/maincontent/article/attachments.component.html"),
+            template: __webpack_require__(/*! raw-loader!./attachments.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/article/attachments.component.html"),
             styles: [__webpack_require__(/*! ./attachments.component.css */ "./src/app/maincontent/article/attachments.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_maincontent_image__WEBPACK_IMPORTED_MODULE_3__["ImageService"]])
@@ -995,17 +1288,6 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 
 /***/ }),
 
-/***/ "./src/app/maincontent/article/items.component.html":
-/*!**********************************************************!*\
-  !*** ./src/app/maincontent/article/items.component.html ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class='article-list' >\n\n\n  <div *ngIf='items'>\n\n    <div *ngFor=\"let currentItem of items\" >\n\n      <app-article [type]='type' [id]='currentItem.id'></app-article>\n\n    </div>\n  </div>\n\n  </div>\n"
-
-/***/ }),
-
 /***/ "./src/app/maincontent/article/items.component.ts":
 /*!********************************************************!*\
   !*** ./src/app/maincontent/article/items.component.ts ***!
@@ -1056,10 +1338,17 @@ var ItemsComponent = /** @class */ (function () {
         });
         // this.titleService.setTitle(this.type);
     };
+    ItemsComponent.ctorParameters = function () { return [
+        { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Title"] },
+        { type: src_app_shared_services_log_service__WEBPACK_IMPORTED_MODULE_5__["Log"] },
+        { type: src_app_shared_services_read_service__WEBPACK_IMPORTED_MODULE_4__["ReadService"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClient"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] }
+    ]; };
     ItemsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-items',
-            template: __webpack_require__(/*! ./items.component.html */ "./src/app/maincontent/article/items.component.html"),
+            template: __webpack_require__(/*! raw-loader!./items.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/article/items.component.html"),
             styles: [__webpack_require__(/*! ./items.component.css */ "./src/app/maincontent/article/items.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Title"], src_app_shared_services_log_service__WEBPACK_IMPORTED_MODULE_5__["Log"], src_app_shared_services_read_service__WEBPACK_IMPORTED_MODULE_4__["ReadService"], _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClient"],
@@ -1099,18 +1388,7 @@ var MediaComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".monthdaycell {\n  font-size: 0.75em;\n}\n\n\n.weekend {\n  background-color: #E8E8FF;\n}\n\n\n.monthtable {\nflex: 1 1 100%;\n}\n\n\n.flexcontainer {\n display: flex;\n flex-direction: row;\n flex-wrap: wrap;\n }\n\n\n.yearheading {\n  text-align: center;\n}\n\n\n@media all and (min-width: 55em) {\n\t.monthtable {\n\n\t\tflex: 1 1 20em;\n\t}\n}\n\n\n/* https://stackoverflow.com/questions/3839809/detect-iphone-ipad-purely-by-css#3839896 */\n\n\n@media screen and (max-device-width: 480px) and (orientation:portrait) {\n  .flexcontainer {\n    flex:none;\n    display: table;\n    width: 20em;\n  }\n  .monthtable {\n    flex:none;\n    width: 20em;\n  }\n}\n\n\n@media screen and (max-device-width: 480px) and (orientation:landscape) {\n  .flexcontainer {\n   flex:none;\n   display: table;\n    width: 20em;\n  }\n  .monthtable {\n    flex:none;\n    width: 20em;\n  }\n}\n\n\n/*\n* different colors by activity\n*/\n\n\n.activitycolor0 {\n  background-color: #BF360C;\n}\n\n\n.activitycolor1 {\n  background-color: #880E4F;\n}\n\n\n.activitycolor2 {\n  background-color: #4A148C;\n}\n\n\n.activitycolor3 {\n  background-color: #9A3820;\n}\n\n\n.activitycolor4 {\n  background-color: #9C27B0;\n}\n\n\n.activitycolor5 {\n  background-color: #673AB7;\n}\n\n\n.activitycolor6 {\n  background-color: #01579B;\n}\n\n\n.activitycolor7 {\n  background-color: #006064;\n}\n\n\n.activitycolor8 {\n  background-color: #004D40;\n}\n\n\n.activitycolor9 {\n  background-color: #212121;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbmNvbnRlbnQvY2FsZW5kYXIvY2FsZW5kYXItdGltZS1saW5lLW1vbnRoLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7QUFDbkI7OztBQUdBO0VBQ0UseUJBQXlCO0FBQzNCOzs7QUFJQTtBQUNBLGNBQWM7QUFDZDs7O0FBRUE7Q0FDQyxhQUFhO0NBQ2IsbUJBQW1CO0NBQ25CLGVBQWU7Q0FDZjs7O0FBRUQ7RUFDRSxrQkFBa0I7QUFDcEI7OztBQUVBO0NBQ0M7O0VBRUMsY0FBYztDQUNmO0FBQ0Q7OztBQUdBLHlGQUF5Rjs7O0FBQ3pGO0VBQ0U7SUFDRSxTQUFTO0lBQ1QsY0FBYztJQUNkLFdBQVc7RUFDYjtFQUNBO0lBQ0UsU0FBUztJQUNULFdBQVc7RUFDYjtBQUNGOzs7QUFFQTtFQUNFO0dBQ0MsU0FBUztHQUNULGNBQWM7SUFDYixXQUFXO0VBQ2I7RUFDQTtJQUNFLFNBQVM7SUFDVCxXQUFXO0VBQ2I7QUFDRjs7O0FBRUE7O0NBRUM7OztBQUVEO0VBQ0UseUJBQXlCO0FBQzNCOzs7QUFFQTtFQUNFLHlCQUF5QjtBQUMzQjs7O0FBRUE7RUFDRSx5QkFBeUI7QUFDM0I7OztBQUVBO0VBQ0UseUJBQXlCO0FBQzNCOzs7QUFFQTtFQUNFLHlCQUF5QjtBQUMzQjs7O0FBRUE7RUFDRSx5QkFBeUI7QUFDM0I7OztBQUVBO0VBQ0UseUJBQXlCO0FBQzNCOzs7QUFFQTtFQUNFLHlCQUF5QjtBQUMzQjs7O0FBRUE7RUFDRSx5QkFBeUI7QUFDM0I7OztBQUVBO0VBQ0UseUJBQXlCO0FBQzNCIiwiZmlsZSI6InNyYy9hcHAvbWFpbmNvbnRlbnQvY2FsZW5kYXIvY2FsZW5kYXItdGltZS1saW5lLW1vbnRoLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubW9udGhkYXljZWxsIHtcbiAgZm9udC1zaXplOiAwLjc1ZW07XG59XG5cblxuLndlZWtlbmQge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjRThFOEZGO1xufVxuXG5cblxuLm1vbnRodGFibGUge1xuZmxleDogMSAxIDEwMCU7XG59XG5cbi5mbGV4Y29udGFpbmVyIHtcbiBkaXNwbGF5OiBmbGV4O1xuIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gZmxleC13cmFwOiB3cmFwO1xuIH1cblxuLnllYXJoZWFkaW5nIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG5AbWVkaWEgYWxsIGFuZCAobWluLXdpZHRoOiA1NWVtKSB7XG5cdC5tb250aHRhYmxlIHtcblxuXHRcdGZsZXg6IDEgMSAyMGVtO1xuXHR9XG59XG5cblxuLyogaHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS9xdWVzdGlvbnMvMzgzOTgwOS9kZXRlY3QtaXBob25lLWlwYWQtcHVyZWx5LWJ5LWNzcyMzODM5ODk2ICovXG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LWRldmljZS13aWR0aDogNDgwcHgpIGFuZCAob3JpZW50YXRpb246cG9ydHJhaXQpIHtcbiAgLmZsZXhjb250YWluZXIge1xuICAgIGZsZXg6bm9uZTtcbiAgICBkaXNwbGF5OiB0YWJsZTtcbiAgICB3aWR0aDogMjBlbTtcbiAgfVxuICAubW9udGh0YWJsZSB7XG4gICAgZmxleDpub25lO1xuICAgIHdpZHRoOiAyMGVtO1xuICB9XG59XG5cbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtZGV2aWNlLXdpZHRoOiA0ODBweCkgYW5kIChvcmllbnRhdGlvbjpsYW5kc2NhcGUpIHtcbiAgLmZsZXhjb250YWluZXIge1xuICAgZmxleDpub25lO1xuICAgZGlzcGxheTogdGFibGU7XG4gICAgd2lkdGg6IDIwZW07XG4gIH1cbiAgLm1vbnRodGFibGUge1xuICAgIGZsZXg6bm9uZTtcbiAgICB3aWR0aDogMjBlbTtcbiAgfVxufVxuXG4vKlxuKiBkaWZmZXJlbnQgY29sb3JzIGJ5IGFjdGl2aXR5XG4qL1xuXG4uYWN0aXZpdHljb2xvcjAge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjQkYzNjBDO1xufVxuXG4uYWN0aXZpdHljb2xvcjEge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjODgwRTRGO1xufVxuXG4uYWN0aXZpdHljb2xvcjIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjNEExNDhDO1xufVxuXG4uYWN0aXZpdHljb2xvcjMge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjOUEzODIwO1xufVxuXG4uYWN0aXZpdHljb2xvcjQge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjOUMyN0IwO1xufVxuXG4uYWN0aXZpdHljb2xvcjUge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjNjczQUI3O1xufVxuXG4uYWN0aXZpdHljb2xvcjYge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDE1NzlCO1xufVxuXG4uYWN0aXZpdHljb2xvcjcge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDA2MDY0O1xufVxuXG4uYWN0aXZpdHljb2xvcjgge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDA0RDQwO1xufVxuXG4uYWN0aXZpdHljb2xvcjkge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMjEyMTIxO1xufVxuIl19 */"
-
-/***/ }),
-
-/***/ "./src/app/maincontent/calendar/calendar-time-line-month.component.html":
-/*!******************************************************************************!*\
-  !*** ./src/app/maincontent/calendar/calendar-time-line-month.component.html ***!
-  \******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class='flexcontainer'>\n\n<div class='monthtable' *ngFor='let month of months; let i=index'>\n\n<div class=\"divTable\">\n\n  <div class='divTableHeading'>\n    <div class='divTableHead dayCell'>{{month.name}} <span *ngIf='month.number === 0 || i === 0'>{{month.year}}</span></div>\n\n  </div><!-- divTableHeading -->\n<div class=\"divTableBody\">\n<div class='divTableRow' *ngFor='let day of month.days'>\n  <div class='divTableCell monthdaycell' >\n        <div [class]='\"cellBody \"  + getDayOfMonthStyle(day.date.getDay())'>\n        <span [innerHTML]='day.number'></span>\n        <span [innerHTML]='day.name'></span>\n\n        <span *ngIf='day.items.length > 0' >\n    <div *ngFor=\"let currentItem of day.items\" [class]='\"feed-article shadow \" + getCssColor(currentItem.activity)' [routerLink]='getUrl(currentItem)'>\n      <span class='calendar-icon' [innerHTML]='getItemTitleMonthFormat(currentItem)'></span>\n    </div>\n\n  </span>\n    </div>\n  </div><!-- divTableCell -->\n</div><!-- divTableRow -->\n</div><!-- body -->\n</div><!-- table -->\n\n\n</div>\n</div>\n"
+module.exports = ".monthdaycell {\n  font-size: 0.75em;\n}\n\n\n.weekend {\n  background-color: #E8E8FF;\n}\n\n\n.monthtable {\n-webkit-box-flex: 1;\n        flex: 1 1 100%;\n}\n\n\n.flexcontainer {\n display: -webkit-box;\n display: flex;\n -webkit-box-orient: horizontal;\n -webkit-box-direction: normal;\n         flex-direction: row;\n flex-wrap: wrap;\n }\n\n\n.yearheading {\n  text-align: center;\n}\n\n\n@media all and (min-width: 55em) {\n\t.monthtable {\n\n\t\t-webkit-box-flex: 1;\n\n\t\t        flex: 1 1 20em;\n\t}\n}\n\n\n/* https://stackoverflow.com/questions/3839809/detect-iphone-ipad-purely-by-css#3839896 */\n\n\n@media screen and (max-device-width: 480px) and (orientation:portrait) {\n  .flexcontainer {\n    -webkit-box-flex:0;\n            flex:none;\n    display: table;\n    width: 20em;\n  }\n  .monthtable {\n    -webkit-box-flex:0;\n            flex:none;\n    width: 20em;\n  }\n}\n\n\n@media screen and (max-device-width: 480px) and (orientation:landscape) {\n  .flexcontainer {\n   -webkit-box-flex:0;\n           flex:none;\n   display: table;\n    width: 20em;\n  }\n  .monthtable {\n    -webkit-box-flex:0;\n            flex:none;\n    width: 20em;\n  }\n}\n\n\n/*\n* different colors by activity\n*/\n\n\n.activitycolor0 {\n  background-color: #BF360C;\n}\n\n\n.activitycolor1 {\n  background-color: #880E4F;\n}\n\n\n.activitycolor2 {\n  background-color: #4A148C;\n}\n\n\n.activitycolor3 {\n  background-color: #9A3820;\n}\n\n\n.activitycolor4 {\n  background-color: #9C27B0;\n}\n\n\n.activitycolor5 {\n  background-color: #673AB7;\n}\n\n\n.activitycolor6 {\n  background-color: #01579B;\n}\n\n\n.activitycolor7 {\n  background-color: #006064;\n}\n\n\n.activitycolor8 {\n  background-color: #004D40;\n}\n\n\n.activitycolor9 {\n  background-color: #212121;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbmNvbnRlbnQvY2FsZW5kYXIvY2FsZW5kYXItdGltZS1saW5lLW1vbnRoLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7QUFDbkI7OztBQUdBO0VBQ0UseUJBQXlCO0FBQzNCOzs7QUFJQTtBQUNBLG1CQUFjO1FBQWQsY0FBYztBQUNkOzs7QUFFQTtDQUNDLG9CQUFhO0NBQWIsYUFBYTtDQUNiLDhCQUFtQjtDQUFuQiw2QkFBbUI7U0FBbkIsbUJBQW1CO0NBQ25CLGVBQWU7Q0FDZjs7O0FBRUQ7RUFDRSxrQkFBa0I7QUFDcEI7OztBQUVBO0NBQ0M7O0VBRUMsbUJBQWM7O1VBQWQsY0FBYztDQUNmO0FBQ0Q7OztBQUdBLHlGQUF5Rjs7O0FBQ3pGO0VBQ0U7SUFDRSxrQkFBUztZQUFULFNBQVM7SUFDVCxjQUFjO0lBQ2QsV0FBVztFQUNiO0VBQ0E7SUFDRSxrQkFBUztZQUFULFNBQVM7SUFDVCxXQUFXO0VBQ2I7QUFDRjs7O0FBRUE7RUFDRTtHQUNDLGtCQUFTO1dBQVQsU0FBUztHQUNULGNBQWM7SUFDYixXQUFXO0VBQ2I7RUFDQTtJQUNFLGtCQUFTO1lBQVQsU0FBUztJQUNULFdBQVc7RUFDYjtBQUNGOzs7QUFFQTs7Q0FFQzs7O0FBRUQ7RUFDRSx5QkFBeUI7QUFDM0I7OztBQUVBO0VBQ0UseUJBQXlCO0FBQzNCOzs7QUFFQTtFQUNFLHlCQUF5QjtBQUMzQjs7O0FBRUE7RUFDRSx5QkFBeUI7QUFDM0I7OztBQUVBO0VBQ0UseUJBQXlCO0FBQzNCOzs7QUFFQTtFQUNFLHlCQUF5QjtBQUMzQjs7O0FBRUE7RUFDRSx5QkFBeUI7QUFDM0I7OztBQUVBO0VBQ0UseUJBQXlCO0FBQzNCOzs7QUFFQTtFQUNFLHlCQUF5QjtBQUMzQjs7O0FBRUE7RUFDRSx5QkFBeUI7QUFDM0IiLCJmaWxlIjoic3JjL2FwcC9tYWluY29udGVudC9jYWxlbmRhci9jYWxlbmRhci10aW1lLWxpbmUtbW9udGguY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tb250aGRheWNlbGwge1xuICBmb250LXNpemU6IDAuNzVlbTtcbn1cblxuXG4ud2Vla2VuZCB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNFOEU4RkY7XG59XG5cblxuXG4ubW9udGh0YWJsZSB7XG5mbGV4OiAxIDEgMTAwJTtcbn1cblxuLmZsZXhjb250YWluZXIge1xuIGRpc3BsYXk6IGZsZXg7XG4gZmxleC1kaXJlY3Rpb246IHJvdztcbiBmbGV4LXdyYXA6IHdyYXA7XG4gfVxuXG4ueWVhcmhlYWRpbmcge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbkBtZWRpYSBhbGwgYW5kIChtaW4td2lkdGg6IDU1ZW0pIHtcblx0Lm1vbnRodGFibGUge1xuXG5cdFx0ZmxleDogMSAxIDIwZW07XG5cdH1cbn1cblxuXG4vKiBodHRwczovL3N0YWNrb3ZlcmZsb3cuY29tL3F1ZXN0aW9ucy8zODM5ODA5L2RldGVjdC1pcGhvbmUtaXBhZC1wdXJlbHktYnktY3NzIzM4Mzk4OTYgKi9cbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtZGV2aWNlLXdpZHRoOiA0ODBweCkgYW5kIChvcmllbnRhdGlvbjpwb3J0cmFpdCkge1xuICAuZmxleGNvbnRhaW5lciB7XG4gICAgZmxleDpub25lO1xuICAgIGRpc3BsYXk6IHRhYmxlO1xuICAgIHdpZHRoOiAyMGVtO1xuICB9XG4gIC5tb250aHRhYmxlIHtcbiAgICBmbGV4Om5vbmU7XG4gICAgd2lkdGg6IDIwZW07XG4gIH1cbn1cblxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC1kZXZpY2Utd2lkdGg6IDQ4MHB4KSBhbmQgKG9yaWVudGF0aW9uOmxhbmRzY2FwZSkge1xuICAuZmxleGNvbnRhaW5lciB7XG4gICBmbGV4Om5vbmU7XG4gICBkaXNwbGF5OiB0YWJsZTtcbiAgICB3aWR0aDogMjBlbTtcbiAgfVxuICAubW9udGh0YWJsZSB7XG4gICAgZmxleDpub25lO1xuICAgIHdpZHRoOiAyMGVtO1xuICB9XG59XG5cbi8qXG4qIGRpZmZlcmVudCBjb2xvcnMgYnkgYWN0aXZpdHlcbiovXG5cbi5hY3Rpdml0eWNvbG9yMCB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNCRjM2MEM7XG59XG5cbi5hY3Rpdml0eWNvbG9yMSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICM4ODBFNEY7XG59XG5cbi5hY3Rpdml0eWNvbG9yMiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICM0QTE0OEM7XG59XG5cbi5hY3Rpdml0eWNvbG9yMyB7XG4gIGJhY2tncm91bmQtY29sb3I6ICM5QTM4MjA7XG59XG5cbi5hY3Rpdml0eWNvbG9yNCB7XG4gIGJhY2tncm91bmQtY29sb3I6ICM5QzI3QjA7XG59XG5cbi5hY3Rpdml0eWNvbG9yNSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICM2NzNBQjc7XG59XG5cbi5hY3Rpdml0eWNvbG9yNiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMwMTU3OUI7XG59XG5cbi5hY3Rpdml0eWNvbG9yNyB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMwMDYwNjQ7XG59XG5cbi5hY3Rpdml0eWNvbG9yOCB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMwMDRENDA7XG59XG5cbi5hY3Rpdml0eWNvbG9yOSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMyMTIxMjE7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -1226,7 +1504,7 @@ var CalendarTimeLineMonthComponent = /** @class */ (function (_super) {
     CalendarTimeLineMonthComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-calendar-time-line-month',
-            template: __webpack_require__(/*! ./calendar-time-line-month.component.html */ "./src/app/maincontent/calendar/calendar-time-line-month.component.html"),
+            template: __webpack_require__(/*! raw-loader!./calendar-time-line-month.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/calendar/calendar-time-line-month.component.html"),
             styles: [__webpack_require__(/*! ./divtable.css */ "./src/app/maincontent/calendar/divtable.css"), __webpack_require__(/*! ./calendar-time-line.component.css */ "./src/app/maincontent/calendar/calendar-time-line.component.css"), __webpack_require__(/*! ./calendar-time-line-month.component.css */ "./src/app/maincontent/calendar/calendar-time-line-month.component.css")]
         })
     ], CalendarTimeLineMonthComponent);
@@ -1234,17 +1512,6 @@ var CalendarTimeLineMonthComponent = /** @class */ (function (_super) {
 }(_calendar_time_line_component__WEBPACK_IMPORTED_MODULE_2__["CalendarTimeLineComponent"]));
 
 
-
-/***/ }),
-
-/***/ "./src/app/maincontent/calendar/calendar-time-line-week.component.html":
-/*!*****************************************************************************!*\
-  !*** ./src/app/maincontent/calendar/calendar-time-line-week.component.html ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n<div class=\"divTable\">\n  <div class='divTableHeading'>\n    <div class='divTableHead dayCell'>L</div>\n    <div class='divTableHead dayCell'>M</div>\n    <div class='divTableHead dayCell'>M</div>\n    <div class='divTableHead dayCell'>J</div>\n    <div class='divTableHead dayCell'>V</div>\n    <div class='divTableHead dayCell'>S</div>\n    <div class='divTableHead dayCell'>D</div>\n\n  </div><!-- divTableHeading -->\n<div class=\"divTableBody\">\n\n<div class='divTableRow' *ngFor='let week of weeks'>\n  <div class='divTableCell dayCell' *ngFor='let day of week.days'>\n        <div [class]='\"cellBody \"  + getCellStyle(day.date.getMonth())'>\n        <span [innerHTML]='day.number'></span>\n        <span *ngIf='day.number === 1' class='monthline' [innerHTML]='day.monthname' ></span>\n        <span *ngIf='day.items.length > 0' >\n    <div *ngFor=\"let currentItem of day.items\" class='feed-article my-mat-button-dark shadow' [routerLink]='getUrl(currentItem)'>\n      <span class='calendar-icon' [innerHTML]='getShortTitle(currentItem)'></span>\n    </div>\n\n  </span>\n    </div>\n  </div><!-- divTableCell -->\n\n</div><!-- divTableRow -->\n</div><!-- body -->\n</div><!-- table -->\n"
 
 /***/ }),
 
@@ -1321,7 +1588,7 @@ var CalendarTimeLineWeekComponent = /** @class */ (function (_super) {
     CalendarTimeLineWeekComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-calendar-time-line-week',
-            template: __webpack_require__(/*! ./calendar-time-line-week.component.html */ "./src/app/maincontent/calendar/calendar-time-line-week.component.html"),
+            template: __webpack_require__(/*! raw-loader!./calendar-time-line-week.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/calendar/calendar-time-line-week.component.html"),
             styles: [__webpack_require__(/*! ./divtable.css */ "./src/app/maincontent/calendar/divtable.css"), __webpack_require__(/*! ./calendar-time-line.component.css */ "./src/app/maincontent/calendar/calendar-time-line.component.css")]
         })
     ], CalendarTimeLineWeekComponent);
@@ -1340,17 +1607,6 @@ var CalendarTimeLineWeekComponent = /** @class */ (function (_super) {
 /***/ (function(module, exports) {
 
 module.exports = ".feed-article {\n  color: white;\n  margin: 0.2em;\n  padding: 0.2em;\n\n}\n.feed-article:hover {\n  cursor: pointer;\n}\n.calendar-time-line-container {\n  display: block;\n}\n.calendar-time-line-event {\n    float: left;\n\n}\n.clearBoth { clear:both; }\n.feed-subtitle {\n  font-size: 0.7em;\n}\n.calendar-icon {\n  font-size: 1em;\n}\n.yearline {\n  background-color: #E0E0E0;\n}\n.monthline {\n  background-color: #E9E9E9;\n  text-align: center;\n}\n.dayline {\n  font-size: 0.8em;\n}\n.endofweekline {\n  border-bottom: 1px solid #ddd;\n  font-size: 0.8em;\n\n}\n/*\n* custom styles for table\n*/\n.cellBody {\n  height: 100%;\n  width: 100%;\n}\n.dayCell {\n  font-size: 0.75em;\n  height: 3em;\n  width: 14.2857%;\n\n}\n.monthCell1 {\n  background-color: pink;\n}\n.monthCell2 {\n  background-color: yellow;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbmNvbnRlbnQvY2FsZW5kYXIvY2FsZW5kYXItdGltZS1saW5lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0VBQ1osYUFBYTtFQUNiLGNBQWM7O0FBRWhCO0FBQ0E7RUFDRSxlQUFlO0FBQ2pCO0FBRUE7RUFDRSxjQUFjO0FBQ2hCO0FBRUE7SUFDSSxXQUFXOztBQUVmO0FBQ0EsYUFBYSxVQUFVLEVBQUU7QUFFekI7RUFDRSxnQkFBZ0I7QUFDbEI7QUFDQTtFQUNFLGNBQWM7QUFDaEI7QUFHQTtFQUNFLHlCQUF5QjtBQUMzQjtBQUdBO0VBQ0UseUJBQXlCO0VBQ3pCLGtCQUFrQjtBQUNwQjtBQUVBO0VBQ0UsZ0JBQWdCO0FBQ2xCO0FBQ0E7RUFDRSw2QkFBNkI7RUFDN0IsZ0JBQWdCOztBQUVsQjtBQUlBOztDQUVDO0FBRUQ7RUFDRSxZQUFZO0VBQ1osV0FBVztBQUNiO0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsV0FBVztFQUNYLGVBQWU7O0FBRWpCO0FBSUE7RUFDRSxzQkFBc0I7QUFDeEI7QUFFQTtFQUNFLHdCQUF3QjtBQUMxQiIsImZpbGUiOiJzcmMvYXBwL21haW5jb250ZW50L2NhbGVuZGFyL2NhbGVuZGFyLXRpbWUtbGluZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZlZWQtYXJ0aWNsZSB7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgbWFyZ2luOiAwLjJlbTtcbiAgcGFkZGluZzogMC4yZW07XG5cbn1cbi5mZWVkLWFydGljbGU6aG92ZXIge1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi5jYWxlbmRhci10aW1lLWxpbmUtY29udGFpbmVyIHtcbiAgZGlzcGxheTogYmxvY2s7XG59XG5cbi5jYWxlbmRhci10aW1lLWxpbmUtZXZlbnQge1xuICAgIGZsb2F0OiBsZWZ0O1xuXG59XG4uY2xlYXJCb3RoIHsgY2xlYXI6Ym90aDsgfVxuXG4uZmVlZC1zdWJ0aXRsZSB7XG4gIGZvbnQtc2l6ZTogMC43ZW07XG59XG4uY2FsZW5kYXItaWNvbiB7XG4gIGZvbnQtc2l6ZTogMWVtO1xufVxuXG5cbi55ZWFybGluZSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNFMEUwRTA7XG59XG5cblxuLm1vbnRobGluZSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNFOUU5RTk7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuLmRheWxpbmUge1xuICBmb250LXNpemU6IDAuOGVtO1xufVxuLmVuZG9md2Vla2xpbmUge1xuICBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2RkZDtcbiAgZm9udC1zaXplOiAwLjhlbTtcblxufVxuXG5cblxuLypcbiogY3VzdG9tIHN0eWxlcyBmb3IgdGFibGVcbiovXG5cbi5jZWxsQm9keSB7XG4gIGhlaWdodDogMTAwJTtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5kYXlDZWxsIHtcbiAgZm9udC1zaXplOiAwLjc1ZW07XG4gIGhlaWdodDogM2VtO1xuICB3aWR0aDogMTQuMjg1NyU7XG5cbn1cblxuXG5cbi5tb250aENlbGwxIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcGluaztcbn1cblxuLm1vbnRoQ2VsbDIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB5ZWxsb3c7XG59XG4iXX0= */"
-
-/***/ }),
-
-/***/ "./src/app/maincontent/calendar/calendar-time-line.component.html":
-/*!************************************************************************!*\
-  !*** ./src/app/maincontent/calendar/calendar-time-line.component.html ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div *ngFor=\"let currentItem of items\" class='feed-article my-mat-button-dark shadow' [routerLink]='getUrl(currentItem)'>\n  <i [class]='\"material-icons calendar-icon\"'>event</i>\n  <span [innerHTML]='(currentItem.activity | uppercase)'></span>: <span [innerHTML]='currentItem.title'></span>\n  <span class='feed-subtitle' [innerHTML]='currentItem.date'></span>\n</div>\n"
 
 /***/ }),
 
@@ -1463,6 +1719,13 @@ var CalendarTimeLineComponent = /** @class */ (function () {
     CalendarTimeLineComponent.prototype.getCellStyle = function (month) {
         return month % 2 ? 'monthCell1' : 'monthCell2';
     };
+    CalendarTimeLineComponent.ctorParameters = function () { return [
+        { type: src_app_shared_services_read_service__WEBPACK_IMPORTED_MODULE_2__["ReadService"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+        { type: src_app_shared_services_log_service__WEBPACK_IMPORTED_MODULE_4__["Log"] },
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_5__["RouteUtilService"] },
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_5__["DateUtilService"] }
+    ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
@@ -1470,7 +1733,7 @@ var CalendarTimeLineComponent = /** @class */ (function () {
     CalendarTimeLineComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-calendar-time-line',
-            template: __webpack_require__(/*! ./calendar-time-line.component.html */ "./src/app/maincontent/calendar/calendar-time-line.component.html"),
+            template: __webpack_require__(/*! raw-loader!./calendar-time-line.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/calendar/calendar-time-line.component.html"),
             styles: [__webpack_require__(/*! ./divtable.css */ "./src/app/maincontent/calendar/divtable.css"), __webpack_require__(/*! ./calendar-time-line.component.css */ "./src/app/maincontent/calendar/calendar-time-line.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_shared_services_read_service__WEBPACK_IMPORTED_MODULE_2__["ReadService"],
@@ -1607,17 +1870,6 @@ module.exports = ".activity-cell {\n  border-width: 1px;\n  border-style: solid;
 
 /***/ }),
 
-/***/ "./src/app/maincontent/calendar/calendaractivities.component.html":
-/*!************************************************************************!*\
-  !*** ./src/app/maincontent/calendar/calendaractivities.component.html ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n\n<div *ngIf=\"!activity\" >\n\n  <div class='flexcontainer'>\n  <div class='flexfeedcontainer'>\n    <div *ngFor=\"let activityLink of activityObjectList\">\n     <app-activitybutton [activity]='activityLink'></app-activitybutton>\n    </div>\n  </div>\n  <div class='flexmaincontent'>\n    <app-calendar-time-line-month></app-calendar-time-line-month>\n  </div>\n</div>\n\n</div>\n\n<div  *ngIf=\"activity\" class='article-list'>\n    <app-my-calendar-list [activity]='activity'></app-my-calendar-list>\n</div>\n"
-
-/***/ }),
-
 /***/ "./src/app/maincontent/calendar/calendaractivities.component.ts":
 /*!**********************************************************************!*\
   !*** ./src/app/maincontent/calendar/calendaractivities.component.ts ***!
@@ -1676,9 +1928,17 @@ var CalendarActivitiesComponent = /** @class */ (function () {
             _this.activityObjectList = data.filter(function (el) { return el.calendar === 'true'; });
         });
     };
+    CalendarActivitiesComponent.ctorParameters = function () { return [
+        { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Title"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: src_app_shared_services_read_service__WEBPACK_IMPORTED_MODULE_5__["ReadService"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClient"] },
+        { type: src_app_shared_services_log_service__WEBPACK_IMPORTED_MODULE_4__["Log"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] }
+    ]; };
     CalendarActivitiesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            template: __webpack_require__(/*! ./calendaractivities.component.html */ "./src/app/maincontent/calendar/calendaractivities.component.html"),
+            template: __webpack_require__(/*! raw-loader!./calendaractivities.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/calendar/calendaractivities.component.html"),
             styles: [__webpack_require__(/*! ./calendaractivities.component.css */ "./src/app/maincontent/calendar/calendaractivities.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Title"],
@@ -1703,17 +1963,6 @@ var CalendarActivitiesComponent = /** @class */ (function () {
 /***/ (function(module, exports) {
 
 module.exports = ".calendarevent-container {\n \n}\n\n.article-title {\n\tfont-weight: bold;\n  padding: 0.7em;\n}\n\n.article-subtitle {\n  font-size: 0.7em;\n  color: #333;\n}\n\n.article-title-moreinfo {\n  text-align: right;\n  padding-right: 1em;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbmNvbnRlbnQvY2FsZW5kYXIvY2FsZW5kYXJldmVudC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztBQUVBOztBQUVBO0NBQ0MsaUJBQWlCO0VBQ2hCLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsV0FBVztBQUNiOztBQUdBO0VBQ0UsaUJBQWlCO0VBQ2pCLGtCQUFrQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL21haW5jb250ZW50L2NhbGVuZGFyL2NhbGVuZGFyZXZlbnQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jYWxlbmRhcmV2ZW50LWNvbnRhaW5lciB7XG4gXG59XG5cbi5hcnRpY2xlLXRpdGxlIHtcblx0Zm9udC13ZWlnaHQ6IGJvbGQ7XG4gIHBhZGRpbmc6IDAuN2VtO1xufVxuXG4uYXJ0aWNsZS1zdWJ0aXRsZSB7XG4gIGZvbnQtc2l6ZTogMC43ZW07XG4gIGNvbG9yOiAjMzMzO1xufVxuXG5cbi5hcnRpY2xlLXRpdGxlLW1vcmVpbmZvIHtcbiAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gIHBhZGRpbmctcmlnaHQ6IDFlbTtcbn1cbiJdfQ== */"
-
-/***/ }),
-
-/***/ "./src/app/maincontent/calendar/calendarevent.component.html":
-/*!*******************************************************************!*\
-  !*** ./src/app/maincontent/calendar/calendarevent.component.html ***!
-  \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n<div class='calendarevent-container'>\n\n  <div *ngIf='item' class='article-title theme-primary'>\n    <div>\n      <i [class]='\"material-icons calendar-icon\"'>event</i>\n      <span [innerHTML]='item.date | localedate'> </span><span *ngIf='item.enddate && item.enddate !== item.date'> - </span><span *ngIf='item.enddate && item.enddate !== item.date'  [innerHTML]='item.enddate | localedate'> </span> : <span class='feed-subtitle' [innerHTML]='(item.activity | uppercase)'></span>\n    </div>\n  </div>\n\n  <div *ngIf='item' [class]='\"shadow\"'>\n      \t\t\t<div  [class]='\"article-title theme-primary shadow\"'>\n              <span [innerHTML]='item.title'></span>\n            </div>\n            <div  *ngIf='item.organization' class='article-subtitle article-title-moreinfo'>\n                <span class='article-title-moreinfo'> {{item.organization}}</span>\n      \t\t\t</div>\n\n\n\n        <div [class]='\"article-description-container\"'>\n\n          <div [innerHTML]='item.description | br' [class]='\"article-description\"'></div>\n\n          <div *ngIf='item.location'><i class='material-icons'>pin_drop</i> {{item.location}}</div>\n\n          <!-- media -->\n\n          <app-attachments *ngIf='item.media || item.attachments' [recorduri]='getRecordUri()' [attachments]='getAttachments()'></app-attachments>\n          <app-imagelist *ngIf='item.media || item.images' [recorduri]='getRecordUri()' [images]='getImages()' [lazyload]='lazyload'></app-imagelist>\n\n\n\n        </div>\n\n    </div>\n\n<div>\n"
 
 /***/ }),
 
@@ -1796,6 +2045,14 @@ var CalendarEventComponent = /** @class */ (function () {
     CalendarEventComponent.prototype.getRecordUri = function () {
         return this.type + '/' + this.id;
     };
+    CalendarEventComponent.ctorParameters = function () { return [
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_3__["Log"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_3__["ReadService"] },
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_3__["MediaService"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"] },
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_3__["RouteUtilService"] }
+    ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
@@ -1803,7 +2060,7 @@ var CalendarEventComponent = /** @class */ (function () {
     CalendarEventComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-my-calendar-event',
-            template: __webpack_require__(/*! ./calendarevent.component.html */ "./src/app/maincontent/calendar/calendarevent.component.html"),
+            template: __webpack_require__(/*! raw-loader!./calendarevent.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/calendar/calendarevent.component.html"),
             styles: [__webpack_require__(/*! ./calendarevent.component.css */ "./src/app/maincontent/calendar/calendarevent.component.css"), __webpack_require__(/*! ../article/article.css */ "./src/app/maincontent/article/article.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_shared_services__WEBPACK_IMPORTED_MODULE_3__["Log"],
@@ -1828,17 +2085,6 @@ var CalendarEventComponent = /** @class */ (function () {
 /***/ (function(module, exports) {
 
 module.exports = ".feed-article {\n  font-weight: bold;\n  padding: 1.5em;\n}\n\n.feed-subtitle {\n  font-size: 0.7em;\n}\n\n.calendar-icon {\n  font-size: 1em;\n}\n\n.article-feed-spacer {\npadding-bottom: 1em;\n\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbmNvbnRlbnQvY2FsZW5kYXIvY2FsZW5kYXJmZWVkLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7RUFDakIsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7QUFDQSxtQkFBbUI7O0FBRW5CIiwiZmlsZSI6InNyYy9hcHAvbWFpbmNvbnRlbnQvY2FsZW5kYXIvY2FsZW5kYXJmZWVkLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZmVlZC1hcnRpY2xlIHtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIHBhZGRpbmc6IDEuNWVtO1xufVxuXG4uZmVlZC1zdWJ0aXRsZSB7XG4gIGZvbnQtc2l6ZTogMC43ZW07XG59XG5cbi5jYWxlbmRhci1pY29uIHtcbiAgZm9udC1zaXplOiAxZW07XG59XG5cbi5hcnRpY2xlLWZlZWQtc3BhY2VyIHtcbnBhZGRpbmctYm90dG9tOiAxZW07XG5cbn1cbiJdfQ== */"
-
-/***/ }),
-
-/***/ "./src/app/maincontent/calendar/calendarfeed.component.html":
-/*!******************************************************************!*\
-  !*** ./src/app/maincontent/calendar/calendarfeed.component.html ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div *ngFor=\"let item of items; let i=index\">\n\n  <div>\n    <app-calendarpreview  *ngIf='item.description' [type]='\"calendar\"' [item]='item' [show]='\"description\"'></app-calendarpreview>\n    <app-calendarpreview  *ngIf='!item.description' [type]='\"calendar\"' [id]='item.id' [show]='\"description\"'></app-calendarpreview>\n  </div>\n\n  <div class='article-feed-spacer'></div>\n\n</div>\n"
 
 /***/ }),
 
@@ -1914,6 +2160,11 @@ var CalendarFeedComponent = /** @class */ (function () {
         }
         return result;
     };
+    CalendarFeedComponent.ctorParameters = function () { return [
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_3__["ReadService"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_3__["Log"] }
+    ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
@@ -1921,7 +2172,7 @@ var CalendarFeedComponent = /** @class */ (function () {
     CalendarFeedComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-my-calendar-feed',
-            template: __webpack_require__(/*! ./calendarfeed.component.html */ "./src/app/maincontent/calendar/calendarfeed.component.html"),
+            template: __webpack_require__(/*! raw-loader!./calendarfeed.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/calendar/calendarfeed.component.html"),
             styles: [__webpack_require__(/*! ./calendarfeed.component.css */ "./src/app/maincontent/calendar/calendarfeed.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_shared_services__WEBPACK_IMPORTED_MODULE_3__["ReadService"],
@@ -1943,17 +2194,6 @@ var CalendarFeedComponent = /** @class */ (function () {
 /***/ (function(module, exports) {
 
 module.exports = "\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21haW5jb250ZW50L2NhbGVuZGFyL2NhbGVuZGFybGlzdC5jb21wb25lbnQuY3NzIn0= */"
-
-/***/ }),
-
-/***/ "./src/app/maincontent/calendar/calendarlist.component.html":
-/*!******************************************************************!*\
-  !*** ./src/app/maincontent/calendar/calendarlist.component.html ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n<div *ngIf=\"activity\">\n<h3><span [innerHTML]='activity | uppercase'></span></h3>\n\n  <div class='article-list' *ngIf='items' >\n      <div *ngFor=\"let currentItem of items\" >\n\n        <app-calendarpreview [type]='type' [id]='currentItem.id' [show]='\"description\"'></app-calendarpreview>\n\n    </div>\n  </div>\n\n\n\n</div>\n"
 
 /***/ }),
 
@@ -2027,6 +2267,13 @@ var CalendarListComponent = /** @class */ (function () {
     CalendarListComponent.prototype.gotoDetail = function (currentItem) {
         this.router.navigate([this.routerLink + '/detail/', currentItem.activity]);
     };
+    CalendarListComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: src_app_shared_services_read_service__WEBPACK_IMPORTED_MODULE_3__["ReadService"] },
+        { type: src_app_shared_services_log_service__WEBPACK_IMPORTED_MODULE_4__["Log"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"] }
+    ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
@@ -2034,7 +2281,7 @@ var CalendarListComponent = /** @class */ (function () {
     CalendarListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-my-calendar-list',
-            template: __webpack_require__(/*! ./calendarlist.component.html */ "./src/app/maincontent/calendar/calendarlist.component.html"),
+            template: __webpack_require__(/*! raw-loader!./calendarlist.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/calendar/calendarlist.component.html"),
             styles: [__webpack_require__(/*! ./calendarlist.component.css */ "./src/app/maincontent/calendar/calendarlist.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
@@ -2057,18 +2304,7 @@ var CalendarListComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n.calendar-preview-title {\n  color: black;\n  font-size: 1.125em;\n  font-weight: bold;\n}\n.calendar-preview-title:hover {\n  color: #3B78E7;\n  text-decoration: underline;\n}\n.calendar-preview-description {\n  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#ddd));\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  display: inline-block;\n}\n.calendar-preview-table-row {\n  display: flex;\n  flex-direction: row;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbmNvbnRlbnQvY2FsZW5kYXIvY2FsZW5kYXJwcmV2aWV3LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFFQTtFQUNFLFlBQVk7RUFDWixrQkFBa0I7RUFDbEIsaUJBQWlCO0FBQ25CO0FBQ0E7RUFDRSxjQUFjO0VBQ2QsMEJBQTBCO0FBQzVCO0FBRUE7RUFDRSxpRkFBaUY7RUFDakYsNkJBQTZCO0VBQzdCLG9DQUFvQztFQUNwQyxxQkFBcUI7QUFDdkI7QUFHQTtFQUNFLGFBQWE7RUFDYixtQkFBbUI7QUFDckIiLCJmaWxlIjoic3JjL2FwcC9tYWluY29udGVudC9jYWxlbmRhci9jYWxlbmRhcnByZXZpZXcuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuXG4uY2FsZW5kYXItcHJldmlldy10aXRsZSB7XG4gIGNvbG9yOiBibGFjaztcbiAgZm9udC1zaXplOiAxLjEyNWVtO1xuICBmb250LXdlaWdodDogYm9sZDtcbn1cbi5jYWxlbmRhci1wcmV2aWV3LXRpdGxlOmhvdmVyIHtcbiAgY29sb3I6ICMzQjc4RTc7XG4gIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xufVxuXG4uY2FsZW5kYXItcHJldmlldy1kZXNjcmlwdGlvbiB7XG4gIGJhY2tncm91bmQ6IC13ZWJraXQtZ3JhZGllbnQobGluZWFyLCBsZWZ0IHRvcCwgbGVmdCBib3R0b20sIGZyb20oIzAwMCksIHRvKCNkZGQpKTtcbiAgLXdlYmtpdC1iYWNrZ3JvdW5kLWNsaXA6IHRleHQ7XG4gIC13ZWJraXQtdGV4dC1maWxsLWNvbG9yOiB0cmFuc3BhcmVudDtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xufVxuXG5cbi5jYWxlbmRhci1wcmV2aWV3LXRhYmxlLXJvdyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiByb3c7XG59XG4iXX0= */"
-
-/***/ }),
-
-/***/ "./src/app/maincontent/calendar/calendarpreview.component.html":
-/*!*********************************************************************!*\
-  !*** ./src/app/maincontent/calendar/calendarpreview.component.html ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<a *ngIf='item' class='hidelink' [href]='getUrl()'>\n  <div class='shadow'>\n\n    <div class='my-mat-button-dark'>\n      <div>\n        <i [class]='\"material-icons calendar-icon\"'>event</i>\n        <span [innerHTML]='item.date | localedate'> </span> | <span class='feed-subtitle' [innerHTML]='(item.activity | uppercase)'></span> : \n        <span [innerHTML]='item.title' class='feed-subtitle'></span>\n      </div>\n    </div>\n\n    <div *ngIf='show === \"description\"' class='largeview'>\n      <div class='calendar-preview-table-row'>\n        <div *ngIf='image'>\n\n            <img [src]='getThumbnail(image)' [alt]='image.title'>\n\n        </div>\n        <div>\n          <span [innerHTML]='getPreviewDescription()' class='calendar-preview-description'></span>\n        </div>\n      </div>\n    </div>\n\n  </div>\n</a>\n"
+module.exports = "\n\n.calendar-preview-title {\n  color: black;\n  font-size: 1.125em;\n  font-weight: bold;\n}\n.calendar-preview-title:hover {\n  color: #3B78E7;\n  text-decoration: underline;\n}\n.calendar-preview-description {\n  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#ddd));\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  display: inline-block;\n}\n.calendar-preview-table-row {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n          flex-direction: row;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbmNvbnRlbnQvY2FsZW5kYXIvY2FsZW5kYXJwcmV2aWV3LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFFQTtFQUNFLFlBQVk7RUFDWixrQkFBa0I7RUFDbEIsaUJBQWlCO0FBQ25CO0FBQ0E7RUFDRSxjQUFjO0VBQ2QsMEJBQTBCO0FBQzVCO0FBRUE7RUFDRSxpRkFBaUY7RUFDakYsNkJBQTZCO0VBQzdCLG9DQUFvQztFQUNwQyxxQkFBcUI7QUFDdkI7QUFHQTtFQUNFLG9CQUFhO0VBQWIsYUFBYTtFQUNiLDhCQUFtQjtFQUFuQiw2QkFBbUI7VUFBbkIsbUJBQW1CO0FBQ3JCIiwiZmlsZSI6InNyYy9hcHAvbWFpbmNvbnRlbnQvY2FsZW5kYXIvY2FsZW5kYXJwcmV2aWV3LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcblxuLmNhbGVuZGFyLXByZXZpZXctdGl0bGUge1xuICBjb2xvcjogYmxhY2s7XG4gIGZvbnQtc2l6ZTogMS4xMjVlbTtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG59XG4uY2FsZW5kYXItcHJldmlldy10aXRsZTpob3ZlciB7XG4gIGNvbG9yOiAjM0I3OEU3O1xuICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcbn1cblxuLmNhbGVuZGFyLXByZXZpZXctZGVzY3JpcHRpb24ge1xuICBiYWNrZ3JvdW5kOiAtd2Via2l0LWdyYWRpZW50KGxpbmVhciwgbGVmdCB0b3AsIGxlZnQgYm90dG9tLCBmcm9tKCMwMDApLCB0bygjZGRkKSk7XG4gIC13ZWJraXQtYmFja2dyb3VuZC1jbGlwOiB0ZXh0O1xuICAtd2Via2l0LXRleHQtZmlsbC1jb2xvcjogdHJhbnNwYXJlbnQ7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbn1cblxuXG4uY2FsZW5kYXItcHJldmlldy10YWJsZS1yb3cge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogcm93O1xufVxuIl19 */"
 
 /***/ }),
 
@@ -2159,6 +2395,14 @@ var CalendarPreviewComponent = /** @class */ (function () {
     CalendarPreviewComponent.prototype.getAttachments = function () {
         return this.mediaService.getAttachments(this.getItem());
     };
+    CalendarPreviewComponent.ctorParameters = function () { return [
+        { type: src_app_shared_services_log_service__WEBPACK_IMPORTED_MODULE_3__["Log"] },
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_2__["ReadService"] },
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_2__["MediaService"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"] },
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_2__["RouteUtilService"] },
+        { type: src_app_maincontent_image__WEBPACK_IMPORTED_MODULE_6__["ImageService"] }
+    ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
@@ -2182,7 +2426,7 @@ var CalendarPreviewComponent = /** @class */ (function () {
     CalendarPreviewComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-calendarpreview',
-            template: __webpack_require__(/*! ./calendarpreview.component.html */ "./src/app/maincontent/calendar/calendarpreview.component.html"),
+            template: __webpack_require__(/*! raw-loader!./calendarpreview.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/calendar/calendarpreview.component.html"),
             styles: [__webpack_require__(/*! ./calendarpreview.component.css */ "./src/app/maincontent/calendar/calendarpreview.component.css"), __webpack_require__(/*! ../article/article.css */ "./src/app/maincontent/article/article.css"), __webpack_require__(/*! ../article/articlepreview.css */ "./src/app/maincontent/article/articlepreview.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_shared_services_log_service__WEBPACK_IMPORTED_MODULE_3__["Log"],
@@ -2354,17 +2598,6 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 
 /***/ }),
 
-/***/ "./src/app/maincontent/club/clubactivities.component.html":
-/*!****************************************************************!*\
-  !*** ./src/app/maincontent/club/clubactivities.component.html ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class='article-list'>\n  \n  <div *ngIf='!activity'>\n    <div *ngFor='let activityLink of activityObjectList'>\n      <app-activitybutton [activity]='activityLink'></app-activitybutton>\n    </div>\n  </div>\n\n  <div *ngIf='activity'>\n    <app-my-clubs-list [activity]='activity'></app-my-clubs-list>\n  </div>\n\n</div>\n"
-
-/***/ }),
-
 /***/ "./src/app/maincontent/club/clubactivities.component.ts":
 /*!**************************************************************!*\
   !*** ./src/app/maincontent/club/clubactivities.component.ts ***!
@@ -2427,9 +2660,17 @@ var ClubActivitiesComponent = /** @class */ (function () {
             _this.activityObjectList = data;
         });
     };
+    ClubActivitiesComponent.ctorParameters = function () { return [
+        { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Title"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: src_app_shared_services_read_service__WEBPACK_IMPORTED_MODULE_5__["ReadService"] },
+        { type: src_app_shared_services_log_service__WEBPACK_IMPORTED_MODULE_4__["Log"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClient"] }
+    ]; };
     ClubActivitiesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            template: __webpack_require__(/*! ./clubactivities.component.html */ "./src/app/maincontent/club/clubactivities.component.html"),
+            template: __webpack_require__(/*! raw-loader!./clubactivities.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/club/clubactivities.component.html"),
             styles: [__webpack_require__(/*! ./clubactivities.component.css */ "./src/app/maincontent/club/clubactivities.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Title"],
@@ -2454,17 +2695,6 @@ var ClubActivitiesComponent = /** @class */ (function () {
 /***/ (function(module, exports) {
 
 module.exports = ".club-title {\n  padding: .4em 1em;\n\tborder-width: 1px;\n\tborder-style: solid;\n\n\tbackground-color: #e9e9e9;\n\tborder-color: #ddd;\n\tcolor: #333;\n\t/*text-shadow: 0 1px 0 #eee;*/\n\tfont-weight: bold;\n}\n\n.club-title:hover {\n  cursor: pointer;\n}\n\n/* element */\n\n.club-content {\n  /*additional border: add a thicker aspect*/\n  border-width: 1px;\n  border-style: solid;\n\n  /* spacing between article-content  */\n\tmargin-bottom: 1em;\n  /* small decorating border */\n\tborder-color: #ddd;\n\tcolor: #333;\n\n}\n\n.club-website {\n  font-size: 1em;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbmNvbnRlbnQvY2x1Yi9jbHViZGV0YWlsLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7Q0FDbEIsaUJBQWlCO0NBQ2pCLG1CQUFtQjs7Q0FFbkIseUJBQXlCO0NBQ3pCLGtCQUFrQjtDQUNsQixXQUFXO0NBQ1gsNkJBQTZCO0NBQzdCLGlCQUFpQjtBQUNsQjs7QUFFQTtFQUNFLGVBQWU7QUFDakI7O0FBRUEsWUFBWTs7QUFDWjtFQUNFLDBDQUEwQztFQUMxQyxpQkFBaUI7RUFDakIsbUJBQW1COztFQUVuQixxQ0FBcUM7Q0FDdEMsa0JBQWtCO0VBQ2pCLDRCQUE0QjtDQUM3QixrQkFBa0I7Q0FDbEIsV0FBVzs7QUFFWjs7QUFFQTtFQUNFLGNBQWM7QUFDaEIiLCJmaWxlIjoic3JjL2FwcC9tYWluY29udGVudC9jbHViL2NsdWJkZXRhaWwuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jbHViLXRpdGxlIHtcbiAgcGFkZGluZzogLjRlbSAxZW07XG5cdGJvcmRlci13aWR0aDogMXB4O1xuXHRib3JkZXItc3R5bGU6IHNvbGlkO1xuXG5cdGJhY2tncm91bmQtY29sb3I6ICNlOWU5ZTk7XG5cdGJvcmRlci1jb2xvcjogI2RkZDtcblx0Y29sb3I6ICMzMzM7XG5cdC8qdGV4dC1zaGFkb3c6IDAgMXB4IDAgI2VlZTsqL1xuXHRmb250LXdlaWdodDogYm9sZDtcbn1cblxuLmNsdWItdGl0bGU6aG92ZXIge1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi8qIGVsZW1lbnQgKi9cbi5jbHViLWNvbnRlbnQge1xuICAvKmFkZGl0aW9uYWwgYm9yZGVyOiBhZGQgYSB0aGlja2VyIGFzcGVjdCovXG4gIGJvcmRlci13aWR0aDogMXB4O1xuICBib3JkZXItc3R5bGU6IHNvbGlkO1xuXG4gIC8qIHNwYWNpbmcgYmV0d2VlbiBhcnRpY2xlLWNvbnRlbnQgICovXG5cdG1hcmdpbi1ib3R0b206IDFlbTtcbiAgLyogc21hbGwgZGVjb3JhdGluZyBib3JkZXIgKi9cblx0Ym9yZGVyLWNvbG9yOiAjZGRkO1xuXHRjb2xvcjogIzMzMztcblxufVxuXG4uY2x1Yi13ZWJzaXRlIHtcbiAgZm9udC1zaXplOiAxZW07XG59XG4iXX0= */"
-
-/***/ }),
-
-/***/ "./src/app/maincontent/club/clubdetail.component.html":
-/*!************************************************************!*\
-  !*** ./src/app/maincontent/club/clubdetail.component.html ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "      <div *ngIf='item' class='club-content' >\n    \t\t\t<div class='club-title' >\n            <a *ngIf='item.url' target='_blank' [href]='item.url' [title]=\"item.url\"  class=\"club-website\">{{item.title}} <i class='material-icons'>open_in_new</i></a>\n            <span *ngIf='!item.url' class=\"club-website\">{{item.title}}</span>\n            </div>\n          <div [innerHTML]='item.description | br'></div>\n\n      </div>\n"
 
 /***/ }),
 
@@ -2508,6 +2738,11 @@ var ClubDetailComponent = /** @class */ (function () {
             console.error('app-my-clubdetail-component empty id');
         }
     };
+    ClubDetailComponent.ctorParameters = function () { return [
+        { type: src_app_shared_services_read_service__WEBPACK_IMPORTED_MODULE_2__["ReadService"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] },
+        { type: src_app_shared_services_log_service__WEBPACK_IMPORTED_MODULE_3__["Log"] }
+    ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
@@ -2515,7 +2750,7 @@ var ClubDetailComponent = /** @class */ (function () {
     ClubDetailComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-my-clubdetail-component',
-            template: __webpack_require__(/*! ./clubdetail.component.html */ "./src/app/maincontent/club/clubdetail.component.html"),
+            template: __webpack_require__(/*! raw-loader!./clubdetail.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/club/clubdetail.component.html"),
             styles: [__webpack_require__(/*! ./clubdetail.component.css */ "./src/app/maincontent/club/clubdetail.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_shared_services_read_service__WEBPACK_IMPORTED_MODULE_2__["ReadService"],
@@ -2536,18 +2771,7 @@ var ClubDetailComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".department-list {\n  display: flex;\n\tflex-wrap: wrap;\n}\n\n.department-button {\n min-height: 3em;\n border: none;\n margin: 0.5em;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbmNvbnRlbnQvY2x1Yi9jbHVibGlzdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBYTtDQUNkLGVBQWU7QUFDaEI7O0FBRUE7Q0FDQyxlQUFlO0NBQ2YsWUFBWTtDQUNaLGFBQWE7QUFDZCIsImZpbGUiOiJzcmMvYXBwL21haW5jb250ZW50L2NsdWIvY2x1Ymxpc3QuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5kZXBhcnRtZW50LWxpc3Qge1xuICBkaXNwbGF5OiBmbGV4O1xuXHRmbGV4LXdyYXA6IHdyYXA7XG59XG5cbi5kZXBhcnRtZW50LWJ1dHRvbiB7XG4gbWluLWhlaWdodDogM2VtO1xuIGJvcmRlcjogbm9uZTtcbiBtYXJnaW46IDAuNWVtO1xufVxuIl19 */"
-
-/***/ }),
-
-/***/ "./src/app/maincontent/club/clublist.component.html":
-/*!**********************************************************!*\
-  !*** ./src/app/maincontent/club/clublist.component.html ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n<div class='article-list'>\n  <h3><span [innerHTML]='(activity | uppercase)'></span> </h3>\n<div *ngIf=\"activity\" class='department-list'>\n\n\n<div *ngFor='let dep of departmentObjectList'>\n\n  <button  [value]='dep.code' (click)='displayClubs(dep.code)' class='department-button my-mat-button-lighter shadow'>\n    <div [innerHTML]='dep.name'></div>\n\n  </button>\n\n</div>\n\n</div>\n\n\n\n<div *ngIf=\"activity  && department \">\n  <div class='article-list'>\n    <div *ngFor='let club of (clubs | propertyfilter: \"activity\":activity | propertyfilter: \"department\":department)' class='club-content'>\n      <app-my-clubdetail-component [id]=\"club.id\"></app-my-clubdetail-component>\n    </div>\n  </div>\n</div>\n\n</div>\n"
+module.exports = ".department-list {\n  display: -webkit-box;\n  display: flex;\n\tflex-wrap: wrap;\n}\n\n.department-button {\n min-height: 3em;\n border: none;\n margin: 0.5em;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbmNvbnRlbnQvY2x1Yi9jbHVibGlzdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usb0JBQWE7RUFBYixhQUFhO0NBQ2QsZUFBZTtBQUNoQjs7QUFFQTtDQUNDLGVBQWU7Q0FDZixZQUFZO0NBQ1osYUFBYTtBQUNkIiwiZmlsZSI6InNyYy9hcHAvbWFpbmNvbnRlbnQvY2x1Yi9jbHVibGlzdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmRlcGFydG1lbnQtbGlzdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG5cdGZsZXgtd3JhcDogd3JhcDtcbn1cblxuLmRlcGFydG1lbnQtYnV0dG9uIHtcbiBtaW4taGVpZ2h0OiAzZW07XG4gYm9yZGVyOiBub25lO1xuIG1hcmdpbjogMC41ZW07XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -2615,6 +2839,14 @@ var ClubListComponent = /** @class */ (function () {
     ClubListComponent.prototype.getLogoUrl = function (id, file) {
         return 'public/activities/' + id + '/' + file;
     };
+    ClubListComponent.ctorParameters = function () { return [
+        { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Title"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: src_app_shared_services_read_service__WEBPACK_IMPORTED_MODULE_5__["ReadService"] },
+        { type: src_app_shared_services_log_service__WEBPACK_IMPORTED_MODULE_4__["Log"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClient"] }
+    ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
@@ -2622,7 +2854,7 @@ var ClubListComponent = /** @class */ (function () {
     ClubListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-my-clubs-list',
-            template: __webpack_require__(/*! ./clublist.component.html */ "./src/app/maincontent/club/clublist.component.html"),
+            template: __webpack_require__(/*! raw-loader!./clublist.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/club/clublist.component.html"),
             styles: [__webpack_require__(/*! ./clublist.component.css */ "./src/app/maincontent/club/clublist.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Title"],
@@ -2812,17 +3044,6 @@ module.exports = ".images-container {\n\tborder-top: 1px solid #ddd;\n\tpadding-
 
 /***/ }),
 
-/***/ "./src/app/maincontent/image/imagelist.component.html":
-/*!************************************************************!*\
-  !*** ./src/app/maincontent/image/imagelist.component.html ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n\n\n\n<ngui-inview *ngIf='this.enableinview'  [blurEnabled]='false'>\n  <div *ngIf>\n<!-- images -->\n    <div *ngIf='images && images.length > 0' [class]='\"images-container\"'>\n    <div *ngFor='let image of images'>\n      <a [href]='image.url' [title]='image.title'>\n    \n        <img  [src]='getDefaultImage(image)' [srcset]='getThumbnailSrcSet(image)' [alt]='image.title' sizes='(min-width: 55em) 60vw, 100vw'>\n    \n      </a>\n    </div>\n  </div>\n  </div>\n\n</ngui-inview>\n\n<div *ngIf='!this.enableinview' >\n    <div *ngIf='images && images.length > 0' [class]='\"images-container\"'>\n        <div *ngFor='let image of images'>\n          <a [href]='image.url' [title]='image.title'>\n        \n            <img  [src]='getDefaultImage(image)' [srcset]='getThumbnailSrcSet(image)' [alt]='image.title' sizes='(min-width: 55em) 60vw, 100vw'>\n        \n          </a>\n        </div>\n      </div>\n</div>"
-
-/***/ }),
-
 /***/ "./src/app/maincontent/image/imagelist.component.ts":
 /*!**********************************************************!*\
   !*** ./src/app/maincontent/image/imagelist.component.ts ***!
@@ -2868,6 +3089,10 @@ var ImageListComponent = /** @class */ (function () {
     ImageListComponent.prototype.getThumbnailSrcSet = function (picture) {
         return this.imageService.getThumbnailSrcSet(src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].server, this.recorduri, picture);
     };
+    ImageListComponent.ctorParameters = function () { return [
+        { type: _image_service__WEBPACK_IMPORTED_MODULE_3__["ImageService"] },
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_4__["BrowserService"] }
+    ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
@@ -2883,7 +3108,7 @@ var ImageListComponent = /** @class */ (function () {
     ImageListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-imagelist',
-            template: __webpack_require__(/*! ./imagelist.component.html */ "./src/app/maincontent/image/imagelist.component.html"),
+            template: __webpack_require__(/*! raw-loader!./imagelist.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/image/imagelist.component.html"),
             styles: [__webpack_require__(/*! ./imagelist.component.css */ "./src/app/maincontent/image/imagelist.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_image_service__WEBPACK_IMPORTED_MODULE_3__["ImageService"], src_app_shared_services__WEBPACK_IMPORTED_MODULE_4__["BrowserService"]])
@@ -3018,8 +3243,12 @@ var NguiInviewComponent = /** @class */ (function () {
             this.once80PctVisible = true;
         }
     };
+    NguiInviewComponent.ctorParameters = function () { return [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] },
+        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["PLATFORM_ID"],] }] }
+    ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ContentChild"])(_angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]),
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ContentChild"])(_angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], { static: false }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"])
     ], NguiInviewComponent.prototype, "template", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -3094,17 +3323,6 @@ module.exports = "\n.newstitle {\n   padding: .7em 0.7em;\n}\n\n/*# sourceMappin
 
 /***/ }),
 
-/***/ "./src/app/maincontent/news/news.component.html":
-/*!******************************************************!*\
-  !*** ./src/app/maincontent/news/news.component.html ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<section>\n<div [class]='\"article-list\"'>\n\n \n\n  <div *ngFor=\"let item of items\">\n\n                <app-article *ngIf='item.description' [type]='type' [itemparam]='item' ></app-article>\n                <app-article *ngIf='!item.description' [type]='type' [id]='item.id' ></app-article>\n\n          \n  </div>\n</div>\n</section>"
-
-/***/ }),
-
 /***/ "./src/app/maincontent/news/news.component.ts":
 /*!****************************************************!*\
   !*** ./src/app/maincontent/news/news.component.ts ***!
@@ -3168,6 +3386,11 @@ var NewsComponent = /** @class */ (function () {
         });
         this.log.debug('NewsComponent ' + this.type + ' ' + this.items.length);
     };
+    NewsComponent.ctorParameters = function () { return [
+        { type: src_app_shared_services_read_service__WEBPACK_IMPORTED_MODULE_3__["ReadService"] },
+        { type: src_app_shared_services_log_service__WEBPACK_IMPORTED_MODULE_2__["Log"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] }
+    ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
@@ -3175,7 +3398,7 @@ var NewsComponent = /** @class */ (function () {
     NewsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-my-news-component',
-            template: __webpack_require__(/*! ./news.component.html */ "./src/app/maincontent/news/news.component.html"),
+            template: __webpack_require__(/*! raw-loader!./news.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/news/news.component.html"),
             styles: [__webpack_require__(/*! ./news.component.css */ "./src/app/maincontent/news/news.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_shared_services_read_service__WEBPACK_IMPORTED_MODULE_3__["ReadService"],
@@ -3296,17 +3519,6 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 
 /***/ }),
 
-/***/ "./src/app/maincontent/news/newsdetails.component.html":
-/*!*************************************************************!*\
-  !*** ./src/app/maincontent/news/newsdetails.component.html ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<app-article *ngIf=\"id\" [type]='type' [id]='id' ></app-article>\n"
-
-/***/ }),
-
 /***/ "./src/app/maincontent/news/newsdetails.component.ts":
 /*!***********************************************************!*\
   !*** ./src/app/maincontent/news/newsdetails.component.ts ***!
@@ -3343,10 +3555,15 @@ var NewsDetailsComponent = /** @class */ (function () {
             }
         });
     };
+    NewsDetailsComponent.ctorParameters = function () { return [
+        { type: src_app_shared_services_log_service__WEBPACK_IMPORTED_MODULE_4__["Log"] },
+        { type: src_app_shared_services_read_service__WEBPACK_IMPORTED_MODULE_3__["ReadService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] }
+    ]; };
     NewsDetailsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-my-newsdetails-component',
-            template: __webpack_require__(/*! ./newsdetails.component.html */ "./src/app/maincontent/news/newsdetails.component.html"),
+            template: __webpack_require__(/*! raw-loader!./newsdetails.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/news/newsdetails.component.html"),
             styles: [__webpack_require__(/*! ./newsdetails.component.css */ "./src/app/maincontent/news/newsdetails.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_shared_services_log_service__WEBPACK_IMPORTED_MODULE_4__["Log"],
@@ -3368,17 +3585,6 @@ var NewsDetailsComponent = /** @class */ (function () {
 /***/ (function(module, exports) {
 
 module.exports = "\n.newstitle {\n   padding: 0.7em 0.7em;\n}\n\n\n.news-preview-container {\n  padding-bottom: 0.2em;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbmNvbnRlbnQvbmV3cy9uZXdzcHJldmlldy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQTtHQUNHLG9CQUFvQjtBQUN2Qjs7O0FBR0E7RUFDRSxxQkFBcUI7QUFDdkIiLCJmaWxlIjoic3JjL2FwcC9tYWluY29udGVudC9uZXdzL25ld3NwcmV2aWV3LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi5uZXdzdGl0bGUge1xuICAgcGFkZGluZzogMC43ZW0gMC43ZW07XG59XG5cblxuLm5ld3MtcHJldmlldy1jb250YWluZXIge1xuICBwYWRkaW5nLWJvdHRvbTogMC4yZW07XG59XG4iXX0= */"
-
-/***/ }),
-
-/***/ "./src/app/maincontent/news/newspreview.component.html":
-/*!*************************************************************!*\
-  !*** ./src/app/maincontent/news/newspreview.component.html ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n\n<div class='article-list'>\n\n  <div *ngFor=\"let currentItem of items; let i=index\"  class=\"news-preview-container\">\n\n\n    <app-articlepreview [type]='\"news\"' [id]='currentItem.id'></app-articlepreview>\n\n  </div>\n\n\n\n</div>\n"
 
 /***/ }),
 
@@ -3430,6 +3636,12 @@ var NewsPreviewComponent = /** @class */ (function () {
         });
         // this.titleService.setTitle(this.type);
     };
+    NewsPreviewComponent.ctorParameters = function () { return [
+        { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Title"] },
+        { type: src_app_shared_services_read_service__WEBPACK_IMPORTED_MODULE_4__["ReadService"] },
+        { type: src_app_shared_services_log_service__WEBPACK_IMPORTED_MODULE_3__["Log"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"] }
+    ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
@@ -3437,7 +3649,7 @@ var NewsPreviewComponent = /** @class */ (function () {
     NewsPreviewComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-newspreview-component',
-            template: __webpack_require__(/*! ./newspreview.component.html */ "./src/app/maincontent/news/newspreview.component.html"),
+            template: __webpack_require__(/*! raw-loader!./newspreview.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/news/newspreview.component.html"),
             styles: [__webpack_require__(/*! ./newspreview.component.css */ "./src/app/maincontent/news/newspreview.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Title"],
@@ -3460,17 +3672,6 @@ var NewsPreviewComponent = /** @class */ (function () {
 /***/ (function(module, exports) {
 
 module.exports = ".videoWrapper {\n\tposition: relative;\n\tpadding-bottom: 56.25%; /* 16:9 */\n\tpadding-top: 25px;\n\theight: 0;\n}\n.videoWrapper iframe {\n\tposition: absolute;\n\ttop: 0;\n\tleft: 0;\n\twidth: 100%;\n\theight: 100%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbmNvbnRlbnQvdmlkZW8vdmlkZW8uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtDQUNDLGtCQUFrQjtDQUNsQixzQkFBc0IsRUFBRSxTQUFTO0NBQ2pDLGlCQUFpQjtDQUNqQixTQUFTO0FBQ1Y7QUFDQTtDQUNDLGtCQUFrQjtDQUNsQixNQUFNO0NBQ04sT0FBTztDQUNQLFdBQVc7Q0FDWCxZQUFZO0FBQ2IiLCJmaWxlIjoic3JjL2FwcC9tYWluY29udGVudC92aWRlby92aWRlby5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnZpZGVvV3JhcHBlciB7XG5cdHBvc2l0aW9uOiByZWxhdGl2ZTtcblx0cGFkZGluZy1ib3R0b206IDU2LjI1JTsgLyogMTY6OSAqL1xuXHRwYWRkaW5nLXRvcDogMjVweDtcblx0aGVpZ2h0OiAwO1xufVxuLnZpZGVvV3JhcHBlciBpZnJhbWUge1xuXHRwb3NpdGlvbjogYWJzb2x1dGU7XG5cdHRvcDogMDtcblx0bGVmdDogMDtcblx0d2lkdGg6IDEwMCU7XG5cdGhlaWdodDogMTAwJTtcbn1cbiJdfQ== */"
-
-/***/ }),
-
-/***/ "./src/app/maincontent/video/video.component.html":
-/*!********************************************************!*\
-  !*** ./src/app/maincontent/video/video.component.html ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n<div *ngIf=\"sanitized\" class=\"videoWrapper\" >\n  <iframe type=\"text/html\" width=\"640\" height=\"360\" [src]=\"videoUrl\" frameborder=\"0\" allowfullscreen></iframe>\n</div>\n"
 
 /***/ }),
 
@@ -3507,6 +3708,10 @@ var VideoComponent = /** @class */ (function () {
             }
         }
     };
+    VideoComponent.ctorParameters = function () { return [
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_3__["MediaService"] },
+        { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"] }
+    ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
@@ -3514,7 +3719,7 @@ var VideoComponent = /** @class */ (function () {
     VideoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-video',
-            template: __webpack_require__(/*! ./video.component.html */ "./src/app/maincontent/video/video.component.html"),
+            template: __webpack_require__(/*! raw-loader!./video.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/video/video.component.html"),
             styles: [__webpack_require__(/*! ./video.component.css */ "./src/app/maincontent/video/video.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_shared_services__WEBPACK_IMPORTED_MODULE_3__["MediaService"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"]])
@@ -3620,17 +3825,6 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 
 /***/ }),
 
-/***/ "./src/app/maincontent/video/videolist.component.html":
-/*!************************************************************!*\
-  !*** ./src/app/maincontent/video/videolist.component.html ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<!-- images -->\n<div *ngIf='videos && videos.length > 0' >\n<div *ngFor='let video of videos'>\n  <app-video [url]='video.url'></app-video>\n</div>\n"
-
-/***/ }),
-
 /***/ "./src/app/maincontent/video/videolist.component.ts":
 /*!**********************************************************!*\
   !*** ./src/app/maincontent/video/videolist.component.ts ***!
@@ -3654,6 +3848,10 @@ var VideoListComponent = /** @class */ (function () {
         this.imageService = imageService;
         this.sanitizer = sanitizer;
     }
+    VideoListComponent.ctorParameters = function () { return [
+        { type: _video_service__WEBPACK_IMPORTED_MODULE_2__["VideoService"] },
+        { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"] }
+    ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
@@ -3665,7 +3863,7 @@ var VideoListComponent = /** @class */ (function () {
     VideoListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-videolist',
-            template: __webpack_require__(/*! ./videolist.component.html */ "./src/app/maincontent/video/videolist.component.html"),
+            template: __webpack_require__(/*! raw-loader!./videolist.component.html */ "./node_modules/raw-loader/index.js!./src/app/maincontent/video/videolist.component.html"),
             styles: [__webpack_require__(/*! ./videolist.component.css */ "./src/app/maincontent/video/videolist.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_video_service__WEBPACK_IMPORTED_MODULE_2__["VideoService"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"]])
@@ -4549,17 +4747,6 @@ module.exports = "/*\n* Initialize some space in page during image load.\n* min-
 
 /***/ }),
 
-/***/ "./src/app/sidenav/banner/banner.component.html":
-/*!******************************************************!*\
-  !*** ./src/app/sidenav/banner/banner.component.html ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "  <header>\n  <div [class]='\"banner-container\"'>\n\n    <img [src]='url' [class]='\"banner\"'>\n  </div>\n</header>"
-
-/***/ }),
-
 /***/ "./src/app/sidenav/banner/banner.component.ts":
 /*!****************************************************!*\
   !*** ./src/app/sidenav/banner/banner.component.ts ***!
@@ -4591,7 +4778,7 @@ var BannerComponent = /** @class */ (function () {
     BannerComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-my-banner',
-            template: __webpack_require__(/*! ./banner.component.html */ "./src/app/sidenav/banner/banner.component.html"),
+            template: __webpack_require__(/*! raw-loader!./banner.component.html */ "./node_modules/raw-loader/index.js!./src/app/sidenav/banner/banner.component.html"),
             styles: [__webpack_require__(/*! ./banner.component.css */ "./src/app/sidenav/banner/banner.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
@@ -4611,17 +4798,6 @@ var BannerComponent = /** @class */ (function () {
 /***/ (function(module, exports) {
 
 module.exports = ".feed-content {\n  border-color: yellow;\n  border-width: 1px;\n  border-style: solid;\n}\n\n.feed-article {\n  border-color: #eee;\n  border-width: 1px;\n  border-style: dotted;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2lkZW5hdi9mZWF0dXJlZC9mZWF0dXJlZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usb0JBQW9CO0VBQ3BCLGlCQUFpQjtFQUNqQixtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsaUJBQWlCO0VBQ2pCLG9CQUFvQjtBQUN0QiIsImZpbGUiOiJzcmMvYXBwL3NpZGVuYXYvZmVhdHVyZWQvZmVhdHVyZWQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5mZWVkLWNvbnRlbnQge1xuICBib3JkZXItY29sb3I6IHllbGxvdztcbiAgYm9yZGVyLXdpZHRoOiAxcHg7XG4gIGJvcmRlci1zdHlsZTogc29saWQ7XG59XG5cbi5mZWVkLWFydGljbGUge1xuICBib3JkZXItY29sb3I6ICNlZWU7XG4gIGJvcmRlci13aWR0aDogMXB4O1xuICBib3JkZXItc3R5bGU6IGRvdHRlZDtcbn1cbiJdfQ== */"
-
-/***/ }),
-
-/***/ "./src/app/sidenav/featured/featured.component.html":
-/*!**********************************************************!*\
-  !*** ./src/app/sidenav/featured/featured.component.html ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"feed-content\">\n\n<div></div>\n<div *ngFor=\"let currentItem of items\" (click)=\"gotoDetail(currentItem)\" class='feed-article' [innerHTML]='currentItem.title' >\n</div>\n<div>\n"
 
 /***/ }),
 
@@ -4654,10 +4830,13 @@ var FeaturedComponent = /** @class */ (function () {
     FeaturedComponent.prototype.gotoDetail = function (item) {
         this.log.debug('gotoDetail...');
     };
+    FeaturedComponent.ctorParameters = function () { return [
+        { type: src_app_shared_services_log_service__WEBPACK_IMPORTED_MODULE_2__["Log"] }
+    ]; };
     FeaturedComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-my-featured-widget',
-            template: __webpack_require__(/*! ./featured.component.html */ "./src/app/sidenav/featured/featured.component.html"),
+            template: __webpack_require__(/*! raw-loader!./featured.component.html */ "./node_modules/raw-loader/index.js!./src/app/sidenav/featured/featured.component.html"),
             styles: [__webpack_require__(/*! ./featured.component.css */ "./src/app/sidenav/featured/featured.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_shared_services_log_service__WEBPACK_IMPORTED_MODULE_2__["Log"]])
@@ -4677,17 +4856,6 @@ var FeaturedComponent = /** @class */ (function () {
 /***/ (function(module, exports) {
 
 module.exports = ".footer-title {\n  font-weight: bold;\n}\n\n.footer-article {\n  border-color: #eee;\n  border-width: 1px;\n  border-style: dashed;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2lkZW5hdi9mb290ZXIvZm9vdGVyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7QUFDbkI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsaUJBQWlCO0VBQ2pCLG9CQUFvQjtBQUN0QiIsImZpbGUiOiJzcmMvYXBwL3NpZGVuYXYvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZvb3Rlci10aXRsZSB7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuXG4uZm9vdGVyLWFydGljbGUge1xuICBib3JkZXItY29sb3I6ICNlZWU7XG4gIGJvcmRlci13aWR0aDogMXB4O1xuICBib3JkZXItc3R5bGU6IGRhc2hlZDtcbn1cbiJdfQ== */"
-
-/***/ }),
-
-/***/ "./src/app/sidenav/footer/footer.component.html":
-/*!******************************************************!*\
-  !*** ./src/app/sidenav/footer/footer.component.html ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n<div class='footer-content'>\n  <div *ngFor=\"let currentItem of items\" class='footer-article' >\n\n    <span *ngIf=\"currentItem.title\" class=\"footer-title\" [innerHTML]='currentItem.title'></span>\n    <div *ngIf=\"currentItem.description\" [innerHTML]=\"currentItem.description\"></div>\n\n  </div>\n\n<div>\n"
 
 /***/ }),
 
@@ -4727,10 +4895,15 @@ var FooterComponent = /** @class */ (function () {
         this.http.get(this.readService.getIndexUrl('about'))
             .subscribe(function (data) { return _this.items = data; });
     };
+    FooterComponent.ctorParameters = function () { return [
+        { type: src_app_shared_services_read_service__WEBPACK_IMPORTED_MODULE_3__["ReadService"] },
+        { type: src_app_shared_services_log_service__WEBPACK_IMPORTED_MODULE_2__["Log"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] }
+    ]; };
     FooterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-my-footer-widget',
-            template: __webpack_require__(/*! ./footer.component.html */ "./src/app/sidenav/footer/footer.component.html"),
+            template: __webpack_require__(/*! raw-loader!./footer.component.html */ "./node_modules/raw-loader/index.js!./src/app/sidenav/footer/footer.component.html"),
             styles: [__webpack_require__(/*! ./footer.component.css */ "./src/app/sidenav/footer/footer.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_shared_services_read_service__WEBPACK_IMPORTED_MODULE_3__["ReadService"],
@@ -4751,17 +4924,6 @@ var FooterComponent = /** @class */ (function () {
 /***/ (function(module, exports) {
 
 module.exports = ".expand-title {\n  background-color: #e9e9e9;\n  font-weight: bold;\n  text-align: center;\n  height: 3em;\n  margin: 1em;\n}\n\n.expand-title:hover {\n  background-color: #E0E0E0;\n  cursor: pointer;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2lkZW5hdi9ob21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSx5QkFBeUI7RUFDekIsaUJBQWlCO0VBQ2pCLGtCQUFrQjtFQUNsQixXQUFXO0VBQ1gsV0FBVztBQUNiOztBQUVBO0VBQ0UseUJBQXlCO0VBQ3pCLGVBQWU7QUFDakIiLCJmaWxlIjoic3JjL2FwcC9zaWRlbmF2L2hvbWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtdGl0bGUge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZTllOWU5O1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBoZWlnaHQ6IDNlbTtcbiAgbWFyZ2luOiAxZW07XG59XG5cbi5leHBhbmQtdGl0bGU6aG92ZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjRTBFMEUwO1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG4iXX0= */"
-
-/***/ }),
-
-/***/ "./src/app/sidenav/home.component.html":
-/*!*********************************************!*\
-  !*** ./src/app/sidenav/home.component.html ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n<div [ngClass]='{\"flexcontainer\": isModernBrowser()}'>\n\n  <div [class]='\"article-list\"' [ngClass]='{\"flexfeedcontainer\": isModernBrowser()}'>\n    <app-my-calendar-feed [max]='max'></app-my-calendar-feed>\n  </div>\n\n  <div  [ngClass]='{\"flexmaincontent\": isModernBrowser()}'>\n    <app-my-news-component [max]='max'></app-my-news-component>\n    <div [routerLink]='\"news\"' [class]='\"expand-title shadow\"'>\n      <i [class]='\"material-icons\"'>expand_more</i>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -4789,15 +4951,19 @@ var HomeComponent = /** @class */ (function () {
     }
     HomeComponent.prototype.ngOnInit = function () {
         if (this.layoutService.getLayout() === 'desktop') {
-            this.max = 10;
+            this.max = 15;
         }
     };
     HomeComponent.prototype.isModernBrowser = function () {
         return this.browserService.isModernBrowser();
     };
+    HomeComponent.ctorParameters = function () { return [
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_2__["LayoutService"] },
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_2__["BrowserService"] }
+    ]; };
     HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            template: __webpack_require__(/*! ./home.component.html */ "./src/app/sidenav/home.component.html"),
+            template: __webpack_require__(/*! raw-loader!./home.component.html */ "./node_modules/raw-loader/index.js!./src/app/sidenav/home.component.html"),
             styles: [__webpack_require__(/*! ./home.component.css */ "./src/app/sidenav/home.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_shared_services__WEBPACK_IMPORTED_MODULE_2__["LayoutService"], src_app_shared_services__WEBPACK_IMPORTED_MODULE_2__["BrowserService"]])
@@ -5017,18 +5183,7 @@ var MenuService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".slidemenu-button-container {\n  display: block;\n  line-height: 2.25em;\n  width: 100%;\n}\n\n\n.slidemenu-button {\n  color: white;\n  text-decoration: none;\n  width: 100%;\n}\n\n\n.slidemenu-button-icon {\n  font-size: 0.94em;\n}\n\n\n.icon-container {\n  margin: 0 1em 0 1em;\n\n}\n\n\n.slidemenu-button-text {\n  font-size: 0.94em;\n  font-weight: 500;\n  text-decoration: none;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2lkZW5hdi9tZW51YnV0dG9uLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxjQUFjO0VBQ2QsbUJBQW1CO0VBQ25CLFdBQVc7QUFDYjs7O0FBR0E7RUFDRSxZQUFZO0VBQ1oscUJBQXFCO0VBQ3JCLFdBQVc7QUFDYjs7O0FBRUE7RUFDRSxpQkFBaUI7QUFDbkI7OztBQUVBO0VBQ0UsbUJBQW1COztBQUVyQjs7O0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsZ0JBQWdCO0VBQ2hCLHFCQUFxQjtBQUN2QiIsImZpbGUiOiJzcmMvYXBwL3NpZGVuYXYvbWVudWJ1dHRvbi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNsaWRlbWVudS1idXR0b24tY29udGFpbmVyIHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIGxpbmUtaGVpZ2h0OiAyLjI1ZW07XG4gIHdpZHRoOiAxMDAlO1xufVxuXG5cbi5zbGlkZW1lbnUtYnV0dG9uIHtcbiAgY29sb3I6IHdoaXRlO1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4uc2xpZGVtZW51LWJ1dHRvbi1pY29uIHtcbiAgZm9udC1zaXplOiAwLjk0ZW07XG59XG5cbi5pY29uLWNvbnRhaW5lciB7XG4gIG1hcmdpbjogMCAxZW0gMCAxZW07XG5cbn1cblxuLnNsaWRlbWVudS1idXR0b24tdGV4dCB7XG4gIGZvbnQtc2l6ZTogMC45NGVtO1xuICBmb250LXdlaWdodDogNTAwO1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG59XG4iXX0= */"
-
-/***/ }),
-
-/***/ "./src/app/sidenav/menubutton.component.html":
-/*!***************************************************!*\
-  !*** ./src/app/sidenav/menubutton.component.html ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<a [href]='' [routerLink]='item.routerLink'  routerLinkActive='active'  [title]='item.title' [class]='\"slidemenu-button slidemenu-button-container my-mat-button-dark\"'>\n\n<i  class='icon-container material-icons slidemenu-button-icon' [innerHTML]='item.icon' ></i>\n<span *ngIf='expanded' class='slidemenu-button-text' [innerHTML]='item.title'></span>\n\n</a>\n"
+module.exports = ".slidemenu-button-container {\r\n  display: block;\r\n  line-height: 2.25em;\r\n  width: 100%;\r\n}\r\n\r\n\r\n.slidemenu-button {\r\n  color: white;\r\n  text-decoration: none;\r\n  width: 100%;\r\n}\r\n\r\n\r\n.slidemenu-button-icon {\r\n  font-size: 0.94em;\r\n}\r\n\r\n\r\n.icon-container {\r\n  margin: 0 1em 0 1em;\r\n\r\n}\r\n\r\n\r\n.slidemenu-button-text {\r\n  font-size: 0.94em;\r\n  font-weight: 500;\r\n  text-decoration: none;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2lkZW5hdi9tZW51YnV0dG9uLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxjQUFjO0VBQ2QsbUJBQW1CO0VBQ25CLFdBQVc7QUFDYjs7O0FBR0E7RUFDRSxZQUFZO0VBQ1oscUJBQXFCO0VBQ3JCLFdBQVc7QUFDYjs7O0FBRUE7RUFDRSxpQkFBaUI7QUFDbkI7OztBQUVBO0VBQ0UsbUJBQW1COztBQUVyQjs7O0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsZ0JBQWdCO0VBQ2hCLHFCQUFxQjtBQUN2QiIsImZpbGUiOiJzcmMvYXBwL3NpZGVuYXYvbWVudWJ1dHRvbi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNsaWRlbWVudS1idXR0b24tY29udGFpbmVyIHtcclxuICBkaXNwbGF5OiBibG9jaztcclxuICBsaW5lLWhlaWdodDogMi4yNWVtO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG5cclxuLnNsaWRlbWVudS1idXR0b24ge1xyXG4gIGNvbG9yOiB3aGl0ZTtcclxuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbi5zbGlkZW1lbnUtYnV0dG9uLWljb24ge1xyXG4gIGZvbnQtc2l6ZTogMC45NGVtO1xyXG59XHJcblxyXG4uaWNvbi1jb250YWluZXIge1xyXG4gIG1hcmdpbjogMCAxZW0gMCAxZW07XHJcblxyXG59XHJcblxyXG4uc2xpZGVtZW51LWJ1dHRvbi10ZXh0IHtcclxuICBmb250LXNpemU6IDAuOTRlbTtcclxuICBmb250LXdlaWdodDogNTAwO1xyXG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -5062,7 +5217,7 @@ var MenubuttonComponent = /** @class */ (function () {
     MenubuttonComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-menubutton',
-            template: __webpack_require__(/*! ./menubutton.component.html */ "./src/app/sidenav/menubutton.component.html"),
+            template: __webpack_require__(/*! raw-loader!./menubutton.component.html */ "./node_modules/raw-loader/index.js!./src/app/sidenav/menubutton.component.html"),
             styles: [__webpack_require__(/*! ./menubutton.component.css */ "./src/app/sidenav/menubutton.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
@@ -5102,18 +5257,7 @@ var MenuItem = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".menu-container {\n  box-shadow: 5px 5px 10px 0 #656565;\n  height: 100%;\n  left: 0;\n  position: absolute;\n  top: 0.5em;\n  transition-duration: .5s;\n  transition-property: height, -webkit-transform;\n  transition-property: transform, height;\n  transition-property: transform, height, -webkit-transform;\n  transition-timing-function: cubic-bezier(.25, .8, .25, 1);\n  width: 2.8em;\n  z-index: 110;\n}\n\n\n.menu-container-expanded {\n    min-width: 20%;\n    width: 13em;\n}\n\n\n@media all and (min-width: 55em) {\n  .menu-container {\n    height: 100%;\n    left:auto;\n    min-height: 60em;\n    min-width: inherit;\n    padding-top: 3em;\n    position: relative;\n    top:auto;\n    z-index: 80;\n  }\n}\n\n\n.buttonseparator {\n  border-color: white;\n  border-style: solid;\n  border-width: 0.07em 0 0 0;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2lkZW5hdi9zaWRlbmF2LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrQ0FBa0M7RUFDbEMsWUFBWTtFQUNaLE9BQU87RUFDUCxrQkFBa0I7RUFDbEIsVUFBVTtFQUNWLHdCQUF3QjtFQUN4Qiw4Q0FBc0M7RUFBdEMsc0NBQXNDO0VBQXRDLHlEQUFzQztFQUN0Qyx5REFBeUQ7RUFDekQsWUFBWTtFQUNaLFlBQVk7QUFDZDs7O0FBR0E7SUFDSSxjQUFjO0lBQ2QsV0FBVztBQUNmOzs7QUFFQTtFQUNFO0lBQ0UsWUFBWTtJQUNaLFNBQVM7SUFDVCxnQkFBZ0I7SUFDaEIsa0JBQWtCO0lBQ2xCLGdCQUFnQjtJQUNoQixrQkFBa0I7SUFDbEIsUUFBUTtJQUNSLFdBQVc7RUFDYjtBQUNGOzs7QUFFQTtFQUNFLG1CQUFtQjtFQUNuQixtQkFBbUI7RUFDbkIsMEJBQTBCO0FBQzVCIiwiZmlsZSI6InNyYy9hcHAvc2lkZW5hdi9zaWRlbmF2LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWVudS1jb250YWluZXIge1xuICBib3gtc2hhZG93OiA1cHggNXB4IDEwcHggMCAjNjU2NTY1O1xuICBoZWlnaHQ6IDEwMCU7XG4gIGxlZnQ6IDA7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiAwLjVlbTtcbiAgdHJhbnNpdGlvbi1kdXJhdGlvbjogLjVzO1xuICB0cmFuc2l0aW9uLXByb3BlcnR5OiB0cmFuc2Zvcm0sIGhlaWdodDtcbiAgdHJhbnNpdGlvbi10aW1pbmctZnVuY3Rpb246IGN1YmljLWJlemllciguMjUsIC44LCAuMjUsIDEpO1xuICB3aWR0aDogMi44ZW07XG4gIHotaW5kZXg6IDExMDtcbn1cblxuXG4ubWVudS1jb250YWluZXItZXhwYW5kZWQge1xuICAgIG1pbi13aWR0aDogMjAlO1xuICAgIHdpZHRoOiAxM2VtO1xufVxuXG5AbWVkaWEgYWxsIGFuZCAobWluLXdpZHRoOiA1NWVtKSB7XG4gIC5tZW51LWNvbnRhaW5lciB7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIGxlZnQ6YXV0bztcbiAgICBtaW4taGVpZ2h0OiA2MGVtO1xuICAgIG1pbi13aWR0aDogaW5oZXJpdDtcbiAgICBwYWRkaW5nLXRvcDogM2VtO1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICB0b3A6YXV0bztcbiAgICB6LWluZGV4OiA4MDtcbiAgfVxufVxuXG4uYnV0dG9uc2VwYXJhdG9yIHtcbiAgYm9yZGVyLWNvbG9yOiB3aGl0ZTtcbiAgYm9yZGVyLXN0eWxlOiBzb2xpZDtcbiAgYm9yZGVyLXdpZHRoOiAwLjA3ZW0gMCAwIDA7XG59XG4iXX0= */"
-
-/***/ }),
-
-/***/ "./src/app/sidenav/sidenav.component.html":
-/*!************************************************!*\
-  !*** ./src/app/sidenav/sidenav.component.html ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<nav>\n<div *ngIf='isOpen()' [class]='\"menu-container theme-primary\"'  [ngClass]='{\"menu-container-expanded\": isExpanded()}'>\n<div [class]='\"buttonseparator\"'></div>\n<span *ngFor='let menu of menuItems' (click)='expandClose()' >\n  <app-menubutton [item]='menu' [expanded]='expanded' ></app-menubutton>\n  <div [class]='\"buttonseparator\"'></div>\n</span>\n\n</div>\n</nav>"
+module.exports = ".menu-container {\r\n  box-shadow: 5px 5px 10px 0 #656565;\r\n  height: 100%;\r\n  left: 0;\r\n  position: absolute;\r\n  top: 0.5em;\r\n  -webkit-transition-duration: .5s;\r\n          transition-duration: .5s;\r\n  -webkit-transition-property: height, -webkit-transform;\r\n  transition-property: height, -webkit-transform;\r\n  transition-property: transform, height;\r\n  transition-property: transform, height, -webkit-transform;\r\n  -webkit-transition-timing-function: cubic-bezier(.25, .8, .25, 1);\r\n          transition-timing-function: cubic-bezier(.25, .8, .25, 1);\r\n  width: 2.8em;\r\n  z-index: 110;\r\n}\r\n\r\n\r\n.menu-container-expanded {\r\n    min-width: 20%;\r\n    width: 13em;\r\n}\r\n\r\n\r\n@media all and (min-width: 55em) {\r\n  .menu-container {\r\n    height: 100%;\r\n    left:auto;\r\n    min-height: 60em;\r\n    min-width: inherit;\r\n  /*  padding-top: 3em;*/\r\n    position: relative;\r\n    top:auto;\r\n    z-index: 80;\r\n  }\r\n}\r\n\r\n\r\n.buttonseparator {\r\n  border-color: white;\r\n  border-style: solid;\r\n  border-width: 1px 0 0 0;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2lkZW5hdi9zaWRlbmF2LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrQ0FBa0M7RUFDbEMsWUFBWTtFQUNaLE9BQU87RUFDUCxrQkFBa0I7RUFDbEIsVUFBVTtFQUNWLGdDQUF3QjtVQUF4Qix3QkFBd0I7RUFDeEIsc0RBQXNDO0VBQXRDLDhDQUFzQztFQUF0QyxzQ0FBc0M7RUFBdEMseURBQXNDO0VBQ3RDLGlFQUF5RDtVQUF6RCx5REFBeUQ7RUFDekQsWUFBWTtFQUNaLFlBQVk7QUFDZDs7O0FBR0E7SUFDSSxjQUFjO0lBQ2QsV0FBVztBQUNmOzs7QUFFQTtFQUNFO0lBQ0UsWUFBWTtJQUNaLFNBQVM7SUFDVCxnQkFBZ0I7SUFDaEIsa0JBQWtCO0VBQ3BCLHNCQUFzQjtJQUNwQixrQkFBa0I7SUFDbEIsUUFBUTtJQUNSLFdBQVc7RUFDYjtBQUNGOzs7QUFFQTtFQUNFLG1CQUFtQjtFQUNuQixtQkFBbUI7RUFDbkIsdUJBQXVCO0FBQ3pCIiwiZmlsZSI6InNyYy9hcHAvc2lkZW5hdi9zaWRlbmF2LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWVudS1jb250YWluZXIge1xyXG4gIGJveC1zaGFkb3c6IDVweCA1cHggMTBweCAwICM2NTY1NjU7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIGxlZnQ6IDA7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIHRvcDogMC41ZW07XHJcbiAgdHJhbnNpdGlvbi1kdXJhdGlvbjogLjVzO1xyXG4gIHRyYW5zaXRpb24tcHJvcGVydHk6IHRyYW5zZm9ybSwgaGVpZ2h0O1xyXG4gIHRyYW5zaXRpb24tdGltaW5nLWZ1bmN0aW9uOiBjdWJpYy1iZXppZXIoLjI1LCAuOCwgLjI1LCAxKTtcclxuICB3aWR0aDogMi44ZW07XHJcbiAgei1pbmRleDogMTEwO1xyXG59XHJcblxyXG5cclxuLm1lbnUtY29udGFpbmVyLWV4cGFuZGVkIHtcclxuICAgIG1pbi13aWR0aDogMjAlO1xyXG4gICAgd2lkdGg6IDEzZW07XHJcbn1cclxuXHJcbkBtZWRpYSBhbGwgYW5kIChtaW4td2lkdGg6IDU1ZW0pIHtcclxuICAubWVudS1jb250YWluZXIge1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG4gICAgbGVmdDphdXRvO1xyXG4gICAgbWluLWhlaWdodDogNjBlbTtcclxuICAgIG1pbi13aWR0aDogaW5oZXJpdDtcclxuICAvKiAgcGFkZGluZy10b3A6IDNlbTsqL1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgdG9wOmF1dG87XHJcbiAgICB6LWluZGV4OiA4MDtcclxuICB9XHJcbn1cclxuXHJcbi5idXR0b25zZXBhcmF0b3Ige1xyXG4gIGJvcmRlci1jb2xvcjogd2hpdGU7XHJcbiAgYm9yZGVyLXN0eWxlOiBzb2xpZDtcclxuICBib3JkZXItd2lkdGg6IDFweCAwIDAgMDtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -5149,7 +5293,7 @@ var SidenavComponent = /** @class */ (function () {
         this.log = log;
         this.layoutService = layoutService;
         this.mode = 'side';
-        this.expanded = false;
+        this.expanded = true;
         this.menuItems = [];
         this.setLayout();
         // https://www.learnrxjs.io/operators/creation/fromevent.html
@@ -5194,7 +5338,7 @@ var SidenavComponent = /** @class */ (function () {
     };
     SidenavComponent.prototype.setSide = function () {
         this.mode = 'side';
-        this.expanded = false;
+        this.expanded = true;
         this.opened = true;
     };
     SidenavComponent.prototype.initLayout = function () {
@@ -5250,6 +5394,11 @@ var SidenavComponent = /** @class */ (function () {
     SidenavComponent.prototype.getMenuLayout = function () {
         return this.layoutService.getLayout() === 'mobile' ? 'over' : 'side';
     };
+    SidenavComponent.ctorParameters = function () { return [
+        { type: _menu_service__WEBPACK_IMPORTED_MODULE_3__["MenuService"] },
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_6__["Log"] },
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_6__["LayoutService"] }
+    ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
@@ -5269,7 +5418,7 @@ var SidenavComponent = /** @class */ (function () {
     SidenavComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-sidenav',
-            template: __webpack_require__(/*! ./sidenav.component.html */ "./src/app/sidenav/sidenav.component.html"),
+            template: __webpack_require__(/*! raw-loader!./sidenav.component.html */ "./node_modules/raw-loader/index.js!./src/app/sidenav/sidenav.component.html"),
             styles: [__webpack_require__(/*! ./sidenav.component.css */ "./src/app/sidenav/sidenav.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_menu_service__WEBPACK_IMPORTED_MODULE_3__["MenuService"],
@@ -5290,18 +5439,7 @@ var SidenavComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* top menu bar CSS */\n.top-menu-bar {\n  box-shadow: 5px 5px 10px 0 #656565;\n  display:table;\n  font-size: 1.25em;\n\n  text-decoration: none;\n\n  width: 100%;\n  z-index: 100;\n}\n/* web site title */\n.top-menu-title-container {\n  display: table-cell;\n  padding: 0.5em ;\n  text-align: left;\n  width: 100%;\n}\n.router-container {\n  padding: 0;\n  width:100%;\n}\n@media all and (min-width: 55em) {\n  .router-container {\n    padding-left: 0.2em;\n  }\n}\n.top-menu-icon-container {\n  display: table-cell;\n  padding: 0.5em ;\n  width: 2.8em;\n}\n.image-auto-width {\n  height: auto;\n  width:100%;\n}\n.top-menu-title {\n  font-weight: normal;\n}\n/* content CSS */\n.my-body {\n  display: flex;\n}\n/* backdrop when displaying mobile menu */\n.my-mat-sidenav-backdrop {\n  position:fixed;\n  padding:0;\n  margin:0;\n\n  top:0;\n  left:0;\n\n  width: 100%;\n  height: 100%;\n  transition: background-color .5s cubic-bezier(.25, .8, .25, 1);\n  visibility: hidden;\n  z-index: 80;\n}\n.my-mat-sidenav-shown {\n  background-color: rgba(0, 0, 0, 0.6);\n  visibility: visible;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2lkZW5hdi9zaWRlbmF2Y29udGFpbmVyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEscUJBQXFCO0FBQ3JCO0VBQ0Usa0NBQWtDO0VBQ2xDLGFBQWE7RUFDYixpQkFBaUI7O0VBRWpCLHFCQUFxQjs7RUFFckIsV0FBVztFQUNYLFlBQVk7QUFDZDtBQUVBLG1CQUFtQjtBQUNuQjtFQUNFLG1CQUFtQjtFQUNuQixlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCLFdBQVc7QUFDYjtBQUVBO0VBQ0UsVUFBVTtFQUNWLFVBQVU7QUFDWjtBQUtBO0VBQ0U7SUFDRSxtQkFBbUI7RUFDckI7QUFDRjtBQUdBO0VBQ0UsbUJBQW1CO0VBQ25CLGVBQWU7RUFDZixZQUFZO0FBQ2Q7QUFFQTtFQUNFLFlBQVk7RUFDWixVQUFVO0FBQ1o7QUFFQTtFQUNFLG1CQUFtQjtBQUNyQjtBQUlBLGdCQUFnQjtBQUNoQjtFQUNFLGFBQWE7QUFDZjtBQUlBLHlDQUF5QztBQUV6QztFQUNFLGNBQWM7RUFDZCxTQUFTO0VBQ1QsUUFBUTs7RUFFUixLQUFLO0VBQ0wsTUFBTTs7RUFFTixXQUFXO0VBQ1gsWUFBWTtFQUNaLDhEQUE4RDtFQUM5RCxrQkFBa0I7RUFDbEIsV0FBVztBQUNiO0FBQ0E7RUFDRSxvQ0FBb0M7RUFDcEMsbUJBQW1CO0FBQ3JCIiwiZmlsZSI6InNyYy9hcHAvc2lkZW5hdi9zaWRlbmF2Y29udGFpbmVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiB0b3AgbWVudSBiYXIgQ1NTICovXG4udG9wLW1lbnUtYmFyIHtcbiAgYm94LXNoYWRvdzogNXB4IDVweCAxMHB4IDAgIzY1NjU2NTtcbiAgZGlzcGxheTp0YWJsZTtcbiAgZm9udC1zaXplOiAxLjI1ZW07XG5cbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuXG4gIHdpZHRoOiAxMDAlO1xuICB6LWluZGV4OiAxMDA7XG59XG5cbi8qIHdlYiBzaXRlIHRpdGxlICovXG4udG9wLW1lbnUtdGl0bGUtY29udGFpbmVyIHtcbiAgZGlzcGxheTogdGFibGUtY2VsbDtcbiAgcGFkZGluZzogMC41ZW0gO1xuICB0ZXh0LWFsaWduOiBsZWZ0O1xuICB3aWR0aDogMTAwJTtcbn1cblxuLnJvdXRlci1jb250YWluZXIge1xuICBwYWRkaW5nOiAwO1xuICB3aWR0aDoxMDAlO1xufVxuXG5cblxuXG5AbWVkaWEgYWxsIGFuZCAobWluLXdpZHRoOiA1NWVtKSB7XG4gIC5yb3V0ZXItY29udGFpbmVyIHtcbiAgICBwYWRkaW5nLWxlZnQ6IDAuMmVtO1xuICB9XG59XG5cblxuLnRvcC1tZW51LWljb24tY29udGFpbmVyIHtcbiAgZGlzcGxheTogdGFibGUtY2VsbDtcbiAgcGFkZGluZzogMC41ZW0gO1xuICB3aWR0aDogMi44ZW07XG59XG5cbi5pbWFnZS1hdXRvLXdpZHRoIHtcbiAgaGVpZ2h0OiBhdXRvO1xuICB3aWR0aDoxMDAlO1xufVxuXG4udG9wLW1lbnUtdGl0bGUge1xuICBmb250LXdlaWdodDogbm9ybWFsO1xufVxuXG5cblxuLyogY29udGVudCBDU1MgKi9cbi5teS1ib2R5IHtcbiAgZGlzcGxheTogZmxleDtcbn1cblxuXG5cbi8qIGJhY2tkcm9wIHdoZW4gZGlzcGxheWluZyBtb2JpbGUgbWVudSAqL1xuXG4ubXktbWF0LXNpZGVuYXYtYmFja2Ryb3Age1xuICBwb3NpdGlvbjpmaXhlZDtcbiAgcGFkZGluZzowO1xuICBtYXJnaW46MDtcblxuICB0b3A6MDtcbiAgbGVmdDowO1xuXG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG4gIHRyYW5zaXRpb246IGJhY2tncm91bmQtY29sb3IgLjVzIGN1YmljLWJlemllciguMjUsIC44LCAuMjUsIDEpO1xuICB2aXNpYmlsaXR5OiBoaWRkZW47XG4gIHotaW5kZXg6IDgwO1xufVxuLm15LW1hdC1zaWRlbmF2LXNob3duIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAwLCAwLCAwLjYpO1xuICB2aXNpYmlsaXR5OiB2aXNpYmxlO1xufVxuIl19 */"
-
-/***/ }),
-
-/***/ "./src/app/sidenav/sidenavcontainer.component.html":
-/*!*********************************************************!*\
-  !*** ./src/app/sidenav/sidenavcontainer.component.html ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n<div [class]='\"top-menu-bar theme-dark\"'>\n\n  <!-- burger menu icon -->\n  <div (click)='sidenav.expandMenu()' >\n    <span [class]='\"top-menu-icon-container my-mat-button-darker\"' >\n      <i [class]='\"material-icons\"'>menu</i>\n    </span>\n  </div>\n\n  <!-- title -->\n  <div [class]='\"top-menu-title-container my-mat-button-darker\"' [routerLink]='\"/\"'>\n    <span [class]='\"top-menu-title\"' [innerHTML]='title'></span>\n  </div>\n\n</div>\n\n\n<div [class]='\"my-body\"'>\n\n    <app-sidenav #sidenav [mode]='menuMode' [opened]='menuOpened'></app-sidenav>\n\n  <!-- fading backdrop : close menu on click -->\n  <div *ngIf='sidenav.isOverMenuOpened()'  [class]='\"my-mat-sidenav-backdrop\"' [ngClass]='{\"my-mat-sidenav-shown\": sidenav.isOpen()}' (click)='sidenav.open()'></div>\n\n  <!-- container -->\n  <div class='router-container'>\n  <img [src]='bannerurl' [srcset]='getBannerSrcSet()' alt='' sizes='(min-width: 55em) 100vw' [class]='\"image-auto-width\"'>\n\n    <!-- content -->\n    <main>\n    <router-outlet></router-outlet>\n    </main>\n  </div>\n\n</div>\n"
+module.exports = "\r\n\r\n.banner-container img {\r\n  width: 100%;\r\n}\r\n\r\n\r\n@media all and (min-width: 55em) {\r\n\t.banner-container img {\r\n\t\tdisplay: block;\r\n\t\tmargin: 0 auto;\r\n\t}\r\n\r\n}\r\n\r\n\r\n/*\r\n.top-banner {\r\n  box-shadow: 5px 5px 10px 0 #656565;\r\n}*/\r\n\r\n\r\n/* top menu bar CSS */\r\n\r\n\r\n.top-menu-bar {\r\n  box-shadow: 5px 5px 10px 0 #656565;\r\n  /*box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);*/\r\n  display:table;\r\n  font-size: 1.25em;\r\n\r\n  text-decoration: none;\r\n\r\n  width: 100%;\r\n  z-index: 100;\r\n}\r\n\r\n\r\n/* web site title */\r\n\r\n\r\n.top-menu-title-container {\r\n  display: table-cell;\r\n  padding: 0.5em ;\r\n  text-align: left;\r\n  width: 100%;\r\n}\r\n\r\n\r\n.router-container {\r\n  padding: 0;\r\n  width:100%;\r\n}\r\n\r\n\r\n@media all and (min-width: 55em) {\r\n  .router-container {\r\n    padding-left: 0.2em;\r\n  }\r\n}\r\n\r\n\r\n.top-menu-icon-container {\r\n  display: table-cell;\r\n  padding: 0.5em ;\r\n  width: 2.8em;\r\n}\r\n\r\n\r\n.image-auto-width {\r\n  height: auto;\r\n  width:100%;\r\n}\r\n\r\n\r\n.top-menu-title {\r\n  font-weight: normal;\r\n}\r\n\r\n\r\n/* content CSS */\r\n\r\n\r\n.my-body {\r\n  display: -webkit-box;\r\n  display: flex;\r\n}\r\n\r\n\r\n/* backdrop when displaying mobile menu */\r\n\r\n\r\n.my-mat-sidenav-backdrop {\r\n  position:fixed;\r\n  padding:0;\r\n  margin:0;\r\n\r\n  top:0;\r\n  left:0;\r\n\r\n  width: 100%;\r\n  height: 100%;\r\n  -webkit-transition: background-color .5s cubic-bezier(.25, .8, .25, 1);\r\n  transition: background-color .5s cubic-bezier(.25, .8, .25, 1);\r\n  visibility: hidden;\r\n  z-index: 80;\r\n}\r\n\r\n\r\n.my-mat-sidenav-shown {\r\n  background-color: rgba(0, 0, 0, 0.6);\r\n  visibility: visible;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2lkZW5hdi9zaWRlbmF2Y29udGFpbmVyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFFQTtFQUNFLFdBQVc7QUFDYjs7O0FBR0E7Q0FDQztFQUNDLGNBQWM7RUFDZCxjQUFjO0NBQ2Y7O0FBRUQ7OztBQUNBOzs7RUFHRTs7O0FBQ0YscUJBQXFCOzs7QUFDckI7RUFDRSxrQ0FBa0M7RUFDbEMseUdBQXlHO0VBQ3pHLGFBQWE7RUFDYixpQkFBaUI7O0VBRWpCLHFCQUFxQjs7RUFFckIsV0FBVztFQUNYLFlBQVk7QUFDZDs7O0FBRUEsbUJBQW1COzs7QUFDbkI7RUFDRSxtQkFBbUI7RUFDbkIsZUFBZTtFQUNmLGdCQUFnQjtFQUNoQixXQUFXO0FBQ2I7OztBQUVBO0VBQ0UsVUFBVTtFQUNWLFVBQVU7QUFDWjs7O0FBS0E7RUFDRTtJQUNFLG1CQUFtQjtFQUNyQjtBQUNGOzs7QUFHQTtFQUNFLG1CQUFtQjtFQUNuQixlQUFlO0VBQ2YsWUFBWTtBQUNkOzs7QUFFQTtFQUNFLFlBQVk7RUFDWixVQUFVO0FBQ1o7OztBQUVBO0VBQ0UsbUJBQW1CO0FBQ3JCOzs7QUFJQSxnQkFBZ0I7OztBQUNoQjtFQUNFLG9CQUFhO0VBQWIsYUFBYTtBQUNmOzs7QUFJQSx5Q0FBeUM7OztBQUV6QztFQUNFLGNBQWM7RUFDZCxTQUFTO0VBQ1QsUUFBUTs7RUFFUixLQUFLO0VBQ0wsTUFBTTs7RUFFTixXQUFXO0VBQ1gsWUFBWTtFQUNaLHNFQUE4RDtFQUE5RCw4REFBOEQ7RUFDOUQsa0JBQWtCO0VBQ2xCLFdBQVc7QUFDYjs7O0FBQ0E7RUFDRSxvQ0FBb0M7RUFDcEMsbUJBQW1CO0FBQ3JCIiwiZmlsZSI6InNyYy9hcHAvc2lkZW5hdi9zaWRlbmF2Y29udGFpbmVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcclxuXHJcbi5iYW5uZXItY29udGFpbmVyIGltZyB7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcblxyXG5AbWVkaWEgYWxsIGFuZCAobWluLXdpZHRoOiA1NWVtKSB7XHJcblx0LmJhbm5lci1jb250YWluZXIgaW1nIHtcclxuXHRcdGRpc3BsYXk6IGJsb2NrO1xyXG5cdFx0bWFyZ2luOiAwIGF1dG87XHJcblx0fVxyXG5cclxufVxyXG4vKlxyXG4udG9wLWJhbm5lciB7XHJcbiAgYm94LXNoYWRvdzogNXB4IDVweCAxMHB4IDAgIzY1NjU2NTtcclxufSovXHJcbi8qIHRvcCBtZW51IGJhciBDU1MgKi9cclxuLnRvcC1tZW51LWJhciB7XHJcbiAgYm94LXNoYWRvdzogNXB4IDVweCAxMHB4IDAgIzY1NjU2NTtcclxuICAvKmJveC1zaGFkb3c6IDAgM3B4IDVweCAtMXB4IHJnYmEoMCwwLDAsLjIpLCAwIDZweCAxMHB4IDAgcmdiYSgwLDAsMCwuMTQpLCAwIDFweCAxOHB4IDAgcmdiYSgwLDAsMCwuMTIpOyovXHJcbiAgZGlzcGxheTp0YWJsZTtcclxuICBmb250LXNpemU6IDEuMjVlbTtcclxuXHJcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG5cclxuICB3aWR0aDogMTAwJTtcclxuICB6LWluZGV4OiAxMDA7XHJcbn1cclxuXHJcbi8qIHdlYiBzaXRlIHRpdGxlICovXHJcbi50b3AtbWVudS10aXRsZS1jb250YWluZXIge1xyXG4gIGRpc3BsYXk6IHRhYmxlLWNlbGw7XHJcbiAgcGFkZGluZzogMC41ZW0gO1xyXG4gIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbi5yb3V0ZXItY29udGFpbmVyIHtcclxuICBwYWRkaW5nOiAwO1xyXG4gIHdpZHRoOjEwMCU7XHJcbn1cclxuXHJcblxyXG5cclxuXHJcbkBtZWRpYSBhbGwgYW5kIChtaW4td2lkdGg6IDU1ZW0pIHtcclxuICAucm91dGVyLWNvbnRhaW5lciB7XHJcbiAgICBwYWRkaW5nLWxlZnQ6IDAuMmVtO1xyXG4gIH1cclxufVxyXG5cclxuXHJcbi50b3AtbWVudS1pY29uLWNvbnRhaW5lciB7XHJcbiAgZGlzcGxheTogdGFibGUtY2VsbDtcclxuICBwYWRkaW5nOiAwLjVlbSA7XHJcbiAgd2lkdGg6IDIuOGVtO1xyXG59XHJcblxyXG4uaW1hZ2UtYXV0by13aWR0aCB7XHJcbiAgaGVpZ2h0OiBhdXRvO1xyXG4gIHdpZHRoOjEwMCU7XHJcbn1cclxuXHJcbi50b3AtbWVudS10aXRsZSB7XHJcbiAgZm9udC13ZWlnaHQ6IG5vcm1hbDtcclxufVxyXG5cclxuXHJcblxyXG4vKiBjb250ZW50IENTUyAqL1xyXG4ubXktYm9keSB7XHJcbiAgZGlzcGxheTogZmxleDtcclxufVxyXG5cclxuXHJcblxyXG4vKiBiYWNrZHJvcCB3aGVuIGRpc3BsYXlpbmcgbW9iaWxlIG1lbnUgKi9cclxuXHJcbi5teS1tYXQtc2lkZW5hdi1iYWNrZHJvcCB7XHJcbiAgcG9zaXRpb246Zml4ZWQ7XHJcbiAgcGFkZGluZzowO1xyXG4gIG1hcmdpbjowO1xyXG5cclxuICB0b3A6MDtcclxuICBsZWZ0OjA7XHJcblxyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGhlaWdodDogMTAwJTtcclxuICB0cmFuc2l0aW9uOiBiYWNrZ3JvdW5kLWNvbG9yIC41cyBjdWJpYy1iZXppZXIoLjI1LCAuOCwgLjI1LCAxKTtcclxuICB2aXNpYmlsaXR5OiBoaWRkZW47XHJcbiAgei1pbmRleDogODA7XHJcbn1cclxuLm15LW1hdC1zaWRlbmF2LXNob3duIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuNik7XHJcbiAgdmlzaWJpbGl0eTogdmlzaWJsZTtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -5390,10 +5528,18 @@ var SidenavcontainerComponent = /** @class */ (function () {
             this.menuOpened = true;
         }
     };
+    SidenavcontainerComponent.ctorParameters = function () { return [
+        { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Title"] },
+        { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Meta"] },
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_4__["ReadService"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"] },
+        { type: src_app_maincontent_image__WEBPACK_IMPORTED_MODULE_6__["ImageService"] },
+        { type: src_app_shared_services__WEBPACK_IMPORTED_MODULE_4__["LayoutService"] }
+    ]; };
     SidenavcontainerComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-sidenav-container',
-            template: __webpack_require__(/*! ./sidenavcontainer.component.html */ "./src/app/sidenav/sidenavcontainer.component.html"),
+            template: __webpack_require__(/*! raw-loader!./sidenavcontainer.component.html */ "./node_modules/raw-loader/index.js!./src/app/sidenav/sidenavcontainer.component.html"),
             styles: [__webpack_require__(/*! ./sidenavcontainer.component.css */ "./src/app/sidenav/sidenavcontainer.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["Title"],
@@ -5420,12 +5566,16 @@ var SidenavcontainerComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
+// The file contents for the current environment will overwrite these during build.
+// The build system defaults to the dev environment which uses `environment.ts`, but if you do
+// `ng build --env=prod` then `environment.prod.ts` will be used instead.
+// The list of which env maps to which file can be found in `.angular-cli.json`.
 var environment = {
-    production: true,
+    production: false,
     defaultlocale: 'en',
-    locale: 'en-UK',
-    server: '/mobilecms-demo/',
-    log: 'error',
+    locale: 'fr-FR',
+    server: '',
+    log: 'debug',
     public: 'public'
 };
 
